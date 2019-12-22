@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TaskLink12Client
 {
     public partial class Form1 : Form
@@ -15,6 +16,7 @@ namespace TaskLink12Client
         public Form1()
         {
             InitializeComponent();
+            TL.LogS("abc");
         }
     }
 }

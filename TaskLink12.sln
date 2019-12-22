@@ -7,10 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLink12Server", "TaskLin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLink12Client", "TaskLink12Client\TaskLink12Client.csproj", "{979D6E00-BA01-44AA-9843-6459FEC86252}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TL12Files", "TL12Files", "{87FABFD4-E836-4EFF-BE37-0B9AF8B88D18}"
-	ProjectSection(SolutionItems) = preProject
-		TLLogging.cs = TLLogging.cs
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLink12Library", "TaskLink12Library\TaskLink12Library.csproj", "{0A62F596-DDD1-4D1B-B5B3-AE39CE337715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +23,10 @@ Global
 		{979D6E00-BA01-44AA-9843-6459FEC86252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979D6E00-BA01-44AA-9843-6459FEC86252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979D6E00-BA01-44AA-9843-6459FEC86252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A62F596-DDD1-4D1B-B5B3-AE39CE337715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A62F596-DDD1-4D1B-B5B3-AE39CE337715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A62F596-DDD1-4D1B-B5B3-AE39CE337715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A62F596-DDD1-4D1B-B5B3-AE39CE337715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
