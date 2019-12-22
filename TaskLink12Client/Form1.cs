@@ -17,6 +17,7 @@ namespace TaskLink12Client
         {
             InitializeComponent();
             TL.LogS("abc");
+            TL.
         }
     }
 }

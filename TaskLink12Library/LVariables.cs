@@ -26,8 +26,9 @@ public static partial class TLL
     private const string PathSP = ".SP.tl";
 
     /// <summary>
-    /// Array of chars that should be removed from the TCP traffic -> enhancing safety
+    /// used to determine the keysize of the encryption algorithm
+    /// AES standard keysize is 256
     /// </summary>
-    private static readonly char[] BAD_CHARS = { '/', '\\', '\"', '\'', '{', '}' };
+    private const ushort keysize = 256;
 
 }
