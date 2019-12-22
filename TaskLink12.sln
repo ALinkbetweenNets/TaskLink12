@@ -7,7 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLink12Server", "TaskLin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLink12Client", "TaskLink12Client\TaskLink12Client.csproj", "{979D6E00-BA01-44AA-9843-6459FEC86252}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{87FABFD4-E836-4EFF-BE37-0B9AF8B88D18}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TL12Files", "TL12Files", "{87FABFD4-E836-4EFF-BE37-0B9AF8B88D18}"
+	ProjectSection(SolutionItems) = preProject
+		TLLogging.cs = TLLogging.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
