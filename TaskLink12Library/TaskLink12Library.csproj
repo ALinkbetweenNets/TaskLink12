@@ -45,6 +45,7 @@
     <Compile Include="LStrings.cs" />
     <Compile Include="LLogging.cs" />
     <Compile Include="LEncryption.cs" />
+    <Compile Include="LGarbageColletion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LVariables.cs" />
   </ItemGroup>

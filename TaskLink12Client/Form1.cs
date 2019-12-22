@@ -13,11 +13,11 @@ namespace TaskLink12Client
 {
     public partial class Form1 : Form
     {
+        TLL tll = new TLL();
         public Form1()
         {
             InitializeComponent();
-            TL.LogS("abc");
-            TL.
+
         }
     }
 }

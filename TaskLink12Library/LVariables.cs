@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text;
 
-public static partial class TLL
+public partial class TLL
 {
     /// <summary>
     /// Network port to use for TCP connection. Must be unused by other services.
@@ -23,12 +23,25 @@ public static partial class TLL
     /// <summary>
     /// The File under which the Session Password get stored
     /// </summary>
-    private const string PathSP = ".SP.tl";
+    public const string PathSP = ".SP.tl";
 
     /// <summary>
     /// used to determine the keysize of the encryption algorithm
     /// AES standard keysize is 256
     /// </summary>
-    private const ushort keysize = 256;
+    public const ushort keysize = 256;
+
+    /// <summary>
+    /// Session password used for Communication. Should never be clear text (-> use SHA-256).
+    /// Must be equal on all devices
+    /// </summary>
+    public string SessionPassword = string.Empty;
+
+    /// <summary>
+    /// size of the IV in bytes = keysize / 8
+    /// Default 256 -> IV = 32 bytes
+    /// Using 16 character string -> 32 bytes when converted to a byte array
+    /// </summary>
+    public string initVector = "pemgail9uzpgzl88";
 
 }

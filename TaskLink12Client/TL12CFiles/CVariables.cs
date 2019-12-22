@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskLink12Client
 {
-    public class CVariables
+    public partial class CVariables
     {
         /// <summary>
         /// Local IP Address used for connections. Replaced at init
@@ -23,11 +23,11 @@ namespace TaskLink12Client
         /// Determines wether Silent Mode is on / off
         /// Silent Mode disables MSG Boxes etc
         /// </summary>
-        private bool Silent = false;
+        public bool Silent = false;
 
         /// <summary>
         /// File to control Silent mode
         /// </summary>
-        private const string PathSilent = ".S.tl";
+        public const string PathSilent = ".S.tl";
     }
 }
