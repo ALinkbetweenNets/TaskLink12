@@ -13,7 +13,11 @@ namespace TaskLink12Client
 {
     public partial class FormTLClient : Form
     {
-        TLL tll = new TLL();
+        public TLL tll = new TLL();
+        public string LogF(string msg)
+        {
+            return TLL.LogF(msg, ref textBoxLog);
+        }
         public FormTLClient()
         {
             InitializeComponent();

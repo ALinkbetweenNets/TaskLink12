@@ -12,7 +12,11 @@ namespace TaskLink12Server
 {
     public partial class FormTLServer : Form
     {
-        TLL tll = new TLL();
+        public TLL tll = new TLL();
+        public string LogF(string msg)
+        {
+            return TLL.LogF(msg, ref textBoxLog);
+        }
         public FormTLServer()
         {
             InitializeComponent();

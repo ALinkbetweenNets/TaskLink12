@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 
@@ -31,7 +30,6 @@ public partial class TLL
             {
                 Log("Could not get local IP Address");
             }
-
         }
         catch (Exception ex)
         {
@@ -46,15 +44,15 @@ public partial class TLL
     /// </summary>
     /// <param name="IPToCheck">The IPv4 Address to test</param>
     /// <returns>Wether The given IPv4 is local (IP Filter applies)</returns>
-    private bool IPFilter(string IPToCheck) => IPAddress.TryParse(IPToCheck, out testIP)
+    public static bool IPFilter(string IPToCheck) => IPAddress.TryParse(IPToCheck, out testIPOut)
         && IPToCheck.StartsWith(Utf8.GetString(
-            Convert.FromBase64String(LocalIPFilter))) ? true : false;
+            Convert.FromBase64String(LocalIPFilter)));
 
     /// <summary>
     /// Overload for IPAddress Objects. Tests IPv4 Address with IP localIPFilter
     /// </summary>
     /// <param name="IPToCheck">The IPv4 Address to test</param>
     /// <returns>Wether The given IPv4 is local (IP Filter applies)</returns>
-    private bool IPFilter(IPAddress IPToCheck) => IPToCheck.ToString().StartsWith(
-        Utf8.GetString(Convert.FromBase64String(LocalIPFilter))) ? true : false;
+    public static bool IPFilter(IPAddress IPToCheck) => IPToCheck.ToString().StartsWith(
+        Utf8.GetString(Convert.FromBase64String(LocalIPFilter)));
 }

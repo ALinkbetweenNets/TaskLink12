@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Text;
 
 public partial class TLL
@@ -53,5 +52,5 @@ public partial class TLL
     /// Used in the IPFilter to check wether given IPs can be parsed
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Codequalität", "IDE0052:Ungelesene private Member entfernen", Justification = "<Ausstehend>")]
-    private IPAddress testIP;
+    public static IPAddress testIPOut;
 }

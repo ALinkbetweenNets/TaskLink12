@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +20,7 @@ namespace TaskLink12Server
         {
             if (SessionPassword.Length > 0)
             {
-                if (TLL.IPFilter(StringCheck(address)))
+                if (TLL.IPFilter(address))
                 {
 
                     try
@@ -26,11 +28,11 @@ namespace TaskLink12Server
                         IPAddress ipaddress = IPAddress.Parse(address);
                         using (TcpClient tcpClient = new TcpClient())
                         {
-                            LogS($"Connecting to {address};{port}. Type:{type}, Content:{content}...");
-                            await tcpClient.ConnectAsync(ipaddress, port);
-                            LogS("Connected");
+                            TLL.Log($"Connecting to {address};{TLL.Port}. Type:{type}, Content:{content}...");
+                            await tcpClient.ConnectAsync(ipaddress, TLL.Port);
+                            Log("Connected");
                             NetworkStream stream = tcpClient.GetStream();
-                            LogS("Opened Stream");
+                            Log("Opened Stream");
                             //byte[] ByteResponse = new byte[100];
 
 
