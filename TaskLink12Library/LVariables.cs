@@ -44,4 +44,8 @@ public partial class TLL
     /// </summary>
     public string initVector = "pemgail9uzpgzl88";
 
+    /// <summary>
+    /// Local IP Address used for connections. Replaced at init
+    /// </summary>
+    public string LocalIP = "192.168.1.10";
 }
