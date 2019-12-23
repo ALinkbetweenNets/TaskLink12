@@ -79,5 +79,11 @@
   <ItemGroup>
     <Folder Include="TL12SFiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskLink12Library\TaskLink12Library.csproj">
+      <Project>{0a62f596-ddd1-4d1b-b5b3-ae39ce337715}</Project>
+      <Name>TaskLink12Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

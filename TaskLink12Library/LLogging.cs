@@ -10,4 +10,9 @@ public partial class TLL
 
         return msg;
     }
+    public static string LogF(string msg, ref System.Windows.Forms.TextBox textBox)
+    {
+        textBox.Text += "*" + Log(msg) + " /*\r\n";
+        return msg;
+    }
 }

@@ -12,6 +12,7 @@ namespace TaskLink12Server
 {
     public partial class Form1 : Form
     {
+        TLL tll = new TLL();
         public Form1()
         {
             InitializeComponent();
