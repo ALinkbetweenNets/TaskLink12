@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TaskLink12Client
 {
@@ -33,7 +29,6 @@ namespace TaskLink12Client
                     TLL.Log("Could not End Process " + process.ProcessName);
                 }
             }
-
             foreach (var process in Process.GetProcessesByName(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower())))
             {
                 string procName = process.ProcessName;

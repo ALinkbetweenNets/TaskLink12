@@ -10,7 +10,7 @@ public partial class TLL
     /// <param name="plainText">string to Encrypt</param>
     /// <param name="passPhrase">Passphrase to use in Combination with initVector</param>
     /// <returns>Encrypted string</returns>
-    public string EncryptString(string text)
+    public static string EncryptString(string text, string SessionPassword, string initVector)
     {
         Log("Encrypting: " + text);
         Log("With Password: " + SessionPassword);
@@ -45,7 +45,7 @@ public partial class TLL
     /// <param name="cipherText">string to Decrypt</param>
     /// <param name="passPhrase">Passphrase to use in Combination with initVector</param>
     /// <returns>Decrypted string</returns>
-    public string DecryptString(string text)
+    public static string DecryptString(string text, string SessionPassword, string initVector)
     {
         Log("Decrypting: " + text);
         Log("With Password: " + SessionPassword);
