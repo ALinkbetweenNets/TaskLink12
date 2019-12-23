@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskLink12Client
 {
-    public partial class CVariables
+    public partial class TLC
     {
 
         /// <summary>

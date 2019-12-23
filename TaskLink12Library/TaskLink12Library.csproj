@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LIP.cs" />
     <Compile Include="LStrings.cs" />
     <Compile Include="LLogging.cs" />
     <Compile Include="LEncryption.cs" />

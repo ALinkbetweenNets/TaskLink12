@@ -48,4 +48,10 @@ public partial class TLL
     /// Local IP Address used for connections. Replaced at init
     /// </summary>
     public string LocalIP = "192.168.1.10";
+
+    /// <summary>
+    /// Used in the IPFilter to check wether given IPs can be parsed
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Codequalität", "IDE0052:Ungelesene private Member entfernen", Justification = "<Ausstehend>")]
+    private IPAddress testIP;
 }

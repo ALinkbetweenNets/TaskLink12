@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskLink12Server
 {
-    public partial class CVariables
+    public partial class TLS
     {
         /// <summary>
         /// Session password used for Communication. Should never be clear text (-> use SHA-256).
