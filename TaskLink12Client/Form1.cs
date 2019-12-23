@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace TaskLink12Client
 {
-    public partial class Form1 : Form
+    public partial class FormTLClient : Form
     {
         TLL tll = new TLL();
-        public Form1()
+        public FormTLClient()
         {
             InitializeComponent();
 

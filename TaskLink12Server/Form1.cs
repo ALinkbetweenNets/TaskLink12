@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TaskLink12Server
 {
-    public partial class Form1 : Form
+    public partial class FormTLServer : Form
     {
         TLL tll = new TLL();
-        public Form1()
+        public FormTLServer()
         {
             InitializeComponent();
         }

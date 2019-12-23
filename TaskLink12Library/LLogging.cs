@@ -12,7 +12,8 @@ public partial class TLL
     }
     public static string LogF(string msg, ref System.Windows.Forms.TextBox textBox)
     {
-        textBox.Text += "*" + Log(msg) + " /*\r\n";
+        textBox.Text += msg;
+        Log("* " + msg + " /*\r\n");
         return msg;
     }
 }
