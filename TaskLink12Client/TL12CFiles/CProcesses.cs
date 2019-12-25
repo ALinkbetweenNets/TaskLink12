@@ -13,18 +13,18 @@ namespace TaskLink12Client
         /// Gets all running processes on the computer
         /// </summary>
         /// <returns>returns sorted list of names of running processes</returns>
-        private string[] GetRunningProcesses()
+        public static string[] GetRunningProcesses()
         {
             List<string> processListRaw = new List<string>();
             foreach (Process p in Process.GetProcesses())
             {
-                if (p.ProcessName != string.Empty && p.ProcessName != " ")
+                if (p.ProcessName.Length > 0 && p.ProcessName != " ")
                 {
                     if (p.MainModule.FileName.StartsWith(@"C:\Windows\"))
-                        processListRaw.Add("!" + p.ProcessName.ToLower().Replace('!', ' ') + ";");
+                        processListRaw.Add("!" + TLL.StringCheck(p.ProcessName.ToLower().Replace('!', ' ')) + ";");
 
                     else
-                        processListRaw.Add(p.ProcessName.ToLower().Replace('!', ' ') + ";");
+                        processListRaw.Add(TLL.StringCheck(p.ProcessName.ToLower().Replace('!', ' ')) + ";");
                 }
             }
             List<string> processList = processListRaw.Distinct().ToList();
@@ -41,34 +41,37 @@ namespace TaskLink12Client
         public static bool KillProc(string name)
         {
             bool success = false;
-            foreach (var process in Process.GetProcessesByName(name.ToLower()))
+            if (name.Length > 2)
             {
-                string procName = process.ProcessName;
-                try
+                foreach (var process in Process.GetProcessesByName(name.ToLower()))
                 {
-                    TLL.Log("Killing Process " + procName);
-                    process.Kill();
-                    TLL.Log("Successfully ended " + process.ProcessName);
-                    success = true;
+                    string procName = process.ProcessName;
+                    try
+                    {
+                        TLL.Log("Killing Process " + procName);
+                        process.Kill();
+                        TLL.Log("Successfully ended " + process.ProcessName);
+                        success = true;
+                    }
+                    catch (Exception)
+                    {
+                        TLL.Log("Could not End Process " + process.ProcessName);
+                    }
                 }
-                catch (Exception)
+                foreach (var process in Process.GetProcessesByName(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower())))
                 {
-                    TLL.Log("Could not End Process " + process.ProcessName);
-                }
-            }
-            foreach (var process in Process.GetProcessesByName(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(name.ToLower())))
-            {
-                string procName = process.ProcessName;
-                try
-                {
-                    TLL.Log("Killing Process " + procName);
-                    process.Kill();
-                    TLL.Log("Successfully ended " + process.ProcessName);
-                    success = true;
-                }
-                catch (Exception)
-                {
-                    TLL.Log("Could not End Process " + process.ProcessName);
+                    string procName = process.ProcessName;
+                    try
+                    {
+                        TLL.Log("Killing Process " + procName);
+                        process.Kill();
+                        TLL.Log("Successfully ended " + process.ProcessName);
+                        success = true;
+                    }
+                    catch (Exception)
+                    {
+                        TLL.Log("Could not End Process " + process.ProcessName);
+                    }
                 }
             }
             return success;

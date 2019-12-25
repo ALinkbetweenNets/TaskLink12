@@ -4,6 +4,7 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -121,25 +122,18 @@ namespace TaskLink12Client
                                                 {
                                                     stringBuilder.Append(s);
                                                 }
-                                                string processString = stringBuilder.ToString();
-                                                byte[] ProcessByte = GetBytes(processString);
-                                                socket.Send(GetBytes(ProcessByte.Length.ToString()));
-                                                socket.Send(ProcessByte);
+                                                Write(stringBuilder.ToString());
 
                                                 break;
                                             case "KILL":
                                                 LogInvoke("Kill Request accepted");
-                                                byteReceived = new byte[4];
-                                                byteLength = socket.Receive(byteReceived);
-                                                socket.Send(GetBytes("l"));
-                                                byte[] byteReceived1 = new byte[
-                                                    Convert.ToInt32(GetString(byteReceived, byteLength))];
-                                                byteLength = socket.Receive(byteReceived1);
+                                                Write("K");
+                                                string procKill = await Read();
 
-                                                if (KillProc(GetString(byteReceived1, byteLength)))
-                                                    socket.Send(GetBytes("S"));
+                                                if (KillProc(procKill))
+                                                    Write("S");
                                                 else
-                                                    socket.Send(GetBytes("F"));
+                                                    Write("F");
 
                                                 //byte[] ByteResponse3 = new byte[GetBytes(4.ToString()).Length];
                                                 //k = socket.Receive()
@@ -171,18 +165,18 @@ namespace TaskLink12Client
 
 
                         }
-                        //RefreshReceiverStatus();
+                    //RefreshReceiverStatus();
 
 
 
-                        
-                        END:
+
+                    END:
                         socket.Close();
                         //close stream
                         tcplistener.Stop();
                         //End listener
                         LogInvoke("Connection closed");
-                        FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
+                        //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
                     }
                 }
             }
