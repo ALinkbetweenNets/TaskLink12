@@ -27,7 +27,7 @@ public partial class TLL
             ),
         Encoding.UTF8.GetBytes(testString)
     )
-);
+);//! for process markings ; for process differntiating
         return Regex.Replace(Regex.Replace(testString, @"[^\u0000-\u007F]+", string.Empty), @"[/\'{},#$%?]", string.Empty);
     }
 

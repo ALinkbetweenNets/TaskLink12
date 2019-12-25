@@ -3,6 +3,7 @@
 using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,106 +64,119 @@ namespace TaskLink12Client
                             string msglength = TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt).Length.ToString();
                             socket.Send(TLL.GetBytes(msglength, tll.SessionPassword, tll.initVector, encrypt));
                             socket.Send(TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt));
-                            LogInvoke($"Sent{msg}. (Length:{msglength}");
+                            LogInvoke($"Sent{msg}. (Length:{msglength})");
                         }
                         async Task<string> Read(bool encrypted = true)
                         {
-                            byte[] Response = new byte[3];
-                            int length = socket.Receive(byteReceived);
+                            byte[] Response = new byte[20];
+                            int length = socket.Receive(Response);
 
                             int ResponseLength = 200;
                             try
                             {
                                 ResponseLength = Convert.ToInt32(TLL.GetString(Response, length, tll.SessionPassword, tll.initVector, encrypted));
                             }
-                            catch (Exception)
-                            { }
+                            catch { }
                             byte[] ByteResponse = new byte[ResponseLength];
                             length = socket.Receive(ByteResponse);
                             string ResponseString = TLL.GetString(ByteResponse, length, tll.SessionPassword, tll.initVector, encrypted);
-                            LogInvoke($"Received {ResponseString}");
+                            LogInvoke($"Received {ResponseString}. (Length: {ResponseLength})");
                             return ResponseString;
-
                         }
 
-
-
-
-
-
-
-
-                        if (Read(false) == "LINK")
+                        if (await Read() == "LINK")
                         {
-                            LogInvoke("Correct Protocol");
-                            socket.Send(GetBytes("LINK", true));
-                            LogInvoke("Sending LINK");
-                            byteReceived = new byte[GetBytes(
-                                SessionPassword.Substring(0, 4)).Length];
-                            byteLength = socket.Receive(byteReceived);
-
-                            if (GetString(byteReceived, byteLength) ==
-                                SessionPassword.Substring(0, 4))
+                            Write("LINK");
+                            if (await Read() == TLL.Version)
                             {
-                                LogInvoke("Correct Password");
-                                LogInvoke("Sending " + SessionPassword.Substring(5, 9));
-                                socket.Send(GetBytes(SessionPassword.Substring(5, 9)));
-                                LogInvoke("Authenticated");
-                                byteReceived = new byte[GetBytes("Request").Length];
-                                byteLength = socket.Receive(byteReceived);
+                                Write(TLL.Version);
 
-                                switch (GetString(byteReceived, byteLength))
+                                int R1 = 2;
+                                try
                                 {
-                                    case "REQUEST":
-                                        LogInvoke("Request accepted");
-                                        string[] processes = GetRunningProcesses();
-                                        StringBuilder stringBuilder = new StringBuilder();
-                                        foreach (string s in processes)
-                                        {
-                                            stringBuilder.Append(s);
-                                        }
-                                        string processString = stringBuilder.ToString();
-                                        byte[] ProcessByte = GetBytes(processString);
-                                        socket.Send(GetBytes(ProcessByte.Length.ToString()));
-                                        socket.Send(ProcessByte);
-
-                                        break;
-                                    case "KILL":
-                                        LogInvoke("Kill Request accepted");
-                                        byteReceived = new byte[4];
-                                        byteLength = socket.Receive(byteReceived);
-                                        socket.Send(GetBytes("l"));
-                                        byte[] byteReceived1 = new byte[
-                                            Convert.ToInt32(GetString(byteReceived, byteLength))];
-                                        byteLength = socket.Receive(byteReceived1);
-
-                                        if (KillProc(GetString(byteReceived1, byteLength)))
-                                            socket.Send(GetBytes("S"));
-                                        else
-                                            socket.Send(GetBytes("F"));
-
-                                        //byte[] ByteResponse3 = new byte[GetBytes(4.ToString()).Length];
-                                        //k = socket.Receive()
-                                        //k = stream.ReadAsync(ByteResponse3, 0, 4);
-                                        //int ResponseLength = Convert.ToInt32(GetString(ByteResponse3, k));
-                                        //LogInvoke(GetString(ByteResponse3, k));
-
-                                        //byte[] ByteResponse4 = new byte[ResponseLength];
-                                        //k = await stream.ReadAsync(ByteResponse4, 0, ResponseLength);
-                                        //string Response = GetString(ByteResponse4, k);
-
-                                        break;
-                                    default:
-                                        LogInvoke("Unknown Type: " +
-                                            GetString(byteReceived, byteLength));
-                                        break;
+                                    R1 = Convert.ToInt32(await Read());
                                 }
-                                //RefreshReceiverStatus();
-                            }
-                            else LogInvoke("Incorrect Password");
-                        }
-                        else LogInvoke("Incorrect Protocol");
+                                catch
+                                {
+                                    goto END;
+                                }
+                                if (R1 > 10 && R1 < 55)
+                                {
+                                    int R2 = TLL.Random(60, 110);
+                                    Write(R2.ToString());
+                                    string testPass = await Read();
+                                    LogInvoke("Received Authentication Token. Checking validity...");
+                                    if (testPass == TLL.GetHash(TLL.GetHash("LINK" + TLL.Version).Substring(R1, R2 - R1)))
+                                    {
+                                        LogInvoke("Authentication Token Correct");
+                                        LogInvoke($"Connection from {socket.RemoteEndPoint.ToString()} authenticated");
+                                        string type = await Read();
+                                        switch (type)
+                                        {
+                                            case "REQUEST":
+                                                LogInvoke("Request accepted");
+                                                string[] processes = TLC.GetRunningProcesses();
+                                                StringBuilder stringBuilder = new StringBuilder();
+                                                foreach (string s in processes)
+                                                {
+                                                    stringBuilder.Append(s);
+                                                }
+                                                string processString = stringBuilder.ToString();
+                                                byte[] ProcessByte = GetBytes(processString);
+                                                socket.Send(GetBytes(ProcessByte.Length.ToString()));
+                                                socket.Send(ProcessByte);
 
+                                                break;
+                                            case "KILL":
+                                                LogInvoke("Kill Request accepted");
+                                                byteReceived = new byte[4];
+                                                byteLength = socket.Receive(byteReceived);
+                                                socket.Send(GetBytes("l"));
+                                                byte[] byteReceived1 = new byte[
+                                                    Convert.ToInt32(GetString(byteReceived, byteLength))];
+                                                byteLength = socket.Receive(byteReceived1);
+
+                                                if (KillProc(GetString(byteReceived1, byteLength)))
+                                                    socket.Send(GetBytes("S"));
+                                                else
+                                                    socket.Send(GetBytes("F"));
+
+                                                //byte[] ByteResponse3 = new byte[GetBytes(4.ToString()).Length];
+                                                //k = socket.Receive()
+                                                //k = stream.ReadAsync(ByteResponse3, 0, 4);
+                                                //int ResponseLength = Convert.ToInt32(GetString(ByteResponse3, k));
+                                                //LogInvoke(GetString(ByteResponse3, k));
+
+                                                //byte[] ByteResponse4 = new byte[ResponseLength];
+                                                //k = await stream.ReadAsync(ByteResponse4, 0, ResponseLength);
+                                                //string Response = GetString(ByteResponse4, k);
+
+                                                break;
+                                            default:
+                                                LogInvoke("Unknown Type: " + type);
+                                                break;
+                                        }//switch
+
+                                    }
+                                    else LogInvoke("Incorrect Password");
+
+                                }
+                                else LogInvoke("Incorrect Authentication Array");
+
+
+                            }
+
+
+
+
+
+                        }
+                        //RefreshReceiverStatus();
+
+
+
+                        
+                        END:
                         socket.Close();
                         //close stream
                         tcplistener.Stop();

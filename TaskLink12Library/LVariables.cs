@@ -4,6 +4,9 @@ using System.Text;
 
 public partial class TLL
 {
+
+    public const string Version = "12.2";
+
     /// <summary>
     /// Network port to use for TCP connection. Must be unused by other services.
     /// Must be equal on communicating Systems.

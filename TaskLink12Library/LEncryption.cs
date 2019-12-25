@@ -23,7 +23,7 @@ public partial class TLL
                 builder.Append(string.Format(@"{0:x2}", x));
             }
             string encodedString = builder.ToString();
-            Log("Encrypted: " + text + " to SHA-256 Hash: " + encodedString);
+            Log("Encrypted text. SHA-256 Hash: " + encodedString);
             return encodedString;
         }
     }
