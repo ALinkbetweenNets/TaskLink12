@@ -1,9 +1,33 @@
 ﻿using System;
 using System.IO;
 using System.Security.Cryptography;
+using System.Text;
 
 public partial class TLL
 {
+
+    /// <summary>
+    /// Calculates SHA-256 Hash Sum of given string
+    /// </summary>
+    /// <param name="text">text to calculate the Hash of</param>
+    /// <returns>Calculated SHA-256 Hash</returns>
+    public static string GetHash(string text)
+    {
+        byte[] textBytes = Utf8.GetBytes(text);
+        using (SHA512Managed hashstring = new SHA512Managed())
+        {
+            byte[] hash = hashstring.ComputeHash(textBytes);
+            StringBuilder builder = new StringBuilder();
+            foreach (byte x in hash)
+            {
+                builder.Append(string.Format(@"{0:x2}", x));
+            }
+            string encodedString = builder.ToString();
+            Log("Encrypted: " + text + " to SHA-256 Hash: " + encodedString);
+            return encodedString;
+        }
+    }
+
     /// <summary>
     /// Encrypts given string with AES using passphrase and initVector
     /// </summary>

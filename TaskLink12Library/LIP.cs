@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 
@@ -7,8 +8,9 @@ public partial class TLL
     ///<summary>
     ///Gets IP Address of Internal Network and Writes to label
     ///</summary>
-    public void RefreshLocalIP(System.Windows.Forms.Label labelIP)
+    public static List<IPAddress> RefreshLocalIP()
     {
+        List<IPAddress> IpList = new List<IPAddress>();
         try
         {
             IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
@@ -18,24 +20,18 @@ public partial class TLL
                 if (address.AddressFamily == AddressFamily.InterNetwork
                     && IPFilter(address))
                 {
-                    LocalIP = address.ToString();
-                    Log(LocalIP);
+                    IpList.Add(address);
+                    Log(address.ToString());
                 }
             }
-            if (LocalIP?.Length > 0)
-            {
-                labelIP.Text = "Local IP: " + LocalIP;
-            }
-            else
-            {
-                Log("Could not get local IP Address");
-            }
+
         }
         catch (Exception ex)
         {
             Log(ex);
             Log("Error while getting local IP");
         }
+        return IpList;
     }
 
 

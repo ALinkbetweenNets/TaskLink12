@@ -6,7 +6,7 @@ namespace TaskLink12Client
     public partial class TLC
     {
 
-        private async void startup()
+        public async void startup()
         {
             if (Silent)
             {
@@ -16,6 +16,7 @@ namespace TaskLink12Client
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
             RefreshReceiverStatus();
+            DisableButtons();
         }
     }
 }

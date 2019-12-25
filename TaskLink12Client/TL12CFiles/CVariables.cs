@@ -21,5 +21,7 @@ namespace TaskLink12Client
         /// File to control Silent mode
         /// </summary>
         public const string PathSilent = ".S.tl";
+
+        public static bool ReceiverOn = false;
     }
 }

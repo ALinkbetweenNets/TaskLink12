@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 public partial class TLL
@@ -53,4 +54,6 @@ public partial class TLL
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Codequalität", "IDE0052:Ungelesene private Member entfernen", Justification = "<Ausstehend>")]
     public static IPAddress testIPOut;
+
+    public List<IPAddress> IpList = new List<IPAddress>();
 }
