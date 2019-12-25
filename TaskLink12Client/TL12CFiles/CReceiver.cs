@@ -13,10 +13,7 @@ namespace TaskLink12Client
     public partial class TLC
     {
 
-
-
-
-        public static async Task<string[]> ReceiverRun(TLL tll, TextBox textBoxLog)
+        public static async Task<bool> ReceiverRun(TLL tll, TextBox textBoxLog)
         {
             void LogInvoke(string msg)
             {
@@ -150,27 +147,17 @@ namespace TaskLink12Client
                                                 LogInvoke("Unknown Type: " + type);
                                                 break;
                                         }//switch
-
                                     }
                                     else LogInvoke("Incorrect Password");
-
                                 }
                                 else LogInvoke("Incorrect Authentication Array");
-
-
                             }
-
-
-
-
-
+                            else LogInvoke("Incorrect Protocol Version");
                         }
-                    //RefreshReceiverStatus();
+                        else LogInvoke("Incorrect Protocol");
+                        //RefreshReceiverStatus();
 
-
-
-
-                    END:
+                        END:
                         socket.Close();
                         //close stream
                         tcplistener.Stop();
@@ -179,6 +166,7 @@ namespace TaskLink12Client
                         //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
                     }
                 }
+                return true;
             }
             catch (Exception ex)
             {
@@ -191,7 +179,8 @@ namespace TaskLink12Client
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine(ex.Message);
                 LogInvoke("Connection closed");
-                FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
+                //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
+                return false;
             }
         }
     }
