@@ -31,7 +31,7 @@ namespace TaskLink12Client
             }
             else
             {
-                buttonLogClear.Visible = false;
+
                 TLC.Silent = false;
             }
 
@@ -54,11 +54,11 @@ namespace TaskLink12Client
                 {
                     TLL.Log(ex);
                 }
-                notifyIconTL.Visible = true;
+                notifyIconSilent.Visible = true;
                 Hide();
                 this.WindowState = FormWindowState.Minimized;
                 await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
-                backgroundWorkerReceiver.RunWorkerAsync();
+                ReceiverStartStop(true);
                 Hide();
                 await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
             }
@@ -109,19 +109,21 @@ namespace TaskLink12Client
             {
                 try
                 {
-                    TLC.
+                    ReceiverStartStop(true);
                 }
                 catch (Exception ex)
                 {
                     TLL.Log(ex);
-                    TLL.Log("Could not start Receiver (Probably already running)");
                 }
+                if(TLC.ReceiverOn)
                 buttonStartStop.Text = "Stop";
-                TLC.ReceiverOn = true;
+                
             }
             else
             {
-                TLC.ReceiverOn = false;
+                ReceiverStartStop(false);
+                if (!TLC.ReceiverOn)
+                    buttonStartStop.Text = "Start";
             }
             RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
 

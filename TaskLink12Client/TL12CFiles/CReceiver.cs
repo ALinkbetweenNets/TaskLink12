@@ -1,6 +1,8 @@
 ﻿
 
 using System;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -8,12 +10,16 @@ namespace TaskLink12Client
 {
     public partial class TLC
     {
-        
-        
 
 
-        public static async Task<string[]> ReceiverRun()
+
+
+        public static async Task<string[]> ReceiverRun(TLL tll, TextBox textBoxLog)
         {
+            void LogInvoke(string msg)
+            {
+                TLL.LogF(msg, ref textBoxLog);
+            }
             //does not support multiple connections at once
             try
             {
@@ -21,16 +27,16 @@ namespace TaskLink12Client
                 {
                     FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate
                     {
-                        RefreshStatus();
+                        //FormTLClient.RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
                     });
                     LogInvoke("Starting Receiver");
                     //Initializes the Listener
-                    TcpListener tcplistener = new TcpListener(IPAddress.Parse(LocalIP), port);
+                    TcpListener tcplistener = new TcpListener(IPAddress.Parse(tll.LocalIP), TLL.Port);
 
                     //Log("Local IP: " + LocalIP);
                     //Start Listening at the specified port
                     tcplistener.Start();
-                    LogInvoke("The server is running at port " + port.ToString());
+                    LogInvoke("The server is running at port " + TLL.Port.ToString());
                     LogInvoke("The local End point is  :" + tcplistener.LocalEndpoint);
                     LogInvoke("Waiting for a connection.....");
                     Socket socket = tcplistener.AcceptSocket();
@@ -52,10 +58,41 @@ namespace TaskLink12Client
                          * Resp.Length  Response
                          */
 
-                        byte[] byteReceived = new byte[GetBytes("LINK", true).Length];
-                        int byteLength = socket.Receive(byteReceived);
+                        async void Write(string msg, bool encrypt = true)
+                        {
+                            string msglength = TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt).Length.ToString();
+                            socket.Send(TLL.GetBytes(msglength, tll.SessionPassword, tll.initVector, encrypt));
+                            socket.Send(TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt));
+                            LogInvoke($"Sent{msg}. (Length:{msglength}");
+                        }
+                        async Task<string> Read(bool encrypted = true)
+                        {
+                            byte[] Response = new byte[3];
+                            int length = socket.Receive(byteReceived);
 
-                        if (GetString(byteReceived, byteLength, true) == "LINK")
+                            int ResponseLength = 200;
+                            try
+                            {
+                                ResponseLength = Convert.ToInt32(TLL.GetString(Response, length, tll.SessionPassword, tll.initVector, encrypted));
+                            }
+                            catch (Exception)
+                            { }
+                            byte[] ByteResponse = new byte[ResponseLength];
+                            length = socket.Receive(ByteResponse);
+                            string ResponseString = TLL.GetString(ByteResponse, length, tll.SessionPassword, tll.initVector, encrypted);
+                            LogInvoke($"Received {ResponseString}");
+                            return ResponseString;
+
+                        }
+
+
+
+
+
+
+
+
+                        if (Read(false) == "LINK")
                         {
                             LogInvoke("Correct Protocol");
                             socket.Send(GetBytes("LINK", true));
