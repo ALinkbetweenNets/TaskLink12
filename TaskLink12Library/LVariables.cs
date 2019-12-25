@@ -37,6 +37,15 @@ public partial class TLL
     /// </summary>
     public string SessionPassword = string.Empty;
 
+
+    public bool SPSet
+    {
+        get
+        {
+            return SessionPassword.Length > 0;
+        }
+    }
+
     /// <summary>
     /// size of the IV in bytes = keysize / 8
     /// Default 256 -> IV = 32 bytes

@@ -1,16 +1,18 @@
 ﻿
 
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaskLink12Client
 {
     public partial class TLC
     {
-
+        
         
 
-        public static string[] ReceiverRun()
+
+        public static async Task<string[]> ReceiverRun()
         {
             //does not support multiple connections at once
             try
@@ -19,7 +21,7 @@ namespace TaskLink12Client
                 {
                     FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate
                     {
-                        RefreshReceiverStatus();
+                        RefreshStatus();
                     });
                     LogInvoke("Starting Receiver");
                     //Initializes the Listener

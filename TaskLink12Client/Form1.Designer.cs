@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxLog = new System.Windows.Forms.TextBox();
             this.buttonSPSet = new System.Windows.Forms.Button();
             this.buttonSPSave = new System.Windows.Forms.Button();
@@ -41,6 +42,10 @@
             this.listBoxIP = new System.Windows.Forms.ListBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.buttonStatusRefresh = new System.Windows.Forms.Button();
+            this.buttonSilent = new System.Windows.Forms.Button();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.buttonLogClear = new System.Windows.Forms.Button();
+            this.notifyIconSilent = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // textBoxLog
@@ -50,7 +55,7 @@
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
-            this.textBoxLog.Size = new System.Drawing.Size(247, 426);
+            this.textBoxLog.Size = new System.Drawing.Size(247, 388);
             this.textBoxLog.TabIndex = 0;
             // 
             // buttonSPSet
@@ -87,7 +92,7 @@
             // buttonIPRefresh
             // 
             this.buttonIPRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonIPRefresh.Location = new System.Drawing.Point(403, 162);
+            this.buttonIPRefresh.Location = new System.Drawing.Point(403, 202);
             this.buttonIPRefresh.Name = "buttonIPRefresh";
             this.buttonIPRefresh.Size = new System.Drawing.Size(132, 32);
             this.buttonIPRefresh.TabIndex = 4;
@@ -152,8 +157,9 @@
             this.listBoxIP.ItemHeight = 20;
             this.listBoxIP.Location = new System.Drawing.Point(325, 12);
             this.listBoxIP.Name = "listBoxIP";
-            this.listBoxIP.Size = new System.Drawing.Size(210, 144);
+            this.listBoxIP.Size = new System.Drawing.Size(210, 184);
             this.listBoxIP.TabIndex = 11;
+            this.listBoxIP.SelectedIndexChanged += new System.EventHandler(this.listBoxIP_SelectedIndexChanged);
             // 
             // labelStatus
             // 
@@ -176,11 +182,53 @@
             this.buttonStatusRefresh.UseVisualStyleBackColor = true;
             this.buttonStatusRefresh.Click += new System.EventHandler(this.buttonStatusRefresh_Click);
             // 
+            // buttonSilent
+            // 
+            this.buttonSilent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.buttonSilent.Location = new System.Drawing.Point(40, 293);
+            this.buttonSilent.Name = "buttonSilent";
+            this.buttonSilent.Size = new System.Drawing.Size(278, 45);
+            this.buttonSilent.TabIndex = 14;
+            this.buttonSilent.Text = "Enable Silent Mode";
+            this.buttonSilent.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoCheck = false;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBox4.Location = new System.Drawing.Point(12, 306);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(22, 21);
+            this.checkBox4.TabIndex = 15;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // buttonLogClear
+            // 
+            this.buttonLogClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonLogClear.Location = new System.Drawing.Point(656, 406);
+            this.buttonLogClear.Name = "buttonLogClear";
+            this.buttonLogClear.Size = new System.Drawing.Size(132, 32);
+            this.buttonLogClear.TabIndex = 16;
+            this.buttonLogClear.Text = "Clear Log";
+            this.buttonLogClear.UseVisualStyleBackColor = true;
+            // 
+            // notifyIconSilent
+            // 
+            this.notifyIconSilent.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIconSilent.BalloonTipText = "Task Link 12 Client";
+            this.notifyIconSilent.BalloonTipTitle = "Task Link 12 Client";
+            this.notifyIconSilent.Text = "Task Link 12 Client";
+            this.notifyIconSilent.Visible = true;
+            // 
             // FormTLClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonLogClear);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.buttonSilent);
             this.Controls.Add(this.buttonStatusRefresh);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.listBoxIP);
@@ -216,6 +264,10 @@
         private System.Windows.Forms.ListBox listBoxIP;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Button buttonStatusRefresh;
+        private System.Windows.Forms.Button buttonSilent;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Button buttonLogClear;
+        public System.Windows.Forms.NotifyIcon notifyIconSilent;
     }
 }
 

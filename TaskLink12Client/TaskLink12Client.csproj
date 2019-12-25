@@ -55,8 +55,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TL12CFiles\CProcesses.cs" />
-    <Compile Include="TL12CFiles\CStartup.cs" />
+    <Compile Include="TL12CFiles\CFiles.cs" />
     <Compile Include="TL12CFiles\CReceiver.cs" />
+    <Compile Include="TL12CFiles\CLogging.cs" />
     <Compile Include="TL12CFiles\CSilent.cs" />
     <Compile Include="TL12CFiles\CVariables.cs" />
     <EmbeddedResource Include="Form1.resx">
