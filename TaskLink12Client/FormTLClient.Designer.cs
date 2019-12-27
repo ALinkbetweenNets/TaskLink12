@@ -35,36 +35,39 @@
             this.buttonStartStop = new System.Windows.Forms.Button();
             this.buttonIPRefresh = new System.Windows.Forms.Button();
             this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSPSet = new System.Windows.Forms.CheckBox();
+            this.checkBoxIPSet = new System.Windows.Forms.CheckBox();
+            this.checkBoxReceiver = new System.Windows.Forms.CheckBox();
             this.labelIP = new System.Windows.Forms.Label();
-            this.listBoxIP = new System.Windows.Forms.ListBox();
+            this.listBoxIPLocal = new System.Windows.Forms.ListBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.buttonStatusRefresh = new System.Windows.Forms.Button();
             this.buttonSilent = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSilent = new System.Windows.Forms.CheckBox();
             this.buttonLogClear = new System.Windows.Forms.Button();
             this.notifyIconSilent = new System.Windows.Forms.NotifyIcon(this.components);
             this.buttonSPRemove = new System.Windows.Forms.Button();
+            this.checkBoxSPSave = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxLog
             // 
             this.textBoxLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxLog.Location = new System.Drawing.Point(541, 12);
+            this.textBoxLog.Location = new System.Drawing.Point(962, 19);
+            this.textBoxLog.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
-            this.textBoxLog.Size = new System.Drawing.Size(247, 388);
+            this.textBoxLog.Size = new System.Drawing.Size(436, 599);
             this.textBoxLog.TabIndex = 0;
             // 
             // buttonSPSet
             // 
             this.buttonSPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonSPSet.Location = new System.Drawing.Point(40, 12);
+            this.buttonSPSet.Location = new System.Drawing.Point(71, 19);
+            this.buttonSPSet.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSPSet.Name = "buttonSPSet";
-            this.buttonSPSet.Size = new System.Drawing.Size(278, 45);
+            this.buttonSPSet.Size = new System.Drawing.Size(494, 70);
             this.buttonSPSet.TabIndex = 1;
             this.buttonSPSet.Text = "Set Session Password";
             this.buttonSPSet.UseVisualStyleBackColor = true;
@@ -73,9 +76,10 @@
             // buttonSPSave
             // 
             this.buttonSPSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonSPSave.Location = new System.Drawing.Point(40, 63);
+            this.buttonSPSave.Location = new System.Drawing.Point(71, 98);
+            this.buttonSPSave.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSPSave.Name = "buttonSPSave";
-            this.buttonSPSave.Size = new System.Drawing.Size(278, 45);
+            this.buttonSPSave.Size = new System.Drawing.Size(494, 70);
             this.buttonSPSave.TabIndex = 2;
             this.buttonSPSave.Text = "Save Session Password";
             this.buttonSPSave.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // buttonStartStop
             // 
             this.buttonStartStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonStartStop.Location = new System.Drawing.Point(41, 190);
+            this.buttonStartStop.Location = new System.Drawing.Point(73, 294);
+            this.buttonStartStop.Margin = new System.Windows.Forms.Padding(5);
             this.buttonStartStop.Name = "buttonStartStop";
-            this.buttonStartStop.Size = new System.Drawing.Size(278, 45);
+            this.buttonStartStop.Size = new System.Drawing.Size(494, 70);
             this.buttonStartStop.TabIndex = 3;
             this.buttonStartStop.Text = "Start";
             this.buttonStartStop.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // buttonIPRefresh
             // 
             this.buttonIPRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonIPRefresh.Location = new System.Drawing.Point(403, 202);
+            this.buttonIPRefresh.Location = new System.Drawing.Point(716, 313);
+            this.buttonIPRefresh.Margin = new System.Windows.Forms.Padding(5);
             this.buttonIPRefresh.Name = "buttonIPRefresh";
-            this.buttonIPRefresh.Size = new System.Drawing.Size(132, 32);
+            this.buttonIPRefresh.Size = new System.Drawing.Size(235, 50);
             this.buttonIPRefresh.TabIndex = 4;
             this.buttonIPRefresh.Text = "Refresh IPs";
             this.buttonIPRefresh.UseVisualStyleBackColor = true;
@@ -106,83 +112,91 @@
             // textBoxIP
             // 
             this.textBoxIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxIP.Location = new System.Drawing.Point(121, 152);
+            this.textBoxIP.Location = new System.Drawing.Point(215, 236);
+            this.textBoxIP.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.ReadOnly = true;
-            this.textBoxIP.Size = new System.Drawing.Size(198, 32);
+            this.textBoxIP.Size = new System.Drawing.Size(349, 49);
             this.textBoxIP.TabIndex = 5;
             // 
-            // checkBox1
+            // checkBoxSPSet
             // 
-            this.checkBox1.AutoCheck = false;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox1.Location = new System.Drawing.Point(12, 25);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(22, 21);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSPSet.AutoCheck = false;
+            this.checkBoxSPSet.AutoSize = true;
+            this.checkBoxSPSet.Enabled = false;
+            this.checkBoxSPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBoxSPSet.Location = new System.Drawing.Point(21, 39);
+            this.checkBoxSPSet.Margin = new System.Windows.Forms.Padding(5);
+            this.checkBoxSPSet.Name = "checkBoxSPSet";
+            this.checkBoxSPSet.Size = new System.Drawing.Size(34, 33);
+            this.checkBoxSPSet.TabIndex = 6;
+            this.checkBoxSPSet.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxIPSet
             // 
-            this.checkBox2.AutoCheck = false;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox2.Location = new System.Drawing.Point(13, 159);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(22, 21);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxIPSet.AutoCheck = false;
+            this.checkBoxIPSet.AutoSize = true;
+            this.checkBoxIPSet.Enabled = false;
+            this.checkBoxIPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBoxIPSet.Location = new System.Drawing.Point(23, 246);
+            this.checkBoxIPSet.Margin = new System.Windows.Forms.Padding(5);
+            this.checkBoxIPSet.Name = "checkBoxIPSet";
+            this.checkBoxIPSet.Size = new System.Drawing.Size(34, 33);
+            this.checkBoxIPSet.TabIndex = 7;
+            this.checkBoxIPSet.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkBoxReceiver
             // 
-            this.checkBox3.AutoCheck = false;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox3.Location = new System.Drawing.Point(13, 205);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(22, 21);
-            this.checkBox3.TabIndex = 8;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxReceiver.AutoCheck = false;
+            this.checkBoxReceiver.AutoSize = true;
+            this.checkBoxReceiver.Enabled = false;
+            this.checkBoxReceiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBoxReceiver.Location = new System.Drawing.Point(23, 318);
+            this.checkBoxReceiver.Margin = new System.Windows.Forms.Padding(5);
+            this.checkBoxReceiver.Name = "checkBoxReceiver";
+            this.checkBoxReceiver.Size = new System.Drawing.Size(34, 33);
+            this.checkBoxReceiver.TabIndex = 8;
+            this.checkBoxReceiver.UseVisualStyleBackColor = true;
             // 
             // labelIP
             // 
             this.labelIP.AutoSize = true;
-            this.labelIP.Location = new System.Drawing.Point(41, 160);
+            this.labelIP.Location = new System.Drawing.Point(73, 248);
+            this.labelIP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelIP.Name = "labelIP";
-            this.labelIP.Size = new System.Drawing.Size(74, 20);
+            this.labelIP.Size = new System.Drawing.Size(132, 32);
             this.labelIP.TabIndex = 10;
             this.labelIP.Text = "Local IP: ";
             // 
-            // listBoxIP
+            // listBoxIPLocal
             // 
-            this.listBoxIP.FormattingEnabled = true;
-            this.listBoxIP.ItemHeight = 20;
-            this.listBoxIP.Location = new System.Drawing.Point(325, 12);
-            this.listBoxIP.Name = "listBoxIP";
-            this.listBoxIP.Size = new System.Drawing.Size(210, 184);
-            this.listBoxIP.TabIndex = 11;
-            this.listBoxIP.Click += new System.EventHandler(this.listBoxIP_Click);
+            this.listBoxIPLocal.FormattingEnabled = true;
+            this.listBoxIPLocal.ItemHeight = 31;
+            this.listBoxIPLocal.Location = new System.Drawing.Point(578, 19);
+            this.listBoxIPLocal.Margin = new System.Windows.Forms.Padding(5);
+            this.listBoxIPLocal.Name = "listBoxIPLocal";
+            this.listBoxIPLocal.Size = new System.Drawing.Size(370, 283);
+            this.listBoxIPLocal.TabIndex = 11;
+            this.listBoxIPLocal.Click += new System.EventHandler(this.listBoxIP_Click);
             // 
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.Location = new System.Drawing.Point(41, 264);
+            this.labelStatus.Location = new System.Drawing.Point(73, 409);
+            this.labelStatus.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(74, 26);
+            this.labelStatus.Size = new System.Drawing.Size(124, 42);
             this.labelStatus.TabIndex = 12;
             this.labelStatus.Text = "Status";
             // 
             // buttonStatusRefresh
             // 
             this.buttonStatusRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonStatusRefresh.Location = new System.Drawing.Point(46, 293);
+            this.buttonStatusRefresh.Location = new System.Drawing.Point(82, 454);
+            this.buttonStatusRefresh.Margin = new System.Windows.Forms.Padding(5);
             this.buttonStatusRefresh.Name = "buttonStatusRefresh";
-            this.buttonStatusRefresh.Size = new System.Drawing.Size(132, 32);
+            this.buttonStatusRefresh.Size = new System.Drawing.Size(235, 50);
             this.buttonStatusRefresh.TabIndex = 13;
             this.buttonStatusRefresh.Text = "Refresh Status";
             this.buttonStatusRefresh.UseVisualStyleBackColor = true;
@@ -191,32 +205,35 @@
             // buttonSilent
             // 
             this.buttonSilent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonSilent.Location = new System.Drawing.Point(41, 331);
+            this.buttonSilent.Location = new System.Drawing.Point(73, 513);
+            this.buttonSilent.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSilent.Name = "buttonSilent";
-            this.buttonSilent.Size = new System.Drawing.Size(278, 45);
+            this.buttonSilent.Size = new System.Drawing.Size(494, 70);
             this.buttonSilent.TabIndex = 14;
             this.buttonSilent.Text = "Enable Silent Mode";
             this.buttonSilent.UseVisualStyleBackColor = true;
             this.buttonSilent.Click += new System.EventHandler(this.buttonSilent_Click);
             // 
-            // checkBox4
+            // checkBoxSilent
             // 
-            this.checkBox4.AutoCheck = false;
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Enabled = false;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox4.Location = new System.Drawing.Point(13, 344);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(22, 21);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxSilent.AutoCheck = false;
+            this.checkBoxSilent.AutoSize = true;
+            this.checkBoxSilent.Enabled = false;
+            this.checkBoxSilent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBoxSilent.Location = new System.Drawing.Point(23, 533);
+            this.checkBoxSilent.Margin = new System.Windows.Forms.Padding(5);
+            this.checkBoxSilent.Name = "checkBoxSilent";
+            this.checkBoxSilent.Size = new System.Drawing.Size(34, 33);
+            this.checkBoxSilent.TabIndex = 15;
+            this.checkBoxSilent.UseVisualStyleBackColor = true;
             // 
             // buttonLogClear
             // 
             this.buttonLogClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonLogClear.Location = new System.Drawing.Point(656, 406);
+            this.buttonLogClear.Location = new System.Drawing.Point(1166, 629);
+            this.buttonLogClear.Margin = new System.Windows.Forms.Padding(5);
             this.buttonLogClear.Name = "buttonLogClear";
-            this.buttonLogClear.Size = new System.Drawing.Size(132, 32);
+            this.buttonLogClear.Size = new System.Drawing.Size(235, 50);
             this.buttonLogClear.TabIndex = 16;
             this.buttonLogClear.Text = "Clear Log";
             this.buttonLogClear.UseVisualStyleBackColor = true;
@@ -233,36 +250,52 @@
             // buttonSPRemove
             // 
             this.buttonSPRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonSPRemove.Location = new System.Drawing.Point(186, 114);
+            this.buttonSPRemove.Location = new System.Drawing.Point(331, 177);
+            this.buttonSPRemove.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSPRemove.Name = "buttonSPRemove";
-            this.buttonSPRemove.Size = new System.Drawing.Size(132, 32);
+            this.buttonSPRemove.Size = new System.Drawing.Size(235, 50);
             this.buttonSPRemove.TabIndex = 17;
             this.buttonSPRemove.Text = "Delete File";
             this.buttonSPRemove.UseVisualStyleBackColor = true;
             this.buttonSPRemove.Click += new System.EventHandler(this.buttonSPRemove_Click);
             // 
+            // checkBoxSPSave
+            // 
+            this.checkBoxSPSave.AutoCheck = false;
+            this.checkBoxSPSave.AutoSize = true;
+            this.checkBoxSPSave.Enabled = false;
+            this.checkBoxSPSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkBoxSPSave.Location = new System.Drawing.Point(21, 118);
+            this.checkBoxSPSave.Margin = new System.Windows.Forms.Padding(5);
+            this.checkBoxSPSave.Name = "checkBoxSPSave";
+            this.checkBoxSPSave.Size = new System.Drawing.Size(34, 33);
+            this.checkBoxSPSave.TabIndex = 18;
+            this.checkBoxSPSave.UseVisualStyleBackColor = true;
+            // 
             // FormTLClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1422, 697);
+            this.Controls.Add(this.checkBoxSPSave);
             this.Controls.Add(this.buttonSPRemove);
             this.Controls.Add(this.buttonLogClear);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBoxSilent);
             this.Controls.Add(this.buttonSilent);
             this.Controls.Add(this.buttonStatusRefresh);
             this.Controls.Add(this.labelStatus);
-            this.Controls.Add(this.listBoxIP);
+            this.Controls.Add(this.listBoxIPLocal);
             this.Controls.Add(this.labelIP);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxReceiver);
+            this.Controls.Add(this.checkBoxIPSet);
+            this.Controls.Add(this.checkBoxSPSet);
             this.Controls.Add(this.textBoxIP);
             this.Controls.Add(this.buttonIPRefresh);
             this.Controls.Add(this.buttonStartStop);
             this.Controls.Add(this.buttonSPSave);
             this.Controls.Add(this.buttonSPSet);
             this.Controls.Add(this.textBoxLog);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormTLClient";
             this.Text = "Task Link 12 Client";
             this.ResumeLayout(false);
@@ -271,25 +304,25 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxLog;
         private System.Windows.Forms.Button buttonSPSet;
         private System.Windows.Forms.Button buttonSPSave;
         private System.Windows.Forms.Button buttonStartStop;
         private System.Windows.Forms.Button buttonIPRefresh;
         private System.Windows.Forms.TextBox textBoxIP;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBoxSPSet;
+        private System.Windows.Forms.CheckBox checkBoxIPSet;
+        private System.Windows.Forms.CheckBox checkBoxReceiver;
         private System.Windows.Forms.Label labelIP;
-        private System.Windows.Forms.ListBox listBoxIP;
+        private System.Windows.Forms.ListBox listBoxIPLocal;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Button buttonStatusRefresh;
         private System.Windows.Forms.Button buttonSilent;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBoxSilent;
         private System.Windows.Forms.Button buttonLogClear;
         public System.Windows.Forms.NotifyIcon notifyIconSilent;
         private System.Windows.Forms.Button buttonSPRemove;
+        private System.Windows.Forms.CheckBox checkBoxSPSave;
+        public System.Windows.Forms.TextBox textBoxLog;
     }
 }
 

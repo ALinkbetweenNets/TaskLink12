@@ -16,7 +16,8 @@ namespace TaskLink12Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTLClient());
+            TLC.Form = new FormTLClient();
+            Application.Run(TLC.Form);
         }
     }
 }

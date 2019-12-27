@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace TaskLink12Client
 {
@@ -22,15 +15,16 @@ namespace TaskLink12Client
         }
         public FormTLClient()
         {
-
             InitializeComponent();
             LogF("Starting...");
+            TLC.Form = this;
             DisableButtons();
             IpRefresh();
             TLC.FileSilent(ref textBoxLog);
             tll.FileSP(TLC.PathSP, ref tll, ref textBoxLog, TLC.Silent);
             if (tll.SPSet)
             {
+                checkBoxSPSave.Checked = true;
                 EnableButtons();
             }
             else
@@ -38,9 +32,8 @@ namespace TaskLink12Client
 
                 TLC.Silent = false;
             }
-
             SilentMode();
-            RefreshStatus();
+            RefreshStatusReceiver();
 
             EnableButtons();
 
@@ -77,9 +70,11 @@ namespace TaskLink12Client
             bool SPSet = tll.SPSet;
             if (SPSet)
                 buttonSPSet.Text = "Set new Session Password";
-            checkBox1.Checked = SPSet;
+            checkBoxSPSet.Checked = SPSet;
+            checkBoxIPSet.Checked = tll.IPSet;
             buttonSPSave.Enabled = SPSet;
             buttonStartStop.Enabled = tll.IPSet && SPSet;
+            //RefreshStatusReceiver();
         }
 
         public void DisableButtons()
@@ -102,24 +97,28 @@ namespace TaskLink12Client
                 Hide();
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
-            RefreshStatus();
+            RefreshStatusReceiver();
             DisableButtons();
+        }
+
+        public async void StartReceiver()
+        {
+            TLC.ReceiverOn = true;
+            TLC.ReceiverOn = await TLC.ReceiverRun(tll);
+            Thread.CurrentThread.Abort();
         }
 
         public async void ReceiverStartStop(bool start)
         {
 
-            RefreshStatus();
+            RefreshStatusReceiver();
             if (start)
             {
                 try
                 {
-                    new Thread(() =>
-                    {
-                        Thread.CurrentThread.IsBackground = true;
-                        /* run your code here */
-                        TLC.ReceiverRun(tll);
-                    }).Start();
+                    TLC.ReceiverOn = true;
+                    Thread t = new Thread(new ThreadStart(StartReceiver));
+                    t.Start();
 
                     //TLC.ReceiverRun(tll).Start();
                     //if (!receiver)
@@ -136,7 +135,7 @@ namespace TaskLink12Client
                 if (!TLC.ReceiverOn)
                     buttonStartStop.Text = "Start";
             }
-            RefreshStatus();
+            RefreshStatusReceiver();
         }
 
         public void buttonSPSet_Click(object sender, EventArgs e)
@@ -156,7 +155,6 @@ namespace TaskLink12Client
                 Input = string.Empty;
                 tll.SessionPassword = hash;
                 hash = string.Empty;
-                checkBox1.Checked = true;
                 TLL.LogBox("Set new Session Password. SHA-512 Hash:\n" +
                         tll.SessionPassword);
             }
@@ -175,14 +173,14 @@ namespace TaskLink12Client
         }
         public void IpRefresh()
         {
-            listBoxIP.Items.Clear();
+            listBoxIPLocal.Items.Clear();
             tll.IpList = TLL.RefreshLocalIP();
             LogF("IPs on this Computer:");
             if (tll.IpList.Count > 0)
             {
                 foreach (IPAddress ip in tll.IpList)
                 {
-                    listBoxIP.Items.Add(ip.ToString());
+                    listBoxIPLocal.Items.Add(ip.ToString());
                     LogF(ip.ToString());
                 }
             }
@@ -191,24 +189,25 @@ namespace TaskLink12Client
                 TLL.LogBox("Could not get local IP Addresses. Are you connected to a network?");
                 LogF("Could not get local IP Addresses. Are you connected to a network?");
             }
-            if (listBoxIP.Items.Count == 1)
+            if (listBoxIPLocal.Items.Count == 1)
             {
-                listBoxIP.SetSelected(0, true);
+                listBoxIPLocal.SetSelected(0, true);
             }
             IPListUpdate();
         }
 
         private void buttonStatusRefresh_Click(object sender, EventArgs e)
         {
-            RefreshStatus();
+            RefreshStatusReceiver();
         }
 
         /// <summary>
         /// Checks whether the Receiver thread is busy and On
         /// </summary>
         /// <returns>Whether the Receiver is active</returns>
-        public bool RefreshStatus()
+        public bool RefreshStatusReceiver()
         {
+            checkBoxReceiver.Checked = TLC.ReceiverOn;
             if (TLC.ReceiverOn)
             {
                 TLL.LogF("Receiver Status: Running", ref textBoxLog);
@@ -254,9 +253,9 @@ namespace TaskLink12Client
         {
             try
             {
-                if (listBoxIP.SelectedItem.ToString().Length > 0)
+                if (listBoxIPLocal.SelectedItem.ToString().Length > 0)
                 {
-                    string ip = TLL.StringCheck(listBoxIP.SelectedItem.ToString());
+                    string ip = TLL.StringCheck(listBoxIPLocal.SelectedItem.ToString());
                     if (TLL.IPFilter(ip))
                     {
                         tll.LocalIP = ip;
@@ -287,7 +286,7 @@ namespace TaskLink12Client
         private void buttonSPSave_Click(object sender, EventArgs e)
         {
             if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?", "Save Session Password"))
-                tll.FileSPSave(TLC.PathSP);
+                checkBoxSPSave.Checked = tll.FileSPSave(TLC.PathSP);
         }
 
         private void notifyIconSilent_Click(object sender, EventArgs e)

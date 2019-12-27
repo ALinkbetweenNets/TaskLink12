@@ -36,7 +36,7 @@ public partial class TLL
     /// <summary>
     /// Writes Session Password to File
     /// </summary>
-    public void FileSPSave(string path)
+    public bool FileSPSave(string path)
     {
         try
         {
@@ -51,12 +51,15 @@ public partial class TLL
 
                 TLL.Log("Writing Done");
                 TLL.LogBox($"Saved Session Password ({SessionPassword}) to {path}");
+                return true;
             }
+            else return false;
         }
         catch (Exception ex)
         {
             TLL.Log(ex);
             TLL.LogBox($"Error while trying to save Session Password to {path}");
+            return false;
         }
     }
 

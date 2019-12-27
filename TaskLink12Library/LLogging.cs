@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Windows.Forms;
 
 public partial class TLL
 {
@@ -11,14 +11,12 @@ public partial class TLL
         return msg;
     }
 
-
     public static string Log(Exception ex)
     {
         return Log(ex.Message);
     }
 
-
-    public static string LogF(string msg, ref System.Windows.Forms.TextBox textBox)
+    public static string LogF(string msg, ref TextBox textBox)
     {
         textBox.Text += msg + "\r\n";
         return Log("* " + msg + " /*");

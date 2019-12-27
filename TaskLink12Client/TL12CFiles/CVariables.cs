@@ -4,8 +4,7 @@ namespace TaskLink12Client
 {
     public partial class TLC
     {
-
-
+        public static FormTLClient Form;
 
         /// <summary>
         /// Determines wether Silent Mode is on / off
