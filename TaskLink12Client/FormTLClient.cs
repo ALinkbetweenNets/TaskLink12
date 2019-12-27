@@ -36,7 +36,6 @@ namespace TaskLink12Client
             RefreshStatusReceiver();
 
             EnableButtons();
-
         }
 
         public async void SilentMode()
@@ -104,7 +103,7 @@ namespace TaskLink12Client
         public async void StartReceiver()
         {
             TLC.ReceiverOn = true;
-            TLC.ReceiverOn = await TLC.ReceiverRun(tll);
+            //TLC.ReceiverOn = TLC.ReceiverRun(tll).Result;
             Thread.CurrentThread.Abort();
         }
 

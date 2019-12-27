@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TaskLink12Client
+namespace TaskLink12Server
 {
-    public partial class TLC
+    public partial class TLS
     {
         public static string LogI(string msg)
         {

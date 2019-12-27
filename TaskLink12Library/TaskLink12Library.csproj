@@ -51,6 +51,7 @@
     <Compile Include="LGarbageColletion.cs" />
     <Compile Include="LGUI.cs" />
     <Compile Include="LCryptoRandom.cs" />
+    <Compile Include="LEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LVariables.cs" />
   </ItemGroup>

@@ -19,17 +19,16 @@ namespace TaskLink12Server
             {
                 if (TLL.IPFilter(address))
                 {
-
                     try
                     {
                         IPAddress ipaddress = IPAddress.Parse(address);
                         using (TcpClient tcpClient = new TcpClient())
                         {
-                            TLL.Log($"Connecting to {address};{TLL.Port}. Type:{type}, Content:{content}...");
-                            await tcpClient.ConnectAsync(ipaddress, TLL.Port);
-                            TLL.Log("Connected");
+                            LogI($"Connecting to {address}:{TLL.Port}. Type:{type}, Content:{content}...");
+                            //await tcpClient.ConnectAsync(ipaddress, TLL.Port);
+                            LogI("Connected");
                             NetworkStream stream = tcpClient.GetStream();
-                            TLL.Log("Opened Stream");
+                            LogI("Opened Stream");
                             //byte[] ByteResponse = new byte[100];
 
 
@@ -51,7 +50,7 @@ namespace TaskLink12Server
                                 byte[] bytes = TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt);
                                 await stream.WriteAsync(TLL.GetBytes(bytes.Length.ToString(), tll.SessionPassword, tll.initVector), 0, bytes.Length);
                                 await stream.WriteAsync(bytes, 0, bytes.Length);
-                                TLL.Log($"Sent{msg}");
+                                LogI($"Sent{msg}");
                             }
                             async Task<string> Read(TLL _tll, bool encrypted = true)
                             {
@@ -68,20 +67,20 @@ namespace TaskLink12Server
                                 byte[] ByteResponse = new byte[ResponseLength];
                                 length = await stream.ReadAsync(ByteResponse, 0, ResponseLength);
                                 string ResponseString = TLL.GetString(ByteResponse, length, tll.SessionPassword, tll.initVector, encrypted);
-                                TLL.Log($"Received {ResponseString}");
+                                LogI($"Received {ResponseString}");
                                 return ResponseString;
                             }
-                            TLL.Log("Transmitter Ready");
+                            LogI("Transmitter Ready");
 
                             Write("LINK",tll, false);
-                            TLL.Log("Started Transmission");
+                            LogI("Started Transmission");
                             if (await Read(tll,false) == "LINK")
                             {
-                                TLL.Log("Correct Protocol");
+                                LogI("Correct Protocol");
                                 Write(tll.SessionPassword.Substring(0, 4),tll);
                                 if (await Read(tll) == tll.SessionPassword.Substring(5, 5))
                                 {//Check if Received is first 5 chars of Session Password
-                                    TLL.Log("Correct Password");
+                                    LogI("Correct Password");
                                     Write(type,tll);
                                     if (type == "KILL")
                                     {
@@ -122,9 +121,9 @@ namespace TaskLink12Server
                                     }
                                     //await stream.WriteAsync(GetBytes("END"), 0, GetBytes("END").Length);
                                 }
-                                else TLL.Log("INCORRECT PASSWORD");
+                                else LogI("INCORRECT PASSWORD");
                             }
-                            else TLL.Log("INCORRECT PROTOCOL");
+                            else LogI("INCORRECT PROTOCOL");
 
                             stream.Close();
                             stream.Dispose();
@@ -132,14 +131,14 @@ namespace TaskLink12Server
                             tcpClient.Close();
                             tcpClient.Dispose();
                         }
-                        TLL.Log("Connection Closed");
-                        return "";
+                        LogI("Connection Closed");
+                        return string.Empty;
                     }
                     catch (Exception ex)
                     {
                         TLL.Log(ex);
                         TLL.LogBox("Error In TCP Connection");
-                        TLL.Log("Connection Closed");
+                        LogI("Connection Closed");
                         return "";
                     }
                 }

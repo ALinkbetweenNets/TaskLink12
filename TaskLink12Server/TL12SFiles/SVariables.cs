@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TaskLink12Server
+﻿namespace TaskLink12Server
 {
     public partial class TLS
     {
+        public static FormTLServer Form;
         /// <summary>
         /// The File under which the Session Password get stored
         /// </summary>

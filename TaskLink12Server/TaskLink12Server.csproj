@@ -46,18 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormTLServer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormTLServer.Designer.cs">
+      <DependentUpon>FormTLServer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TL12SFiles\SConnector.cs" />
+    <Compile Include="TL12SFiles\SLogging.cs" />
+    <Compile Include="TL12SFiles\SVariables - Kopieren - Kopieren - Kopieren.cs" />
+    <Compile Include="TL12SFiles\SVariables - Kopieren - Kopieren.cs" />
+    <Compile Include="TL12SFiles\SVariables - Kopieren.cs" />
     <Compile Include="TL12SFiles\SVariables.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormTLServer.resx">
+      <DependentUpon>FormTLServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

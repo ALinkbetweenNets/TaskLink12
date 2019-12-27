@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaskLink12Server
@@ -16,6 +13,7 @@ namespace TaskLink12Server
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            TLS.Form = new FormTLServer();
             Application.Run(new FormTLServer());
         }
     }
