@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LFiles.cs" />
     <Compile Include="LIP.cs" />
     <Compile Include="LStrings.cs" />
     <Compile Include="LLogging.cs" />

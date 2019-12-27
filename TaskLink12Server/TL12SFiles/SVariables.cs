@@ -9,9 +9,8 @@ namespace TaskLink12Server
     public partial class TLS
     {
         /// <summary>
-        /// Session password used for Communication. Should never be clear text (-> use SHA-256).
-        /// Must be equal on all devices
+        /// The File under which the Session Password get stored
         /// </summary>
-        public static string SessionPassword = string.Empty;
+        public const string PathSP = @"C:\ProgramData\TaskLink\12\Client\SP.tl";
     }
 }

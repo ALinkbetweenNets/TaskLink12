@@ -18,6 +18,11 @@ namespace TaskLink12Client
         /// </summary>
         public const string PathSilent = ".S.tl";
 
+        /// <summary>
+        /// The File under which the Session Password get stored
+        /// </summary>
+        public const string PathSP = @"C:\ProgramData\TaskLink\12\Client\SP.tl";
+
         public static bool ReceiverOn = false;
     }
 }

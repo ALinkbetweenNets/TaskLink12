@@ -13,21 +13,41 @@ namespace TaskLink12Client
     public partial class TLC
     {
 
-        public static async Task<bool> ReceiverRun(TLL tll, TextBox textBoxLog)
+        /// <summary>
+        /// Checks whether the Receiver thread is busy and On
+        /// </summary>
+        /// <returns>Whether the Receiver is active</returns>
+        public static bool RefreshStatusS(ref TextBox textBoxLog, ref Label labelStatus, ref Button buttonStartStop)
+        {
+            if (TLC.ReceiverOn)
+            {
+                TLL.LogF("Receiver Status: Running", ref textBoxLog);
+                labelStatus.Text = "Status: Running";
+                buttonStartStop.Text = "Stop";
+                return true;
+            }
+            else
+            {
+                TLL.LogF("Receiver Status: Not Running", ref textBoxLog);
+                labelStatus.Text = "Receiver Status: Not Running";
+                buttonStartStop.Text = "Start";
+                return false;
+            }
+        }
+
+        public static async Task<bool> ReceiverRun(TLL tll)//Task<bool>
         {
             void LogInvoke(string msg)
             {
-                TLL.LogF(msg, ref textBoxLog);
+                TLL.Log(msg);
             }
             //does not support multiple connections at once
             try
             {
+
                 while (ReceiverOn)
                 {
-                    FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate
-                    {
-                        //FormTLClient.RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
-                    });
+                    //RefreshStatusS(ref textBoxLog, ref labelStatus, ref buttonStartStop);
                     LogInvoke("Starting Receiver");
                     //Initializes the Listener
                     TcpListener tcplistener = new TcpListener(IPAddress.Parse(tll.LocalIP), TLL.Port);
@@ -163,6 +183,7 @@ namespace TaskLink12Client
                         tcplistener.Stop();
                         //End listener
                         LogInvoke("Connection closed");
+                        //RefreshStatusS(ref textBoxLog, ref labelStatus, ref buttonStartStop);
                         //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
                     }
                 }
@@ -179,6 +200,7 @@ namespace TaskLink12Client
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine(ex.Message);
                 LogInvoke("Connection closed");
+                //RefreshStatusS(ref textBoxLog, ref labelStatus, ref buttonStartStop);
                 //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
                 return false;
             }

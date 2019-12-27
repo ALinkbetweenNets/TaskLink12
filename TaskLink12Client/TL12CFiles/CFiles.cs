@@ -32,32 +32,26 @@ namespace TaskLink12Client
             }
         }
 
-        public static void FileSP(ref TextBox textBoxLog, TLL tll)
+        public static void FileSSave(bool Sil)
         {
             try
             {
-                if (File.Exists(TLL.PathSP))
-                {
-                    var SPFile = File.ReadAllLines(TLL.PathSP);
-                    TLL.LogF("Loaded File:", ref textBoxLog);
-                    foreach (string i in SPFile)
-                    {
-                        TLL.LogF(i, ref textBoxLog);
-                        if (i.Length > 0)
-                        {
-                            tll.SessionPassword = i;
-                            if (!TLC.Silent)
-                                TLL.LogBox($"Loaded Session Password (Hash: {tll.SessionPassword}) from {TLL.PathSP}");
-                        }
-                    }
-                }
+                TLL.Log("Writing...");
+                File.Delete(TLC.PathSilent);
+                File.Create(TLC.PathSilent);
+                if (Sil)
+                    File.WriteAllText(TLC.PathSilent, "Silent");
+                TLL.Log("Writing Done");
+                TLL.LogBox($"Saved Silent Mode Setting ({Sil}) to {TLC.PathSilent}");
+                
             }
             catch (Exception ex)
             {
                 TLL.Log(ex);
-                TLL.LogBox("Error initially loading Session Password");
+                TLL.LogBox($"Error while trying to save Silent Mode Setting to {TLC.PathSilent}");
             }
         }
+
 
     }
 }

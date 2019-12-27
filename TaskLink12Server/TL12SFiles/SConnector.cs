@@ -15,7 +15,7 @@ namespace TaskLink12Server
         /// <param name="content">For Response only: the data to transmit (ProcessNames separated with ";")</param>
         public async Task<string> ConnectAsync(string address, TLL tll, string type = "REQUEST", string content = "")
         {
-            if (SessionPassword.Length > 0)
+            if (tll.SessionPassword.Length > 0)
             {
                 if (TLL.IPFilter(address))
                 {
@@ -78,8 +78,8 @@ namespace TaskLink12Server
                             if (await Read(tll,false) == "LINK")
                             {
                                 TLL.Log("Correct Protocol");
-                                Write(SessionPassword.Substring(0, 4),tll);
-                                if (await Read(tll) == SessionPassword.Substring(5, 5))
+                                Write(tll.SessionPassword.Substring(0, 4),tll);
+                                if (await Read(tll) == tll.SessionPassword.Substring(5, 5))
                                 {//Check if Received is first 5 chars of Session Password
                                     TLL.Log("Correct Password");
                                     Write(type,tll);

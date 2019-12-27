@@ -6,7 +6,7 @@ public partial class TLL
     public static string Log(string msg)
     {
         Console.WriteLine(msg);
-        Debug.WriteLine(msg);
+        //Debug.WriteLine(msg);
 
         return msg;
     }
@@ -20,9 +20,8 @@ public partial class TLL
 
     public static string LogF(string msg, ref System.Windows.Forms.TextBox textBox)
     {
-        textBox.Text += msg;
-        Log("* " + msg + " /*\r\n");
-        return msg;
+        textBox.Text += msg + "\r\n";
+        return Log("* " + msg + " /*");
     }
 
     /// <summary>
@@ -39,9 +38,9 @@ public partial class TLL
         }
         catch (Exception ex)
         {
-            return Log("MSGBOX: " + ex);
+            return Log("Error MSGBOX: " + ex);
         }
     }
-    
+
 }
 

@@ -23,10 +23,6 @@ public partial class TLL
     /// </summary>
     public const string LocalIPFilter = "MTkyLjE2OC4 =";
 
-    /// <summary>
-    /// The File under which the Session Password get stored
-    /// </summary>
-    public const string PathSP = ".SP.tl";
 
     /// <summary>
     /// used to determine the keysize of the encryption algorithm
@@ -48,6 +44,14 @@ public partial class TLL
             return SessionPassword.Length > 0;
         }
     }
+    public bool IPSet
+    {
+        get
+        {
+            return LocalIP.Length > 0;
+        }
+    }
+
 
     /// <summary>
     /// size of the IV in bytes = keysize / 8
@@ -59,7 +63,7 @@ public partial class TLL
     /// <summary>
     /// Local IP Address used for connections. Replaced at init
     /// </summary>
-    public string LocalIP = "192.168.1.10";
+    public string LocalIP = "";
 
     /// <summary>
     /// Used in the IPFilter to check wether given IPs can be parsed

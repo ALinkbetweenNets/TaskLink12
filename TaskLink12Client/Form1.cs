@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,10 +22,13 @@ namespace TaskLink12Client
         }
         public FormTLClient()
         {
+
             InitializeComponent();
+            LogF("Starting...");
+            DisableButtons();
             IpRefresh();
             TLC.FileSilent(ref textBoxLog);
-            TLC.FileSP(ref textBoxLog, tll);
+            tll.FileSP(TLC.PathSP, ref tll, ref textBoxLog, TLC.Silent);
             if (tll.SPSet)
             {
                 EnableButtons();
@@ -36,7 +40,10 @@ namespace TaskLink12Client
             }
 
             SilentMode();
-            RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
+            RefreshStatus();
+
+            EnableButtons();
+
         }
 
         public async void SilentMode()
@@ -57,23 +64,22 @@ namespace TaskLink12Client
                 notifyIconSilent.Visible = true;
                 Hide();
                 this.WindowState = FormWindowState.Minimized;
-                await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
+                await Task.Delay(TimeSpan.FromSeconds(1));
                 ReceiverStartStop(true);
                 Hide();
-                await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1));
+                await Task.Delay(TimeSpan.FromSeconds(1));
             }
         }
 
         public void EnableButtons()
         {
-            TLL.Log("Buttons Enable");
-            bool SPSet = tll.SessionPassword.Length > 0;
+            //TLL.Log("Buttons Enable");
+            bool SPSet = tll.SPSet;
             if (SPSet)
-            {
                 buttonSPSet.Text = "Set new Session Password";
-
-                buttonSPSave.Enabled = SPSet;
-            }
+            checkBox1.Checked = SPSet;
+            buttonSPSave.Enabled = SPSet;
+            buttonStartStop.Enabled = tll.IPSet && SPSet;
         }
 
         public void DisableButtons()
@@ -96,46 +102,48 @@ namespace TaskLink12Client
                 Hide();
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
-            RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
+            RefreshStatus();
             DisableButtons();
         }
 
-
-        public void ReceiverStartStop(bool start)
+        public async void ReceiverStartStop(bool start)
         {
 
-            RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
+            RefreshStatus();
             if (start)
             {
                 try
                 {
-                    ReceiverStartStop(true);
+                    new Thread(() =>
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+                        /* run your code here */
+                        TLC.ReceiverRun(tll);
+                    }).Start();
+
+                    //TLC.ReceiverRun(tll).Start();
+                    //if (!receiver)
+                    //    TLL.LogBox("Error in Receiver");
                 }
                 catch (Exception ex)
                 {
                     TLL.Log(ex);
                 }
-                if(TLC.ReceiverOn)
-                buttonStartStop.Text = "Stop";
-                
             }
             else
             {
-                ReceiverStartStop(false);
+                TLC.ReceiverOn = false;
                 if (!TLC.ReceiverOn)
                     buttonStartStop.Text = "Start";
             }
-            RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
-
+            RefreshStatus();
         }
-
-
 
         public void buttonSPSet_Click(object sender, EventArgs e)
         {
-            SPSet();
+            SetSessionPassword();
         }
-        public void SPSet()
+        public void SetSessionPassword()
         {
         SPInput:
             buttonSPSet.Enabled = false;
@@ -150,7 +158,7 @@ namespace TaskLink12Client
                 hash = string.Empty;
                 checkBox1.Checked = true;
                 TLL.LogBox("Set new Session Password. SHA-512 Hash:\n" +
-                        hash);
+                        tll.SessionPassword);
             }
             else
             {
@@ -167,6 +175,7 @@ namespace TaskLink12Client
         }
         public void IpRefresh()
         {
+            listBoxIP.Items.Clear();
             tll.IpList = TLL.RefreshLocalIP();
             LogF("IPs on this Computer:");
             if (tll.IpList.Count > 0)
@@ -182,38 +191,66 @@ namespace TaskLink12Client
                 TLL.LogBox("Could not get local IP Addresses. Are you connected to a network?");
                 LogF("Could not get local IP Addresses. Are you connected to a network?");
             }
+            if (listBoxIP.Items.Count == 1)
+            {
+                listBoxIP.SetSelected(0, true);
+            }
+            IPListUpdate();
         }
-
-
 
         private void buttonStatusRefresh_Click(object sender, EventArgs e)
         {
-            RefreshStatus(ref textBoxLog, ref labelStatus, ref buttonStartStop);
+            RefreshStatus();
         }
 
         /// <summary>
         /// Checks whether the Receiver thread is busy and On
         /// </summary>
         /// <returns>Whether the Receiver is active</returns>
-        public static bool RefreshStatus(ref TextBox textBoxLog, ref Label labelStatus, ref Button buttonStartStop)
+        public bool RefreshStatus()
         {
             if (TLC.ReceiverOn)
             {
                 TLL.LogF("Receiver Status: Running", ref textBoxLog);
                 labelStatus.Text = "Status: Running";
-                buttonStartStop.Text = "Stop Receiver";
+                buttonStartStop.Text = "Stop";
                 return true;
             }
             else
             {
                 TLL.LogF("Receiver Status: Not Running", ref textBoxLog);
                 labelStatus.Text = "Receiver Status: Not Running";
-                buttonStartStop.Text = "Start Receiver";
+                buttonStartStop.Text = "Start";
                 return false;
             }
         }
 
-        private void listBoxIP_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonStartStop_Click(object sender, EventArgs e)
+        {
+            if (tll.SPSet && tll.IPSet)
+            {
+                //ReceiverStartStop(buttonStartStop.Text == "Start");
+                if (buttonStartStop.Text == "Start")
+                {
+                    buttonStartStop.Text = "Stop";
+                    ReceiverStartStop(true);
+                }
+                else
+                {
+                    buttonStartStop.Text = "Start";
+                    ReceiverStartStop(false);
+                }
+            }
+            else
+                TLL.LogBox("Please set a Session Password and select an IP Address first");
+        }
+
+        private void listBoxIP_Click(object sender, EventArgs e)
+        {
+            IPListUpdate();
+        }
+
+        public void IPListUpdate()
         {
             try
             {
@@ -226,12 +263,37 @@ namespace TaskLink12Client
                         textBoxIP.Text = ip;
                     }
                 }
-
-
             }
-            catch { }
+            catch
+            {
+                tll.LocalIP = "";
+                textBoxIP.Text = "";
+            }
+            EnableButtons();
+        }
 
+        private void buttonSilent_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void buttonSPRemove_Click(object sender, EventArgs e)
+        {
+            if (TLL.BoxConfirm("This will remove the Session Password so it cannot be loaded automatically at startup. Do you want to delete it?", "Delete Session Password"))
+
+                tll.FileSPRemove(TLC.PathSP);
+        }
+
+        private void buttonSPSave_Click(object sender, EventArgs e)
+        {
+            if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?", "Save Session Password"))
+                tll.FileSPSave(TLC.PathSP);
+        }
+
+        private void notifyIconSilent_Click(object sender, EventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }
