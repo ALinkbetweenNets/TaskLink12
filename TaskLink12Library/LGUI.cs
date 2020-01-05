@@ -18,13 +18,12 @@ public partial class TLL
             string Input = StringCheck(Microsoft.VisualBasic.Interaction.InputBox(text,
                        title, EnteredText, 0, 0));
 
-            Log($"Input Box: { title} : {text} -> {Input}");
+            Log($"Input Box: { title} : {text}");
             return Input;
         }
         catch (Exception ex)
         {
-            Log(ex);
-            LogBox("Error while trying to show Input Box");
+            Log(ex,"InputBox");
             return string.Empty;
         }
     }
@@ -55,8 +54,7 @@ public partial class TLL
         }
         catch (Exception ex)
         {
-            Log(ex);
-            Log("Error while trying to show Confirmation Box");
+            Log(ex, "Confirmation Box");
             return false;
         }
     }

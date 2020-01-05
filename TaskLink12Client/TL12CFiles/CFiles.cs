@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaskLink12Client
 {
-    public partial class TLC
+    public static partial class TLC
     {
         public static void FileSilent(ref TextBox textBoxLog)
         {

@@ -249,6 +249,7 @@
             // 
             // buttonSPRemove
             // 
+            this.buttonSPRemove.Enabled = false;
             this.buttonSPRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonSPRemove.Location = new System.Drawing.Point(331, 177);
             this.buttonSPRemove.Margin = new System.Windows.Forms.Padding(5);

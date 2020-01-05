@@ -2,7 +2,7 @@
 
 namespace TaskLink12Client
 {
-    public partial class TLC
+    public static partial class TLC
     {
 
         

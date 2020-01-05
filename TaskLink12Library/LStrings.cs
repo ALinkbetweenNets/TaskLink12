@@ -5,13 +5,13 @@ using System.Text.RegularExpressions;
 public partial class TLL
 {
     /// <summary>
-    /// Removes any Bad Chars from given String
+    /// Removes any Bad Chars from given String and filters ASCII Range
     /// </summary>
     /// <param name="testString">String to remove Bad Chars from</param>
-    /// <returns></returns>
+    /// <returns>Clean string</returns>
     public static string StringCheck(string testString)
     {
-        ASCIIEncoding ascii = new ASCIIEncoding();
+        return testString;
         /*foreach (char bad in BAD_CHARS)
         {
             if (testString.Contains(bad.ToString()))
@@ -27,8 +27,8 @@ public partial class TLL
             ),
         Encoding.UTF8.GetBytes(testString)
     )
-);//! for process markings ; for process differntiating
-        return Regex.Replace(Regex.Replace(testString, @"[^\u0000-\u007F]+", string.Empty), @"[/\'{},#$%?]", string.Empty);
+);//! for process markings ; for process differentiating
+        return Regex.Replace(Regex.Replace(testString, @"[^\u0000-\u007F]+", string.Empty), @"[/\'{},#$%?öäü´`^°*]", string.Empty);
     }
 
     /// <summary>
@@ -44,7 +44,7 @@ public partial class TLL
         for (int i = 0; i < byteLength; i++)
             stringBuilder.Append(Convert.ToChar(bytesToConvert[i]).ToString());
         string finishedString = StringCheck(stringBuilder.ToString());
-        Console.WriteLine("Received: " + finishedString);
+        //Console.WriteLine("Received: " + finishedString);
         return encrypted ? DecryptString(finishedString, SessionPassword, initVector) : finishedString;
     }
 
@@ -56,7 +56,6 @@ public partial class TLL
     /// <returns>Converted Bytes</returns>
     public static byte[] GetBytes(string stringToConvert, string SessionPassword, string initVector, bool encrypt = false)
     {
-        stringToConvert = StringCheck(stringToConvert);
         return encrypt ? Utf8.GetBytes(EncryptString(stringToConvert, SessionPassword, initVector)) : Utf8.GetBytes(stringToConvert);
     }
 }

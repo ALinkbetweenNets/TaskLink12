@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TaskLink12Client
 {
-    public partial class TLC
+    public static partial class TLC
     {
 
         /// <summary>
@@ -57,139 +57,145 @@ namespace TaskLink12Client
                         LogI("The server is running at port " + TLL.Port.ToString());
                         LogI("The local End point is  :" + tcplistener.LocalEndpoint);
                         LogI("Waiting for a connection.....");
-                        Socket socket = tcplistener.AcceptSocket();
+                        Socket socket = await tcplistener.AcceptSocketAsync();
                         try
                         {
-
-
-                            if (ReceiverOn || true)
+                            if (socket.RemoteEndPoint.AddressFamily == AddressFamily.InterNetwork)
                             {
-                                //grabs first connection
-                                LogI("Connection accepted from " + socket.RemoteEndPoint.ToString());
 
-                                /* Server
-                                 *      Client
-                                 * LINK  4
-                                 * 4    LINK
-                                 * 
-                                 * SP[0-4]  5 -> ==
-                                 * 5    SP[5-9] -> ==
-                                 * type     10
-                                 * 5        Resp.Length
-                                 * Resp.Length  Response
-                                 */
-
-                                async void Write(string msg, bool encrypt = true)
+                                if (ReceiverOn)
                                 {
-                                    LogI("Sending...");
-                                    string msglength = TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt).Length.ToString();
-                                    socket.Send(TLL.GetBytes(msglength, tll.SessionPassword, tll.initVector, encrypt));
-                                    socket.Send(TLL.GetBytes(msg, tll.SessionPassword, tll.initVector, encrypt));
-                                    LogI($"Sent{msg}. (Length:{msglength})");
-                                }
-                                async Task<string> Read(bool encrypted = true)
-                                {
-                                    LogI("Receiving...");
-                                    byte[] Response = new byte[20];
-                                    int length = socket.Receive(Response);
+                                    //grabs first connection
+                                    LogI($"Connection from {socket.RemoteEndPoint.ToString()} authenticated");
 
-                                    int ResponseLength = 200;
-                                    try
+                                    /* Server
+                                     *      Client
+                                     * LINK  4
+                                     * 4    LINK
+                                     * 
+                                     * SP[0-4]  5 -> ==
+                                     * 5    SP[5-9] -> ==
+                                     * type     10
+                                     * 5        Resp.Length
+                                     * Resp.Length  Response
+                                     */
+
+                                    void Write(string msg, bool encrypt = true)
                                     {
-                                        ResponseLength = Convert.ToInt32(TLL.GetString(Response, length, tll.SessionPassword, tll.initVector, encrypted));
+                                        byte[] bytes = TLL.GetBytes(
+                                            msg, tll.SessionPassword, tll.initVector, encrypt);
+                                        byte[] bytesLength = TLL.GetBytes(
+                                            bytes.Length.ToString(), tll.SessionPassword, tll.initVector, false);
+                                        socket.Send(bytesLength);
+                                        socket.Send(bytes);
+                                        LogI($"Sent: {msg}");
                                     }
-                                    catch { }
-                                    byte[] ByteResponse = new byte[ResponseLength];
-                                    length = socket.Receive(ByteResponse);
-                                    string ResponseString = TLL.GetString(ByteResponse, length, tll.SessionPassword, tll.initVector, encrypted);
-                                    LogI($"Received {ResponseString}. (Length: {ResponseLength})");
-                                    return ResponseString;
-                                }
-
-                                if (await Read(false) == "LINK")
-                                {
-                                    Write("LINK", false);
-                                    if (await Read() == TLL.Version)
+                                    string Read(bool encrypted = true)
                                     {
-                                        Write(TLL.Version);
+                                        byte[] Response = new byte[3];
+                                        int length = socket.Receive(Response);
 
-                                        int R1 = 2;
+                                        int ResponseLength = 200;
                                         try
                                         {
-                                            R1 = Convert.ToInt32(await Read());
+                                            ResponseLength = Convert.ToInt32(TLL.GetString(
+                                                Response, length, tll.SessionPassword, tll.initVector, false));
                                         }
-                                        catch
-                                        {
-                                            goto END;
-                                        }
-                                        if (R1 > 10 && R1 < 55)
-                                        {
-                                            int R2 = TLL.Random(60, 110);
-                                            Write(R2.ToString());
-                                            string testPass = await Read();
-                                            LogI("Received Authentication Token. Checking validity...");
-                                            if (testPass == TLL.GetHash(TLL.GetHash("LINK" + TLL.Version).Substring(R1, R2 - R1)))
-                                            {
-                                                LogI("Authentication Token Correct");
-                                                LogI($"Connection from {socket.RemoteEndPoint.ToString()} authenticated");
-                                                string type = await Read();
-                                                switch (type)
-                                                {
-                                                    case "REQUEST":
-                                                        LogI("Request accepted");
-                                                        string[] processes = TLC.GetRunningProcesses();
-                                                        StringBuilder stringBuilder = new StringBuilder();
-                                                        foreach (string s in processes)
-                                                        {
-                                                            stringBuilder.Append(s);
-                                                        }
-                                                        Write(stringBuilder.ToString());
-
-                                                        break;
-                                                    case "KILL":
-                                                        LogI("Kill Request accepted");
-                                                        Write("K");
-                                                        string procKill = await Read();
-
-                                                        if (KillProc(procKill))
-                                                            Write("S");
-                                                        else
-                                                            Write("F");
-
-                                                        //byte[] ByteResponse3 = new byte[GetBytes(4.ToString()).Length];
-                                                        //k = socket.Receive()
-                                                        //k = stream.ReadAsync(ByteResponse3, 0, 4);
-                                                        //int ResponseLength = Convert.ToInt32(GetString(ByteResponse3, k));
-                                                        //LogInvoke(GetString(ByteResponse3, k));
-
-                                                        //byte[] ByteResponse4 = new byte[ResponseLength];
-                                                        //k = await stream.ReadAsync(ByteResponse4, 0, ResponseLength);
-                                                        //string Response = GetString(ByteResponse4, k);
-
-                                                        break;
-                                                    default:
-                                                        LogI("Unknown Type: " + type);
-                                                        break;
-                                                }//switch
-                                            }
-                                            else LogI("Incorrect Password");
-                                        }
-                                        else LogI("Incorrect Authentication Array");
+                                        catch { }
+                                        byte[] ByteResponse = new byte[ResponseLength];
+                                        length = socket.Receive(ByteResponse);
+                                        string ResponseString = TLL.GetString(
+                                           ByteResponse, length, tll.SessionPassword, tll.initVector, encrypted);
+                                        LogI($"Received: {ResponseString}");
+                                        return ResponseString;
                                     }
-                                    else LogI("Incorrect Protocol Version");
-                                }
-                                else LogI("Incorrect Protocol");
-                                //RefreshReceiverStatus();
 
-                                END:
-                                socket.Close();
-                                //close stream
-                                tcplistener.Stop();
-                                //End listener
-                                LogI("Connection closed");
-                                //RefreshStatusS(ref textBoxLog, ref labelStatus, ref buttonStartStop);
-                                //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
+                                    if (Read(false) == "LINK")
+                                    {
+                                        LogI("Connection Initiated");
+                                        LogI("Correct Protocol");
+                                        Write("LINK", false);
+                                        if (Read(false) == TLL.Version)
+                                        {
+                                            Write(TLL.Version,false);
+
+                                            int R1 = 2;
+                                            try
+                                            {
+                                                R1 = Convert.ToInt32(Read());
+                                            }
+                                            catch
+                                            {
+                                                goto END;
+                                            }
+                                            if (R1 > 10 && R1 < 55)
+                                            {
+                                                int R2 = TLL.Random(60, 110);
+                                                Write(R2.ToString());
+                                                string testPass = Read();
+                                                LogI("Received Authentication Token. Checking validity...");
+                                                if (testPass == TLL.GetHash512(TLL.GetHash512("LINK" + TLL.Version).Substring(R1, R2 - R1)))
+                                                {
+                                                    LogI("Authentication Token Correct");
+                                                    Write(TLL.GetHash512(TLL.GetHash512("LINK" + TLL.Version).Substring(R1, R2 - R1)));
+                                                    string type = Read();
+                                                    switch (type)
+                                                    {
+                                                        case "REQUEST":
+                                                            LogI("Request accepted");
+                                                            string[] processes = TLC.GetRunningProcesses();
+                                                            StringBuilder stringBuilder = new StringBuilder();
+                                                            foreach (string s in processes)
+                                                            {
+                                                                stringBuilder.Append(s);
+                                                            }
+                                                            Write(stringBuilder.ToString());
+
+                                                            break;
+                                                        case "KILL":
+                                                            LogI("Kill Request accepted");
+                                                            string procKill = Read();
+
+                                                            if (KillProc(procKill))
+                                                                Write("S");
+                                                            else
+                                                                Write("F");
+
+                                                            //byte[] ByteResponse3 = new byte[GetBytes(4.ToString()).Length];
+                                                            //k = socket.Receive()
+                                                            //k = stream.ReadAsync(ByteResponse3, 0, 4);
+                                                            //int ResponseLength = Convert.ToInt32(GetString(ByteResponse3, k));
+                                                            //LogInvoke(GetString(ByteResponse3, k));
+
+                                                            //byte[] ByteResponse4 = new byte[ResponseLength];
+                                                            //k = await stream.ReadAsync(ByteResponse4, 0, ResponseLength);
+                                                            //string Response = GetString(ByteResponse4, k);
+
+                                                            break;
+                                                        default:
+                                                            LogI("Unknown Type: " + type);
+                                                            break;
+                                                    }//switch
+                                                }
+                                                else LogI("Incorrect Password");
+                                            }
+                                            else LogI("Incorrect Authentication Array");
+                                        }
+                                        else LogI("Incorrect Protocol Version");
+                                    }
+                                    else LogI("Incorrect Protocol");
+                                    //RefreshReceiverStatus();
+
+                                    socket.Close();
+                                    //close stream
+                                    tcplistener.Stop();
+                                    //End listener
+                                    LogI("Connection closed");
+                                    //RefreshStatusS(ref textBoxLog, ref labelStatus, ref buttonStartStop);
+                                    //FormTLClient.ActiveForm.Invoke((MethodInvoker)delegate { this.RefreshReceiverStatus(); });
+                                }
                             }
+                            else LogI("REMOTE ENDPOINT IS NOT FROM THE INTERNAL NETWORK!");
                         }
                         catch (SocketException ex)
                         {
@@ -203,6 +209,12 @@ namespace TaskLink12Client
                             LogI("Connection closed");
                             goto ReceiverStart;
                         }
+                    END:
+                        socket.Close();
+                        //close stream
+                        tcplistener.Stop();
+                        //End listener
+                        LogI("Connection closed");
                     }//while
                     return TLL.ThreadReturn.Success;
                 }

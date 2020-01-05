@@ -4,6 +4,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+#pragma warning disable IDE1006 // Benennungsstile
+
 namespace TaskLink12Client
 {
     public partial class FormTLClient : Form
@@ -18,14 +20,15 @@ namespace TaskLink12Client
             InitializeComponent();
             LogF("Starting...");
             TLC.Form = this;
-            DisableButtons();
+            EnableButtons();
             IpRefresh();
             TLC.FileSilent(ref textBoxLog);
-            tll.FileSP(TLC.PathSP, ref tll, ref textBoxLog, TLC.Silent);
+            tll.FileSPLoad(TLC.PathSP, ref tll, ref textBoxLog, TLC.Silent);
             if (tll.SPSet)
             {
                 checkBoxSPSave.Checked = true;
                 EnableButtons();
+                buttonSPRemove.Enabled = true;
             }
             else
             {
@@ -38,6 +41,10 @@ namespace TaskLink12Client
             EnableButtons();
         }
 
+        /// <summary>
+        /// Processes Changes to do for Silent Mode
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
         public async void SilentMode()
         {
             if (TLC.Silent && tll.SPSet)
@@ -55,7 +62,7 @@ namespace TaskLink12Client
                 }
                 notifyIconSilent.Visible = true;
                 Hide();
-                this.WindowState = FormWindowState.Minimized;
+                WindowState = FormWindowState.Minimized;
                 await Task.Delay(TimeSpan.FromSeconds(1));
                 ReceiverStartStop(true);
                 Hide();
@@ -63,6 +70,9 @@ namespace TaskLink12Client
             }
         }
 
+        /// <summary>
+        /// Checks Attributes to Enable and Disable Buttons
+        /// </summary>
         public void EnableButtons()
         {
             //TLL.Log("Buttons Enable");
@@ -73,21 +83,15 @@ namespace TaskLink12Client
             checkBoxIPSet.Checked = tll.IPSet;
             buttonSPSave.Enabled = SPSet;
             buttonStartStop.Enabled = tll.IPSet && SPSet;
-            //RefreshStatusReceiver();
+            TLL.GCollector();
         }
 
-        public void DisableButtons()
-        {
-            TLL.Log("Buttons Disable");
-            bool SPSet = tll.SessionPassword.Length > 0;
-            if (SPSet)
-            {
-                buttonSPSet.Text = "Set new Session Password";
-                buttonSPSave.Enabled = SPSet;
-            }
-        }
 
-        public async void startup()
+        /// <summary>
+        /// Silent mode, Enable Buttons and status refresh
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
+        public async void Startup()
         {
             if (TLC.Silent)
             {
@@ -97,17 +101,19 @@ namespace TaskLink12Client
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
             RefreshStatusReceiver();
-            DisableButtons();
+            EnableButtons();
         }
 
-        public async void StartReceiver()
+        public void StartReceiver()
         {
             TLC.ReceiverOn = true;
-            //TLC.ReceiverOn = TLC.ReceiverRun(tll).Result;
+            TLC.ReceiverOn = TLC.ReceiverRun(tll).Result == TLL.ThreadReturn.Success;
             Thread.CurrentThread.Abort();
+            TLL.GCollector();
         }
 
-        public async void ReceiverStartStop(bool start)
+
+        public void ReceiverStartStop(bool start)
         {
 
             RefreshStatusReceiver();
@@ -119,7 +125,6 @@ namespace TaskLink12Client
                     Thread t = new Thread(new ThreadStart(StartReceiver));
                     t.Start();
 
-                    //TLC.ReceiverRun(tll).Start();
                     //if (!receiver)
                     //    TLL.LogBox("Error in Receiver");
                 }
@@ -141,8 +146,13 @@ namespace TaskLink12Client
         {
             SetSessionPassword();
         }
+
+        /// <summary>
+        /// Uses InputBox to set SessionPassword to SHA 512 Hash of entered Password
+        /// </summary>
         public void SetSessionPassword()
         {
+#pragma warning disable IDE0059 // Unnötige Zuweisung eines Werts.
         SPInput:
             buttonSPSet.Enabled = false;
 
@@ -150,12 +160,11 @@ namespace TaskLink12Client
                 "Enter new Session Password", "Session Password");
             if (Input.Length > 0)
             {
-                string hash = TLL.GetHash(Input);
+                tll.SessionPassword = TLL.GetHash512(Input); ;
                 Input = string.Empty;
-                tll.SessionPassword = hash;
-                hash = string.Empty;
                 TLL.LogBox("Set new Session Password. SHA-512 Hash:\n" +
                         tll.SessionPassword);
+                TLL.GCollector();
             }
             else
             {
@@ -164,12 +173,19 @@ namespace TaskLink12Client
             }
             buttonSPSet.Enabled = true;
             EnableButtons();
+#pragma warning restore IDE0059 // Unnötige Zuweisung eines Werts.
         }
 
+
         private void buttonIPRefresh_Click(object sender, EventArgs e)
+
         {
             IpRefresh();
         }
+
+        /// <summary>
+        /// Gathers all IP addresses of all Network Adapters of the Computer and writes to ListBox
+        /// </summary>
         public void IpRefresh()
         {
             listBoxIPLocal.Items.Clear();
@@ -193,6 +209,7 @@ namespace TaskLink12Client
                 listBoxIPLocal.SetSelected(0, true);
             }
             IPListUpdate();
+            TLL.GCollector();
         }
 
         private void buttonStatusRefresh_Click(object sender, EventArgs e)
@@ -243,6 +260,11 @@ namespace TaskLink12Client
                 TLL.LogBox("Please set a Session Password and select an IP Address first");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxIP_Click(object sender, EventArgs e)
         {
             IPListUpdate();
@@ -285,7 +307,12 @@ namespace TaskLink12Client
         private void buttonSPSave_Click(object sender, EventArgs e)
         {
             if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?", "Save Session Password"))
-                checkBoxSPSave.Checked = tll.FileSPSave(TLC.PathSP);
+            {
+                bool success = tll.FileSPSave(TLC.PathSP);
+                checkBoxSPSave.Checked = success;
+                buttonSPRemove.Enabled = success;
+            }
+
         }
 
         private void notifyIconSilent_Click(object sender, EventArgs e)
@@ -295,3 +322,4 @@ namespace TaskLink12Client
         }
     }
 }
+#pragma warning restore IDE1006 // Benennungsstile

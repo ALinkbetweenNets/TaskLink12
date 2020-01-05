@@ -7,11 +7,11 @@ public partial class TLL
 {
 
     /// <summary>
-    /// Calculates SHA-256 Hash Sum of given string
+    /// Calculates SHA-512 Hash Sum of given string
     /// </summary>
     /// <param name="text">text to calculate the Hash of</param>
     /// <returns>Calculated SHA-256 Hash</returns>
-    public static string GetHash(string text)
+    public static string GetHash512(string text)
     {
         byte[] textBytes = Utf8.GetBytes(text);
         using (SHA512Managed hashstring = new SHA512Managed())
@@ -28,19 +28,21 @@ public partial class TLL
         }
     }
 
+    /*
     /// <summary>
     /// Encrypts given string with AES using passphrase and initVector
     /// </summary>
     /// <param name="plainText">string to Encrypt</param>
     /// <param name="passPhrase">Passphrase to use in Combination with initVector</param>
     /// <returns>Encrypted string</returns>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Objekte nicht mehrmals verwerfen")]
     public static string EncryptString(string text, string SessionPassword, string initVector)
     {
         try
         {
-            Log("Encrypting: " + text);
-            Log("With Password: " + SessionPassword);
-            Log("Using initVector: " + initVector);
+            //Log("Encrypting: " + text);
+            //Log("With Password: " + SessionPassword);
+            //Log("Using initVector: " + initVector);
 
             byte[] initVectorBytes = Utf8.GetBytes(initVector);
             byte[] plainTextBytes = Utf8.GetBytes(text);
@@ -61,10 +63,15 @@ public partial class TLL
                 memoryStream.Close();
                 password.Dispose();
                 symmetricKey.Clear();
-                return Convert.ToBase64String(cipherTextBytes);
+                return Utf8.GetString(cipherTextBytes);
+                //return Convert.ToBase64String(cipherTextBytes);
             }
         }
-        catch { return text; }
+        catch (Exception ex)
+        {
+            Log(ex, "Encrypting " + text);
+            return text;
+        }
     }
 
     /// <summary>
@@ -77,12 +84,14 @@ public partial class TLL
     {
         try
         {
-            Log("Decrypting: " + text);
-            Log("With Password: " + SessionPassword);
-            Log("Using initVector: " + initVector);
+            //Log("Decrypting: " + text);
+            //Log("With Password: " + SessionPassword);
+            //Log("Using initVector: " + initVector);
 
             byte[] initVectorBytes = Utf8.GetBytes(initVector);
-            byte[] cipherTextBytes = Convert.FromBase64String(text);
+
+            byte[] cipherTextBytes = Utf8.GetBytes(text);//Convert.FromBase64String(text);
+
             PasswordDeriveBytes password = new PasswordDeriveBytes(SessionPassword, null);
             byte[] keyBytes = password.GetBytes(keysize / 8);
             using (AesCryptoServiceProvider symmetricKey = new AesCryptoServiceProvider
@@ -99,9 +108,112 @@ public partial class TLL
                 memoryStream.Close();
                 password.Dispose();
                 symmetricKey.Clear();
-                return Utf8.GetString(plainTextBytes, 0, decryptedByteCount);
+                return TLL.StringCheck(Utf8.GetString(plainTextBytes, 0, decryptedByteCount));
             }
         }
-        catch { return text; }
+        catch (Exception ex)
+        {
+            Log(ex, "Decrypting " + text);
+            return text;
+        }
+    }
+    */
+    /*public static string DecryptString(string text, string SessionPassword, string secret)
+    {
+        string textToDecrypt = text;
+        string ToReturn = "";
+        string publickey = SessionPassword.Substring(2, 16); ;
+        string privatekey = secret;
+        byte[] privatekeyByte = { };
+        privatekeyByte = System.Text.Encoding.UTF8.GetBytes(privatekey);
+        byte[] publickeybyte = { };
+        publickeybyte = System.Text.Encoding.UTF8.GetBytes(publickey);
+        MemoryStream ms = null;
+        CryptoStream cs = null;
+        byte[] inputbyteArray = new byte[textToDecrypt.Replace(" ", "+").Length];
+        inputbyteArray = Convert.FromBase64String(textToDecrypt.Replace(" ", "+"));
+        using (AesCryptoServiceProvider des = new AesCryptoServiceProvider())
+        {
+            ms = new MemoryStream();
+            cs = new CryptoStream(ms, des.CreateDecryptor(publickeybyte, privatekeyByte), CryptoStreamMode.Write);
+            cs.Write(inputbyteArray, 0, inputbyteArray.Length);
+            cs.FlushFinalBlock();
+            Encoding encoding = Encoding.UTF8;
+            ToReturn = encoding.GetString(ms.ToArray());
+        }
+        return ToReturn;
+    }
+    public static string EncryptString(string text, string SessionPassword, string secret)
+    {
+        string textToEncrypt = text;
+        string ToReturn = "";
+        string publickey = SessionPassword.Substring(2, 16);
+        string secretkey = secret;
+        byte[] secretkeyByte = { };
+        secretkeyByte = Encoding.UTF8.GetBytes(secretkey);
+        byte[] publickeybyte = { };
+        publickeybyte = Encoding.UTF8.GetBytes(publickey);
+        MemoryStream ms = null;
+        CryptoStream cs = null;
+        byte[] inputbyteArray = System.Text.Encoding.UTF8.GetBytes(textToEncrypt);
+        using (AesCryptoServiceProvider des = new AesCryptoServiceProvider())
+        {
+            ms = new MemoryStream();
+            cs = new CryptoStream(ms, des.CreateEncryptor(publickeybyte, secretkeyByte), CryptoStreamMode.Write);
+            cs.Write(inputbyteArray, 0, inputbyteArray.Length);
+            cs.FlushFinalBlock();
+            ToReturn = Convert.ToBase64String(ms.ToArray());
+        }
+        return ToReturn;
+    }*/
+    public static string EncryptString(string text, string SessionPassword, string secret)
+    {
+        byte[] iv = Utf8.GetBytes(secret);
+        byte[] array;
+
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(SessionPassword.Substring(2,16));
+            aes.IV = iv;
+
+            ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write))
+                {
+                    using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
+                    {
+                        streamWriter.Write(text);
+                    }
+                    array = memoryStream.ToArray();
+                }
+            }
+        }
+        return Convert.ToBase64String(array);
+    }
+
+    public static string DecryptString(string text, string SessionPassword, string secret)
+    {
+        byte[] iv = Utf8.GetBytes(secret);
+        byte[] buffer = Convert.FromBase64String(text);
+
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(SessionPassword.Substring(2, 16));
+            aes.IV = iv;
+            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
+            using (MemoryStream memoryStream = new MemoryStream(buffer))
+            {
+                using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
+                {
+                    using (StreamReader streamReader = new StreamReader((Stream)cryptoStream))
+                    {
+                        return streamReader.ReadToEnd();
+                    }
+                }
+            }
+        }
     }
 }

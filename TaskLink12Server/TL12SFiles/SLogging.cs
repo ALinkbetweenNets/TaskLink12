@@ -6,7 +6,8 @@ namespace TaskLink12Server
     {
         public static string LogI(string msg)
         {
-            Form.textBoxLog.Invoke(new Action(() => Form.textBoxLog.Text += TLL.Log(msg) + "\r\n"));
+            TLL.Log(msg);
+            //Form.textBoxLog.Invoke(new Action(() => Form.textBoxLog.Text += TLL.Log(msg) + "\r\n"));
             return msg;
         }
     }

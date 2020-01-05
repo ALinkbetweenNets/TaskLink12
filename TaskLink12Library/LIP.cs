@@ -24,7 +24,6 @@ public partial class TLL
                     Log(address.ToString());
                 }
             }
-
         }
         catch (Exception ex)
         {
@@ -33,7 +32,6 @@ public partial class TLL
         }
         return IpList;
     }
-
 
     /// <summary>
     /// Tests IPv4 Address with IP localIPFilter

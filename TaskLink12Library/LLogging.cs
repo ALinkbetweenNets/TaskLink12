@@ -1,19 +1,43 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 public partial class TLL
 {
-    public static string Log(string msg)
+    /// <summary>
+    /// Writes Message to Debug/ Console
+    /// </summary>
+    /// <param name="msg">Message to Log</param>
+    /// <param name="file">Wether to Append message to Logfile</param>
+    /// <returns>Logged message is returned</returns>
+    public static string Log(string msg, bool file = true)
     {
-        Console.WriteLine(msg);
-        //Debug.WriteLine(msg);
-
+        //Console.WriteLine(msg);
+        if (file)
+            try
+            {
+                File.AppendAllText("TLLog.txt"
+                    , DateTime.Now.ToString()
+                    + ": " + msg + "\n");
+            }
+            catch { }
+        Debug.WriteLine(msg);
         return msg;
     }
 
-    public static string Log(Exception ex)
+    /// <summary>
+    /// Log Overload for Exceptions
+    /// </summary>
+    /// <param name="ex">Exception to Log</param>
+    /// <param name="ExceptionSender">Additional Info about Exception Location</param>
+    /// <returns>Returns Log Message</returns>
+    public static string Log(Exception ex, string ExceptionSender = "")
     {
-        return Log(ex.Message);
+        if (ExceptionSender.Length > 0)
+            return Log(ex.StackTrace+ex.Message+"\n" + ExceptionSender);
+        else
+            return Log(ex.StackTrace+ex.Message);
     }
 
     public static string LogF(string msg, ref TextBox textBox)
@@ -36,7 +60,8 @@ public partial class TLL
         }
         catch (Exception ex)
         {
-            return Log("Error MSGBOX: " + ex);
+            Log(ex);
+            return Log("ERROR in MsgBox");
         }
     }
 

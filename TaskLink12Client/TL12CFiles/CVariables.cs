@@ -2,7 +2,7 @@
 
 namespace TaskLink12Client
 {
-    public partial class TLC
+    public static partial class TLC
     {
         public static FormTLClient Form;
 
@@ -15,13 +15,16 @@ namespace TaskLink12Client
         /// <summary>
         /// File to control Silent mode
         /// </summary>
-        public const string PathSilent = ".S.tl";
+        public const string PathSilent = @"C:\ProgramData\TaskLink\12\Client\S.tl";
 
         /// <summary>
         /// The File under which the Session Password get stored
         /// </summary>
         public const string PathSP = @"C:\ProgramData\TaskLink\12\Client\SP.tl";
 
+        /// <summary>
+        /// Bool to know if the Receiver is running
+        /// </summary>
         public static bool ReceiverOn = false;
     }
 }

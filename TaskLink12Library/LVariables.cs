@@ -5,8 +5,10 @@ using System.Text;
 public partial class TLL
 {
     
-
-    public const string Version = "12.2";
+    /// <summary>
+    /// Version of the TaskLink Project. Used in Protocol
+    /// </summary>
+    public const string Version = "12.3";
 
     /// <summary>
     /// Network port to use for TCP connection. Must be unused by other services.
@@ -22,8 +24,7 @@ public partial class TLL
     /// <summary>
     /// Filter for local IP Addresses used in IPFilter
     /// </summary>
-    public const string LocalIPFilter = "MTkyLjE2OC4 =";
-
+    private const string LocalIPFilter = "MTkyLjE2OC4 =";
 
     /// <summary>
     /// used to determine the keysize of the encryption algorithm
@@ -32,7 +33,7 @@ public partial class TLL
     public const ushort keysize = 256;
 
     /// <summary>
-    /// Session password used for Communication. Should never be clear text (-> use SHA-256).
+    /// Session password used for Communication. Should never be clear text (-> use SHA-512).
     /// Must be equal on all devices
     /// </summary>
     public string SessionPassword = string.Empty;

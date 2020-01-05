@@ -58,7 +58,7 @@
     <Compile Include="TL12SFiles\SLogging.cs" />
     <Compile Include="TL12SFiles\SVariables - Kopieren - Kopieren - Kopieren.cs" />
     <Compile Include="TL12SFiles\SVariables - Kopieren - Kopieren.cs" />
-    <Compile Include="TL12SFiles\SVariables - Kopieren.cs" />
+    <Compile Include="TL12SFiles\SFiles.cs" />
     <Compile Include="TL12SFiles\SVariables.cs" />
     <EmbeddedResource Include="FormTLServer.resx">
       <DependentUpon>FormTLServer.cs</DependentUpon>
