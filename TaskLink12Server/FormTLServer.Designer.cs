@@ -56,18 +56,18 @@
             // textBoxLog
             // 
             this.textBoxLog.Location = new System.Drawing.Point(305, 5);
-            this.textBoxLog.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
-            this.textBoxLog.Size = new System.Drawing.Size(226, 475);
+            this.textBoxLog.Size = new System.Drawing.Size(226, 469);
             this.textBoxLog.TabIndex = 100;
             // 
             // buttonSPSet
             // 
             this.buttonSPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.buttonSPSet.Location = new System.Drawing.Point(21, 36);
-            this.buttonSPSet.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonSPSet.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonSPSet.Name = "buttonSPSet";
             this.buttonSPSet.Size = new System.Drawing.Size(185, 29);
             this.buttonSPSet.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             this.listBoxIPLocal.FormattingEnabled = true;
             this.listBoxIPLocal.Location = new System.Drawing.Point(208, 5);
-            this.listBoxIPLocal.Margin = new System.Windows.Forms.Padding(1);
+            this.listBoxIPLocal.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.listBoxIPLocal.Name = "listBoxIPLocal";
             this.listBoxIPLocal.Size = new System.Drawing.Size(95, 95);
             this.listBoxIPLocal.TabIndex = 99;
@@ -89,16 +89,16 @@
             // 
             this.listBoxClientIP.FormattingEnabled = true;
             this.listBoxClientIP.Location = new System.Drawing.Point(21, 176);
-            this.listBoxClientIP.Margin = new System.Windows.Forms.Padding(1);
+            this.listBoxClientIP.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.listBoxClientIP.Name = "listBoxClientIP";
-            this.listBoxClientIP.Size = new System.Drawing.Size(112, 251);
+            this.listBoxClientIP.Size = new System.Drawing.Size(115, 251);
             this.listBoxClientIP.TabIndex = 4;
             this.listBoxClientIP.Click += new System.EventHandler(this.listBoxClientIP_Click);
             // 
             // textBoxIP
             // 
             this.textBoxIP.Location = new System.Drawing.Point(208, 123);
-            this.textBoxIP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.ReadOnly = true;
             this.textBoxIP.Size = new System.Drawing.Size(95, 20);
@@ -109,7 +109,7 @@
             this.buttonSPRemove.Enabled = false;
             this.buttonSPRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonSPRemove.Location = new System.Drawing.Point(21, 100);
-            this.buttonSPRemove.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonSPRemove.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonSPRemove.Name = "buttonSPRemove";
             this.buttonSPRemove.Size = new System.Drawing.Size(185, 21);
             this.buttonSPRemove.TabIndex = 3;
@@ -124,7 +124,7 @@
             this.checkBoxSPSet.Enabled = false;
             this.checkBoxSPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.checkBoxSPSet.Location = new System.Drawing.Point(5, 44);
-            this.checkBoxSPSet.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxSPSet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxSPSet.Name = "checkBoxSPSet";
             this.checkBoxSPSet.Size = new System.Drawing.Size(15, 14);
             this.checkBoxSPSet.TabIndex = 106;
@@ -137,7 +137,7 @@
             this.checkBoxIPSet.Enabled = false;
             this.checkBoxIPSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.checkBoxIPSet.Location = new System.Drawing.Point(139, 125);
-            this.checkBoxIPSet.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxIPSet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxIPSet.Name = "checkBoxIPSet";
             this.checkBoxIPSet.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIPSet.TabIndex = 105;
@@ -147,7 +147,7 @@
             // 
             this.buttonSPSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.buttonSPSave.Location = new System.Drawing.Point(21, 68);
-            this.buttonSPSave.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonSPSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonSPSave.Name = "buttonSPSave";
             this.buttonSPSave.Size = new System.Drawing.Size(185, 29);
             this.buttonSPSave.TabIndex = 2;
@@ -159,7 +159,7 @@
             // 
             this.buttonIPLocalRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonIPLocalRefresh.Location = new System.Drawing.Point(208, 100);
-            this.buttonIPLocalRefresh.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonIPLocalRefresh.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonIPLocalRefresh.Name = "buttonIPLocalRefresh";
             this.buttonIPLocalRefresh.Size = new System.Drawing.Size(93, 21);
             this.buttonIPLocalRefresh.TabIndex = 4;
@@ -170,8 +170,8 @@
             // buttonLogClear
             // 
             this.buttonLogClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonLogClear.Location = new System.Drawing.Point(443, 483);
-            this.buttonLogClear.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonLogClear.Location = new System.Drawing.Point(440, 476);
+            this.buttonLogClear.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonLogClear.Name = "buttonLogClear";
             this.buttonLogClear.Size = new System.Drawing.Size(88, 21);
             this.buttonLogClear.TabIndex = 13;
@@ -192,7 +192,7 @@
             // 
             this.buttonClientAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.buttonClientAdd.Location = new System.Drawing.Point(21, 144);
-            this.buttonClientAdd.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClientAdd.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonClientAdd.Name = "buttonClientAdd";
             this.buttonClientAdd.Size = new System.Drawing.Size(112, 29);
             this.buttonClientAdd.TabIndex = 5;
@@ -204,7 +204,7 @@
             // 
             this.buttonClientSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonClientSave.Location = new System.Drawing.Point(21, 452);
-            this.buttonClientSave.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClientSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonClientSave.Name = "buttonClientSave";
             this.buttonClientSave.Size = new System.Drawing.Size(112, 21);
             this.buttonClientSave.TabIndex = 7;
@@ -216,7 +216,7 @@
             // 
             this.buttonClientLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonClientLoad.Location = new System.Drawing.Point(21, 476);
-            this.buttonClientLoad.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClientLoad.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonClientLoad.Name = "buttonClientLoad";
             this.buttonClientLoad.Size = new System.Drawing.Size(112, 21);
             this.buttonClientLoad.TabIndex = 8;
@@ -228,7 +228,7 @@
             // 
             this.buttonClientRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonClientRemove.Location = new System.Drawing.Point(21, 429);
-            this.buttonClientRemove.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClientRemove.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonClientRemove.Name = "buttonClientRemove";
             this.buttonClientRemove.Size = new System.Drawing.Size(112, 21);
             this.buttonClientRemove.TabIndex = 6;
@@ -240,7 +240,7 @@
             // 
             this.buttonClientClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonClientClear.Location = new System.Drawing.Point(21, 499);
-            this.buttonClientClear.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClientClear.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonClientClear.Name = "buttonClientClear";
             this.buttonClientClear.Size = new System.Drawing.Size(112, 21);
             this.buttonClientClear.TabIndex = 9;
@@ -251,8 +251,8 @@
             // buttonConnect
             // 
             this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonConnect.Location = new System.Drawing.Point(136, 144);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonConnect.Location = new System.Drawing.Point(137, 144);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(165, 29);
             this.buttonConnect.TabIndex = 10;
@@ -263,8 +263,8 @@
             // buttonEnd
             // 
             this.buttonEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonEnd.Location = new System.Drawing.Point(135, 491);
-            this.buttonEnd.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonEnd.Location = new System.Drawing.Point(137, 475);
+            this.buttonEnd.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonEnd.Name = "buttonEnd";
             this.buttonEnd.Size = new System.Drawing.Size(165, 29);
             this.buttonEnd.TabIndex = 12;
@@ -279,7 +279,7 @@
             this.checkBoxClientSet.Enabled = false;
             this.checkBoxClientSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.checkBoxClientSet.Location = new System.Drawing.Point(5, 152);
-            this.checkBoxClientSet.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxClientSet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxClientSet.Name = "checkBoxClientSet";
             this.checkBoxClientSet.Size = new System.Drawing.Size(15, 14);
             this.checkBoxClientSet.TabIndex = 107;
@@ -288,10 +288,10 @@
             // checkedListBoxProc
             // 
             this.checkedListBoxProc.FormattingEnabled = true;
-            this.checkedListBoxProc.Location = new System.Drawing.Point(136, 176);
+            this.checkedListBoxProc.Location = new System.Drawing.Point(137, 176);
             this.checkedListBoxProc.Name = "checkedListBoxProc";
             this.checkedListBoxProc.ScrollAlwaysVisible = true;
-            this.checkedListBoxProc.Size = new System.Drawing.Size(164, 304);
+            this.checkedListBoxProc.Size = new System.Drawing.Size(168, 289);
             this.checkedListBoxProc.TabIndex = 108;
             // 
             // label1
@@ -318,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 708);
+            this.ClientSize = new System.Drawing.Size(535, 526);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkedListBoxProc);
@@ -342,7 +342,7 @@
             this.Controls.Add(this.listBoxIPLocal);
             this.Controls.Add(this.buttonSPSet);
             this.Controls.Add(this.textBoxLog);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTLServer";
             this.Text = "Task Link 12 Server";
             this.ResumeLayout(false);

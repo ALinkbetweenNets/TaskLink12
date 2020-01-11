@@ -28,7 +28,7 @@ namespace TaskLink12Client
                             processListRaw.Add(TLL.StringCheck(p.ProcessName.ToLower().Replace('!', ' ')) + ";");
                     }
                 }
-                catch { }
+                catch(Exception ex) { TLL.Log(ex); }
             }
             List<string> processList = processListRaw.Distinct().ToList();
 

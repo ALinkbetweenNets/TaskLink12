@@ -40,6 +40,7 @@ namespace TaskLink12Server
         {
             InitializeComponent();
             EnableButtons();
+            IpRefresh();
         }
 
         public void EnableButtons()
@@ -121,6 +122,9 @@ namespace TaskLink12Server
             IpRefresh();
         }
 
+        ///<summary>
+        ///Gets IP Address of Internal Network and Writes to label
+        ///</summary>
         public void IpRefresh()
         {
             listBoxIPLocal.Items.Clear();
@@ -178,7 +182,9 @@ namespace TaskLink12Server
                     "New Client IP"));
                 if (TLL.IPFilter(enteredAddress))
                 {
-                    listBoxClientIP.Items.Add(IPAddress.Parse(enteredAddress));
+                    IPAddress ip = IPAddress.Parse(enteredAddress);
+                    listBoxClientIP.Items.Add(ip);
+                    listBoxClientIP.SetSelected(listBoxClientIP.Items.IndexOf(ip), true);
                     buttonClientSave.Enabled = true;
                     buttonClientRemove.Enabled = true;
                     buttonClientClear.Enabled = true;
@@ -186,6 +192,7 @@ namespace TaskLink12Server
                 else TLL.LogBox("Invalid IPv4 Formatting. IP Address must be local");
             }
             catch { TLL.LogBox("Invalid IPv4 Formatting"); }
+            EnableButtons();
         }
 
         private void buttonClientRemove_Click(object sender, EventArgs e)
@@ -255,7 +262,7 @@ namespace TaskLink12Server
                             if (s.StartsWith("!"))
                                 checkedListBoxProc.SetItemChecked(checkedListBoxProc.Items.IndexOf(s), true);
                         }
-                        checkedListBoxProc.Items.RemoveAt(checkedListBoxProc.Items.Count-1);
+                        checkedListBoxProc.Items.RemoveAt(checkedListBoxProc.Items.Count - 1);
                     }
                 }
             }
@@ -263,15 +270,18 @@ namespace TaskLink12Server
             {
                 TLL.Log(ex);
                 TLL.LogBox("Could not start Connector. Make sure you have set the Session Password, your Local IP Address and a Client IP to connect to");
-
             }
         }
 
         private async void buttonEnd_Click(object sender, EventArgs e)
         {
-            if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0 && checkedListBoxProc.SelectedItem.ToString().Length > 0)
-                if ("S" == await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL", checkedListBoxProc.SelectedItem.ToString()))
-                    TLL.LogBox($"Successfully Ended {checkedListBoxProc.SelectedItem.ToString()}");
+            try
+            {
+                if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0 && checkedListBoxProc.SelectedItem.ToString().Length > 0)
+                    if ("S" == await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL", checkedListBoxProc.SelectedItem.ToString()))
+                        TLL.LogBox($"Successfully Ended {checkedListBoxProc.SelectedItem.ToString()}");
+            }
+            catch { TLL.LogBox("Select a Process first"); }
         }
 
         private void listBoxClientIP_Click(object sender, EventArgs e)
@@ -281,10 +291,12 @@ namespace TaskLink12Server
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //byte[] bytes = TLL.GetBytes("abcdef", tll.SessionPassword, tll.initVector);
-            Console.WriteLine(TLL.DecryptString(TLL.EncryptString("abcdefg",tll.SessionPassword,tll.initVector), tll.SessionPassword, tll.initVector));
-            Console.WriteLine(TLL.DecryptString(TLL.EncryptString("az8fdfghieurohg duiofshgnifusodhgniufodghndigffhfffdffffgffffdffffgffff", tll.SessionPassword, tll.initVector), tll.SessionPassword, tll.initVector));
-            Console.WriteLine(TLL.DecryptString("hrDAnZzgBWx3NcbqYr074dNWq1kvraImYNAtxeJwe3a1YcY3qJHl1ORaKYLDv8JcfUpMQW42Eiq6Uxq1bAH13L9zwBk47ZrLValpgXO7N93CGdZyLUIjTZW8lI4bUhiI5yHelvTRqYN9nYZ7Ufg692BN9JX62fIGKYIjw7zE04qbCddl815UbwzKRC0LPHO3RUwyyZnrhKiTNFi4chvpS92sYjW8ccpqDNuWXBfF3L1iVBpff+u/gF2HK2cXpdgDdSFTn059SkQeKN3AIAgWUkXsdjNy7RQukFUGGAMoCoIAyFSlpUnjpTEpcmEk547ySB4UFltqJcgKXZJr9+zGisa6PTiJoR/PlKNdV2E6ACc=", tll.SessionPassword, tll.initVector));
+            if (tll.SPSet)
+            {
+                Console.WriteLine(TLL.DecryptString(TLL.EncryptString("abcdefg", tll.SessionPassword, tll.initVector), tll.SessionPassword, tll.initVector));
+                Console.WriteLine(TLL.DecryptString(TLL.EncryptString("az8fdfghieurohg duiofshgnifusodhgniufodghndigffhfffdffffgffffdffffgffff", tll.SessionPassword, tll.initVector), tll.SessionPassword, tll.initVector));
+                Console.WriteLine(TLL.DecryptString("hrDAnZzgBWx3NcbqYr074dNWq1kvraImYNAtxeJwe3a1YcY3qJHl1ORaKYLDv8JcfUpMQW42Eiq6Uxq1bAH13L9zwBk47ZrLValpgXO7N93CGdZyLUIjTZW8lI4bUhiI5yHelvTRqYN9nYZ7Ufg692BN9JX62fIGKYIjw7zE04qbCddl815UbwzKRC0LPHO3RUwyyZnrhKiTNFi4chvpS92sYjW8ccpqDNuWXBfF3L1iVBpff+u/gF2HK2cXpdgDdSFTn059SkQeKN3AIAgWUkXsdjNy7RQukFUGGAMoCoIAyFSlpUnjpTEpcmEk547ySB4UFltqJcgKXZJr9+zGisa6PTiJoR/PlKNdV2E6ACc=", tll.SessionPassword, tll.initVector));
+            }
         }//,tll.SessionPassword,tll.initVector)TLL.GetString(bytes,bytes.Length,tll.SessionPassword,tll.initVector)
     }
 }
