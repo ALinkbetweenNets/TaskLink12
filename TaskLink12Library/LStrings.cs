@@ -41,16 +41,23 @@ public partial class TLL
     /// <returns>Built string</returns>
     public static string GetString(byte[] bytesToConvert, int byteLength, string SessionPassword, string initVector, bool encrypted = false)
     {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < byteLength; i++)
-            stringBuilder.Append(Convert.ToChar(bytesToConvert[i]).ToString());
-        string finishedString = StringCheck(stringBuilder.ToString());
+        if (encrypted)
+            return DecryptString(bytesToConvert, SessionPassword, initVector);
+        else
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < byteLength; i++)
+                stringBuilder.Append(Convert.ToChar(bytesToConvert[i]).ToString());
+            return StringCheck(stringBuilder.ToString());
+        }
+
+
+        
         //Console.WriteLine("Received: " + finishedString);
         //byte[] abc = bytesToConvert;
         //string finishedString = Utf8.GetString(Marshal.Copy(new IntPtr(&abc), bytesToConvert, 0, byteLength), byteLength);
-        return encrypted ?
-            DecryptString(finishedString, SessionPassword, initVector)
-            : finishedString;
+        
+           
     }
 
     /// <summary>
@@ -61,9 +68,10 @@ public partial class TLL
     /// <returns>Converted Bytes</returns>
     public static byte[] GetBytes(string stringToConvert, string SessionPassword, string initVector, bool encrypt = false)
     {
-        return encrypt ?
-            Utf8.GetBytes(
-            EncryptString(stringToConvert, SessionPassword, initVector))
-            : Utf8.GetBytes(stringToConvert);
+        if (encrypt)
+        {
+            return EncryptString(stringToConvert, SessionPassword, initVector);
+
+        }else return Utf8.GetBytes(stringToConvert);
     }
 }

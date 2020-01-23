@@ -166,7 +166,7 @@ public partial class TLL
         }
         return ToReturn;
     }*/
-    public static string EncryptString(string text, string SessionPassword, string secret)
+    public static byte[] EncryptString(string text, string SessionPassword, string secret)
     {
         byte[] iv = Utf8.GetBytes(secret);
         byte[] array;
@@ -190,7 +190,7 @@ public partial class TLL
                 }
             }
         }
-        return Convert.ToBase64String(array);
+        return array;
     }
 
     /// <summary>
@@ -200,10 +200,10 @@ public partial class TLL
     /// <param name="SessionPassword"></param>
     /// <param name="secret"></param>
     /// <returns></returns>
-    public static string DecryptString(string text, string SessionPassword, string secret)
+    public static string DecryptString(byte[] text, string SessionPassword, string secret)
     {
         byte[] iv = Utf8.GetBytes(secret);
-        byte[] buffer = Convert.FromBase64String(text);
+        //byte[] buffer = Convert.FromBase64String(text);
 
         using (Aes aes = Aes.Create())
         {
@@ -211,7 +211,7 @@ public partial class TLL
             aes.IV = iv;
             ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
 
-            using (MemoryStream memoryStream = new MemoryStream(buffer))
+            using (MemoryStream memoryStream = new MemoryStream(text))
             {
                 using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
                 {
