@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+#pragma warning disable CA1031 // Do not catch general exception types
 #pragma warning disable IDE1006 // Benennungsstile
 
 namespace TaskLink12Client
@@ -39,35 +40,6 @@ namespace TaskLink12Client
             RefreshStatusReceiver();
 
             EnableButtons();
-        }
-
-        /// <summary>
-        /// Processes Changes to do for Silent Mode
-        /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
-        public async void SilentMode()
-        {
-            if (TLC.Silent && tll.SPSet)
-            {
-                LogF("Silent Mode. Hiding Form...");
-                buttonSilent.Text = "Disable Silent Mode";
-                try
-                {
-                    LogF("Starting Receiver in Silent Mode");
-                    ReceiverStartStop(true);
-                }
-                catch (Exception ex)
-                {
-                    TLL.Log(ex);
-                }
-                notifyIconSilent.Visible = true;
-                Hide();
-                WindowState = FormWindowState.Minimized;
-                await Task.Delay(TimeSpan.FromSeconds(1));
-                ReceiverStartStop(true);
-                Hide();
-                await Task.Delay(TimeSpan.FromSeconds(1));
-            }
         }
 
         /// <summary>
@@ -294,7 +266,59 @@ namespace TaskLink12Client
 
         private void buttonSilent_Click(object sender, EventArgs e)
         {
+            buttonSilent.Enabled = false;
+            TLC.Silent = !TLC.Silent;
+            SilentMode();
+            buttonSilent.Enabled = true;
+        }
 
+        /// <summary>
+        /// Processes Changes to do for Silent Mode
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
+        public async void SilentMode()
+        {
+            notifyIconSilent.Visible = TLC.Silent;
+            if (TLC.Silent && tll.SPSet)
+            {
+                LogF("Silent Mode. Hiding Form...");
+                buttonSilent.Text = "Disable Silent Mode";
+                
+
+                
+                Hide();
+                //WindowState = FormWindowState.Minimized;
+                try
+                {
+                    LogF("Starting Receiver in Silent Mode");
+                    ReceiverStartStop(true);
+                }
+
+                catch (Exception ex)
+                {
+                    TLL.Log(ex);
+                }
+                await Task.Delay(TimeSpan.FromSeconds(1));
+                ReceiverStartStop(true);
+                Hide();
+                await Task.Delay(TimeSpan.FromSeconds(1));
+            }
+            else
+            {
+                buttonSilent.Text = "Enable Silent Mode";
+                Show();
+                try
+                {
+                    LogF("Stopping Receiver");
+                    ReceiverStartStop(false);
+                }
+
+                catch (Exception ex)
+                {
+                    TLL.Log(ex);
+                }
+                
+            }
         }
 
         private void buttonSPRemove_Click(object sender, EventArgs e)
@@ -323,3 +347,4 @@ namespace TaskLink12Client
     }
 }
 #pragma warning restore IDE1006 // Benennungsstile
+#pragma warning restore CA1031 // Do not catch general exception types

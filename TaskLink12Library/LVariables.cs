@@ -4,18 +4,6 @@ using System.Text;
 
 public partial class TLL
 {
-    
-    /// <summary>
-    /// Version of the TaskLink Project. Used in Protocol
-    /// </summary>
-    public const string Version = "12.3";
-
-    /// <summary>
-    /// Network port to use for TCP connection. Must be unused by other services.
-    /// Must be equal on communicating Systems.
-    /// </summary>
-    public static ushort Port = 2502;
-
     /// <summary>
     /// Used to Convert strings and bytes to and from UTF8 chars
     /// </summary>
@@ -54,6 +42,7 @@ public partial class TLL
         }
     }
 
+    public const ushort ReadLengthLength = 4;
 
     /// <summary>
     /// size of the IV in bytes = keysize / 8

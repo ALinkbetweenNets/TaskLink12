@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Windows.Forms;
-
+#pragma warning disable CA1031 // Do not catch general exception types
 #pragma warning disable IDE1006 // Benennungsstile
 
 namespace TaskLink12Server
@@ -258,9 +258,13 @@ namespace TaskLink12Server
                     {
                         foreach (string s in req.Split(';'))
                         {
-                            checkedListBoxProc.Items.Add(s);
-                            if (s.StartsWith("!"))
-                                checkedListBoxProc.SetItemChecked(checkedListBoxProc.Items.IndexOf(s), true);
+                            try
+                            {
+                                checkedListBoxProc.Items.Add(s);
+                                if (s.StartsWith("!"))
+                                    checkedListBoxProc.SetItemChecked(checkedListBoxProc.Items.IndexOf(s), true);
+                            }
+                            catch (Exception ex) { TLL.Log(ex); }
                         }
                         checkedListBoxProc.Items.RemoveAt(checkedListBoxProc.Items.Count - 1);
                     }
@@ -291,13 +295,17 @@ namespace TaskLink12Server
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //button1.Text = TLL.Random(20, 40).ToString();
+            
+            /*
             if (tll.SPSet)
             {
                 Console.WriteLine(TLL.DecryptString(TLL.EncryptString("abcdefg", tll.SessionPassword, tll.initVector), tll.SessionPassword, tll.initVector));
                 Console.WriteLine(TLL.DecryptString(TLL.EncryptString("az8fdfghieurohg duiofshgnifusodhgniufodghndigffhfffdffffgffffdffffgffff", tll.SessionPassword, tll.initVector), tll.SessionPassword, tll.initVector));
                 Console.WriteLine(TLL.DecryptString("hrDAnZzgBWx3NcbqYr074dNWq1kvraImYNAtxeJwe3a1YcY3qJHl1ORaKYLDv8JcfUpMQW42Eiq6Uxq1bAH13L9zwBk47ZrLValpgXO7N93CGdZyLUIjTZW8lI4bUhiI5yHelvTRqYN9nYZ7Ufg692BN9JX62fIGKYIjw7zE04qbCddl815UbwzKRC0LPHO3RUwyyZnrhKiTNFi4chvpS92sYjW8ccpqDNuWXBfF3L1iVBpff+u/gF2HK2cXpdgDdSFTn059SkQeKN3AIAgWUkXsdjNy7RQukFUGGAMoCoIAyFSlpUnjpTEpcmEk547ySB4UFltqJcgKXZJr9+zGisa6PTiJoR/PlKNdV2E6ACc=", tll.SessionPassword, tll.initVector));
-            }
+            }*/
         }//,tll.SessionPassword,tll.initVector)TLL.GetString(bytes,bytes.Length,tll.SessionPassword,tll.initVector)
     }
 }
 #pragma warning restore IDE1006 // Benennungsstile
+#pragma warning restore CA1031 // Do not catch general exception types

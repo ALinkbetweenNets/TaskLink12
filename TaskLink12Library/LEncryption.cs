@@ -193,6 +193,13 @@ public partial class TLL
         return Convert.ToBase64String(array);
     }
 
+    /// <summary>
+    /// Decrypts string
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="SessionPassword"></param>
+    /// <param name="secret"></param>
+    /// <returns></returns>
     public static string DecryptString(string text, string SessionPassword, string secret)
     {
         byte[] iv = Utf8.GetBytes(secret);

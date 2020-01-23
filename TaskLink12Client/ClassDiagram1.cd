@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TLL">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="TLL.ThreadReturn" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="TaskLink12Client.TLC">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAABAAAAAEAEAAAAAAAABAgAAEABYA=</HashCode>
+      <FileName>TL12CFiles\CFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskLink12Client.FormTLClient">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SgBQABAAICAAmGAAEADoBBDCEGABKAAICBAAARSAAAA=</HashCode>
+      <FileName>FormTLClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskLink12Client.Program" Collapsed="true">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskLink12Client.Properties.Resources" Collapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskLink12Client.Properties.Settings" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

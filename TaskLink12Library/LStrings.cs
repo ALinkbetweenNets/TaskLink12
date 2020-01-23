@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -11,7 +12,7 @@ public partial class TLL
     /// <returns>Clean string</returns>
     public static string StringCheck(string testString)
     {
-        return testString;
+        //return testString;
         /*foreach (char bad in BAD_CHARS)
         {
             if (testString.Contains(bad.ToString()))
@@ -45,7 +46,11 @@ public partial class TLL
             stringBuilder.Append(Convert.ToChar(bytesToConvert[i]).ToString());
         string finishedString = StringCheck(stringBuilder.ToString());
         //Console.WriteLine("Received: " + finishedString);
-        return encrypted ? DecryptString(finishedString, SessionPassword, initVector) : finishedString;
+        //byte[] abc = bytesToConvert;
+        //string finishedString = Utf8.GetString(Marshal.Copy(new IntPtr(&abc), bytesToConvert, 0, byteLength), byteLength);
+        return encrypted ?
+            DecryptString(finishedString, SessionPassword, initVector)
+            : finishedString;
     }
 
     /// <summary>
@@ -56,6 +61,9 @@ public partial class TLL
     /// <returns>Converted Bytes</returns>
     public static byte[] GetBytes(string stringToConvert, string SessionPassword, string initVector, bool encrypt = false)
     {
-        return encrypt ? Utf8.GetBytes(EncryptString(stringToConvert, SessionPassword, initVector)) : Utf8.GetBytes(stringToConvert);
+        return encrypt ?
+            Utf8.GetBytes(
+            EncryptString(stringToConvert, SessionPassword, initVector))
+            : Utf8.GetBytes(stringToConvert);
     }
 }

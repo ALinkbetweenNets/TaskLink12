@@ -24,17 +24,20 @@ public partial class TLL
 
         using (var rng = new RNGCryptoServiceProvider())
         {
+            
             var data = new byte[4];
-            rng.GetBytes(data);
+            rng.GetBytes(data,0,2);
 
-            int generatedValue = Math.Abs(BitConverter.ToInt32(data, startIndex: 0));
+            int generatedValue = Math.Abs(BitConverter.ToInt32(
+                data,0));
 
             int diff = max - min;
-            int mod = generatedValue % diff;
-            int R = min + mod;
+            int mod = generatedValue;//% diff
+            int R = mod;//min + 
             if (R > min && R < max)
                 return R;
             else goto CryptoStart;
+            
         }
         
     }
