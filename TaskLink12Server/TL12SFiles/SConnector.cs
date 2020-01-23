@@ -45,8 +45,8 @@ namespace TaskLink12Server
                                 byte[] bytesLength = TLL.GetBytes(
                                     bytes.Length.ToString().PadLeft(TLL.ReadLengthLength, '0')
                                     , tll.SessionPassword, tll.initVector, false);
-                                await stream.WriteAsync(bytesLength, 0, bytesLength.Length);
-                                await stream.WriteAsync(bytes, 0, bytes.Length);
+                                stream.Write(bytesLength, 0, bytesLength.Length);
+                                stream.Write(bytes, 0, bytes.Length);
                                 LogI($"Sent: {msg}");
                             }
                             catch (Exception ex) { TLL.Log(ex); attempts++; goto WriteStart; }

@@ -148,7 +148,7 @@ namespace TaskLink12Client
                                                         {
                                                             case "REQUEST":
                                                                 LogI("Request accepted");
-                                                                string[] processes = TLC.GetRunningProcesses();
+                                                                string[] processes = GetRunningProcesses();
                                                                 StringBuilder stringBuilder = new StringBuilder();
                                                                 foreach (string s in processes)
                                                                 {
