@@ -4,19 +4,20 @@ using System.Net;
 using System.Windows.Forms;
 #pragma warning disable CA1031 // Do not catch general exception types
 #pragma warning disable IDE1006 // Benennungsstile
-
+#pragma warning disable CA1303 // Literale nicht als lokalisierte Parameter übergeben
 namespace TaskLink12Server
 {
     public partial class FormTLServer : Form
     {
-        public TLL tll = new TLL();
+        private TLL tll = new TLL();
         public bool ClientSet
         {
             get
             {
                 try
                 {
-                    return listBoxClientIP.Items.Count > 0 && listBoxClientIP.SelectedItem.ToString().Length > 0 && TLL.IPFilter(listBoxClientIP.SelectedItem.ToString());
+                    return listBoxClientIP.Items.Count > 0 && listBoxClientIP.SelectedItem.ToString().Length > 0 
+                        && TLL.IPFilter(listBoxClientIP.SelectedItem.ToString());
                 }
                 catch { return false; }
             }
@@ -49,7 +50,9 @@ namespace TaskLink12Server
             bool S = tll.SPSet;
             bool I = tll.IPSet;
             if (S)
+
                 buttonSPSet.Text = "Set new Session Password";
+
             checkBoxSPSet.Checked = S;
             checkBoxIPSet.Checked = I;
             checkBoxClientSet.Checked = C;
@@ -101,7 +104,8 @@ namespace TaskLink12Server
 
         private void buttonSPSave_Click(object sender, EventArgs e)
         {
-            if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?", "Save Session Password"))
+            if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?"
+                , "Save Session Password"))
             {
                 bool success = tll.FileSPSave(TLS.PathSP);
                 buttonSPRemove.Enabled = success;
@@ -111,7 +115,8 @@ namespace TaskLink12Server
 
         private void buttonSPRemove_Click(object sender, EventArgs e)
         {
-            if (TLL.BoxConfirm("This will remove the Session Password from the file (It is still in the current Program). Do you want to remove it?", "Remove Session Password File"))
+            if (TLL.BoxConfirm("This will remove the Session Password from the file (It is still in the current Program). Do you want to remove it?"
+                , "Remove Session Password File"))
             {
                 buttonSPRemove.Enabled = !tll.FileSPRemove(TLS.PathSP);
             }
@@ -252,16 +257,17 @@ namespace TaskLink12Server
                 if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0)
                 {
                     Console.WriteLine("Connecting");
-                    string req = await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll);
+                    string req = await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll).ConfigureAwait(true);
                     Console.WriteLine("Request Result:" + req);
                     if (req.Length > 0)
                     {
+                        checkedListBoxProc.Items.Clear();
                         foreach (string s in req.Split(';'))
                         {
                             try
                             {
                                 checkedListBoxProc.Items.Add(s);
-                                if (s.StartsWith("!"))
+                                if (s.StartsWith("!",StringComparison.Ordinal))
                                     checkedListBoxProc.SetItemChecked(checkedListBoxProc.Items.IndexOf(s), true);
                             }
                             catch (Exception ex) { TLL.Log(ex); }
@@ -281,9 +287,12 @@ namespace TaskLink12Server
         {
             try
             {
-                if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0 && checkedListBoxProc.SelectedItem.ToString().Length > 0)
-                    if ("S" == await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL", checkedListBoxProc.SelectedItem.ToString()))
+                if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0
+                    && checkedListBoxProc.SelectedItem.ToString().Length > 0)
+                    if (await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL", 
+                        checkedListBoxProc.SelectedItem.ToString()).ConfigureAwait(true) == "S")
                         TLL.LogBox($"Successfully Ended {checkedListBoxProc.SelectedItem.ToString()}");
+                    else TLL.LogBox($"Could not end {checkedListBoxProc.SelectedItem.ToString()}");
             }
             catch { TLL.LogBox("Select a Process first"); }
         }
@@ -305,7 +314,15 @@ namespace TaskLink12Server
                 Console.WriteLine(TLL.DecryptString("hrDAnZzgBWx3NcbqYr074dNWq1kvraImYNAtxeJwe3a1YcY3qJHl1ORaKYLDv8JcfUpMQW42Eiq6Uxq1bAH13L9zwBk47ZrLValpgXO7N93CGdZyLUIjTZW8lI4bUhiI5yHelvTRqYN9nYZ7Ufg692BN9JX62fIGKYIjw7zE04qbCddl815UbwzKRC0LPHO3RUwyyZnrhKiTNFi4chvpS92sYjW8ccpqDNuWXBfF3L1iVBpff+u/gF2HK2cXpdgDdSFTn059SkQeKN3AIAgWUkXsdjNy7RQukFUGGAMoCoIAyFSlpUnjpTEpcmEk547ySB4UFltqJcgKXZJr9+zGisa6PTiJoR/PlKNdV2E6ACc=", tll.SessionPassword, tll.initVector));
             }*/
         }//,tll.SessionPassword,tll.initVector)TLL.GetString(bytes,bytes.Length,tll.SessionPassword,tll.initVector)
+
+        private void checkedListBoxProc_Click(object sender, EventArgs e)
+        {
+            buttonEnd.Enabled = checkedListBoxProc.Items.Count > 0
+                && checkedListBoxProc.SelectedItem.ToString().Length > 0;
+                
+        }
     }
 }
+#pragma warning restore CA1303 // Literale nicht als lokalisierte Parameter übergeben
 #pragma warning restore IDE1006 // Benennungsstile
 #pragma warning restore CA1031 // Do not catch general exception types

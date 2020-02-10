@@ -18,9 +18,9 @@ public partial class TLL
         {
             byte[] hash = hashstring.ComputeHash(textBytes);
             StringBuilder builder = new StringBuilder();
-            foreach (byte x in hash)
+            foreach (byte b in hash)
             {
-                builder.Append(string.Format(@"{0:x2}", x));
+                builder.Append(string.Format(@"{0:x2}", b));
             }
             string encodedString = builder.ToString();
             Log("Encrypted text. SHA-256 Hash: " + encodedString);
@@ -173,7 +173,7 @@ public partial class TLL
 
         using (Aes aes = Aes.Create())
         {
-            aes.Key = Encoding.UTF8.GetBytes(SessionPassword.Substring(2,16));
+            aes.Key = Encoding.UTF8.GetBytes(SessionPassword.Substring(2, 16));
             aes.IV = iv;
 
             ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
@@ -209,15 +209,16 @@ public partial class TLL
         {
             aes.Key = Encoding.UTF8.GetBytes(SessionPassword.Substring(2, 16));
             aes.IV = iv;
-            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-
-            using (MemoryStream memoryStream = new MemoryStream(text))
+            using (ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
             {
-                using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
+                using (MemoryStream memoryStream = new MemoryStream(text))
                 {
-                    using (StreamReader streamReader = new StreamReader((Stream)cryptoStream))
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
                     {
-                        return streamReader.ReadToEnd();
+                        using (StreamReader streamReader = new StreamReader((Stream)cryptoStream))
+                        {
+                            return streamReader.ReadToEnd();
+                        }
                     }
                 }
             }

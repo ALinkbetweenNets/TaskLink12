@@ -6,6 +6,10 @@ namespace TaskLink12Client
 {
     public static partial class TLC
     {
+        /// <summary>
+        /// Checks File for SIlent Flag and sets Silent Mode
+        /// </summary>
+        /// <param name="textBoxLog"></param>
         public static void FileSilent(ref TextBox textBoxLog)
         {
             try
@@ -31,15 +35,22 @@ namespace TaskLink12Client
             }
         }
 
+        /// <summary>
+        /// Creates File for Silent Mode Flag
+        /// </summary>
+        /// <param name="Sil">Silent Mode Setting to write</param>
         public static void FileSSave(bool Sil)
         {
             try
             {
                 TLL.Log("Writing...");
                 File.Delete(TLC.PathSilent);
-                File.Create(TLC.PathSilent);
+
                 if (Sil)
+                {
+                    File.Create(TLC.PathSilent);
                     File.WriteAllText(TLC.PathSilent, "Silent");
+                }
                 TLL.Log("Writing Done");
                 TLL.LogBox($"Saved Silent Mode Setting ({Sil}) to {TLC.PathSilent}");
                 

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +15,10 @@ namespace TaskLink12Client
         /// <summary>
         /// Checks whether the Receiver thread is busy and On
         /// </summary>
-        /// <returns>Whether the Receiver is active</returns>
+        /// <param name="textBoxLog">textBoxLog to write to</param>
+        /// <param name="labelStatus">Status Label to write result to</param>
+        /// <param name="buttonStartStop">Button to change Text of</param>
+        /// <returns>Wether the Receiver is running</returns>
         public static bool RefreshStatusS(ref TextBox textBoxLog, ref Label labelStatus, ref Button buttonStartStop)
         {
             if (TLC.ReceiverOn)
@@ -34,7 +38,11 @@ namespace TaskLink12Client
         }
 
         //does not support multiple connections at once
-
+        /// <summary>
+        /// Receiver to be started in separate Thread
+        /// </summary>
+        /// <param name="tll">tll Object for Password</param>
+        /// <returns>Returns Result of Connection</returns>
         public static async Task<TLL.ThreadReturn> ReceiverRun(TLL tll)//Task<bool>
         {
             if (tll.SessionPassword.Length > 0)
@@ -56,13 +64,28 @@ namespace TaskLink12Client
                         LogI("The server is running at port " + TLL.Port.ToString());
                         LogI("The local End point is  :" + tcplistener.LocalEndpoint);
                         LogI("Waiting for a connection.....");
-                        Socket socket = await tcplistener.AcceptSocketAsync();
+                        Socket socket = await tcplistener.AcceptSocketAsync().ConfigureAwait(true);
                         try
                         {
                             if (socket.RemoteEndPoint.AddressFamily == AddressFamily.InterNetwork)
                             {
                                 if (ReceiverOn)
                                 {
+                                    string processString=string.Empty ;
+                                    void StartProcessCollection()
+                                    {
+                                        StringBuilder builder = new StringBuilder();
+                                        foreach(string s in GetRunningProcesses())
+                                        {
+                                            builder.Append(s);
+                                        }
+                                        processString=builder.ToString();
+                                        Thread.CurrentThread.Abort();
+                                        TLL.GCollector();
+                                    }
+                                    Thread t = new Thread(new ThreadStart(StartProcessCollection));
+                                    t.Start();
+                                    
                                     //grabs first connection
                                     LogI($"Connection from {socket.RemoteEndPoint.ToString()} authenticated");
 
@@ -109,7 +132,6 @@ namespace TaskLink12Client
                                         }
                                         catch (Exception ex) { TLL.Log(ex); attempts++; goto ReadStart; }
                                     }
-
                                     if (Read(false) == "LINK")
                                     {
                                         LogI("Connection Initiated");
@@ -148,13 +170,17 @@ namespace TaskLink12Client
                                                         {
                                                             case "REQUEST":
                                                                 LogI("Request accepted");
-                                                                string[] processes = GetRunningProcesses();
-                                                                StringBuilder stringBuilder = new StringBuilder();
-                                                                foreach (string s in processes)
+                                                                if (!(processString.Length > 0))
                                                                 {
-                                                                    stringBuilder.Append(s);
-                                                                }
-                                                                Write(stringBuilder.ToString());
+                                                                    string[] processes = GetRunningProcesses();
+                                                                    StringBuilder stringBuilder = new StringBuilder();
+                                                                    foreach (string s in processes)
+                                                                    {
+                                                                        stringBuilder.Append(s);
+                                                                    }
+                                                                    processString = stringBuilder.ToString();
+                                                                }                                                                
+                                                                Write(processString);
 
                                                                 break;
                                                             case "KILL":

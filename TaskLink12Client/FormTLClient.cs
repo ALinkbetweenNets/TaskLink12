@@ -278,13 +278,12 @@ namespace TaskLink12Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
         public async void SilentMode()
         {
-            notifyIconSilent.Visible = TLC.Silent;
-            if (TLC.Silent && tll.SPSet)
+            
+            if (TLC.Silent && tll.SPSet &&tll.IPSet)
             {
+                notifyIconSilent.Visible = TLC.Silent;
                 LogF("Silent Mode. Hiding Form...");
                 buttonSilent.Text = "Disable Silent Mode";
-                
-
                 
                 Hide();
                 //WindowState = FormWindowState.Minimized;
@@ -305,6 +304,7 @@ namespace TaskLink12Client
             }
             else
             {
+                TLC.Silent = false;
                 buttonSilent.Text = "Enable Silent Mode";
                 Show();
                 try
@@ -323,20 +323,21 @@ namespace TaskLink12Client
 
         private void buttonSPRemove_Click(object sender, EventArgs e)
         {
-            if (TLL.BoxConfirm("This will remove the Session Password so it cannot be loaded automatically at startup. Do you want to delete it?", "Delete Session Password"))
+            if (TLL.BoxConfirm("This will remove the Session Password so it cannot be loaded automatically at startup. Do you want to delete it?"
+                , "Delete Session Password"))
 
                 tll.FileSPRemove(TLC.PathSP);
         }
 
         private void buttonSPSave_Click(object sender, EventArgs e)
         {
-            if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?", "Save Session Password"))
+            if (TLL.BoxConfirm("This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?"
+                , "Save Session Password"))
             {
                 bool success = tll.FileSPSave(TLC.PathSP);
                 checkBoxSPSave.Checked = success;
                 buttonSPRemove.Enabled = success;
             }
-
         }
 
         private void notifyIconSilent_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
@@ -12,7 +13,8 @@ public partial class TLL
     /// <summary>
     /// Filter for local IP Addresses used in IPFilter
     /// </summary>
-    private const string LocalIPFilter = "MTkyLjE2OC4 =";
+    private static readonly string[] LocalIPFilter = new string[] {
+        "MTkyLjE2OC4 =","MTAu","MTcyLg==" };
 
     /// <summary>
     /// used to determine the keysize of the encryption algorithm
@@ -26,7 +28,9 @@ public partial class TLL
     /// </summary>
     public string SessionPassword = string.Empty;
 
-
+    /// <summary>
+    /// Checks wether the Session Password is set
+    /// </summary>
     public bool SPSet
     {
         get
@@ -34,6 +38,10 @@ public partial class TLL
             return SessionPassword.Length > 0;
         }
     }
+
+    /// <summary>
+    /// Checks wether án IP Adress is set
+    /// </summary>
     public bool IPSet
     {
         get
@@ -42,6 +50,9 @@ public partial class TLL
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public const ushort ReadLengthLength = 4;
 
     /// <summary>
@@ -62,5 +73,11 @@ public partial class TLL
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Codequalität", "IDE0052:Ungelesene private Member entfernen", Justification = "<Ausstehend>")]
     public static IPAddress testIPOut;
 
+    /// <summary>
+    /// List of IP Adresses from Network Adapters
+    /// </summary>
     public List<IPAddress> IpList = new List<IPAddress>();
+
+    
+    
 }

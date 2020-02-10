@@ -4,6 +4,9 @@ namespace TaskLink12Client
 {
     public static partial class TLC
     {
+        /// <summary>
+        /// Variable to reference Main Window Form
+        /// </summary>
         public static FormTLClient Form;
 
         /// <summary>

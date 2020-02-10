@@ -2,6 +2,7 @@
 {
     public partial class TLS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA2211:Nicht konstante Felder dürfen nicht sichtbar sein", Justification = "<Ausstehend>")]
         public static FormTLServer Form;
         /// <summary>
         /// The File under which the Session Password get stored
