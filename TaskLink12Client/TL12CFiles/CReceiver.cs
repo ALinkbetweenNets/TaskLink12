@@ -151,20 +151,20 @@ namespace TaskLink12Client
                                                     Write(R2.ToString());
 
                                                     string temp = DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
-                                                    string Pass = TLL.GetHash512(tll.SessionPassword + temp);
+                                                    string Pass = TLL.GetHash(tll.SessionPassword + temp,TLL.HashType.h256);
 
                                                     string testPass = Read();
                                                     LogI("Received Authentication Token. Checking validity...");
-                                                    if (testPass == TLL.GetHash512(Pass.Substring(
+                                                    if (testPass == TLL.GetHash(Pass.Substring(
                                                         R1 / 2,
                                                         (R2 / 2) - (R1 / 2)
-                                                        )))
+                                                        ),TLL.HashType.h256))
                                                     {
                                                         LogI("Authentication Token Correct");
-                                                        Write(TLL.GetHash512(Pass.Substring(
+                                                        Write(TLL.GetHash(Pass.Substring(
                                                             R2 / 2 + R1 / 2,
                                                             R2 - (R2 / 2 + R1 / 2)
-                                                            )));
+                                                            ),TLL.HashType.h256));
                                                         string type = Read();
                                                         switch (type)
                                                         {

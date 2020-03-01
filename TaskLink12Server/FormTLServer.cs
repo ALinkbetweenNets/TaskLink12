@@ -81,7 +81,7 @@ namespace TaskLink12Server
             if (Input.Length > 0)
             {
 
-                string hash = TLL.GetHash512(Input);
+                string hash = TLL.GetHash(Input,TLL.HashType.h512);
 
                 Input = string.Empty;
 

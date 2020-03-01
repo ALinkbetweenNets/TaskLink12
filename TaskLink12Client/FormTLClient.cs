@@ -132,7 +132,7 @@ namespace TaskLink12Client
                 "Enter new Session Password", "Session Password");
             if (Input.Length > 0)
             {
-                tll.SessionPassword = TLL.GetHash512(Input); ;
+                tll.SessionPassword = TLL.GetHash(Input,TLL.HashType.h512); ;
                 Input = string.Empty;
                 TLL.LogBox("Set new Session Password. SHA-512 Hash:\n" +
                         tll.SessionPassword);

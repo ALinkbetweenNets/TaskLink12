@@ -5,27 +5,53 @@ using System.Text;
 
 public partial class TLL
 {
+    public enum HashType
+    {
+        h1,h256,h512
+    }
 
     /// <summary>
-    /// Calculates SHA-512 Hash Sum of given string
+    /// Calculates Hash Sum of given string
     /// </summary>
     /// <param name="text">text to calculate the Hash of</param>
     /// <returns>Calculated SHA-256 Hash</returns>
-    public static string GetHash512(string text)
+    public static string GetHash(string text,HashType type)
     {
         byte[] textBytes = Utf8.GetBytes(text);
-        using (SHA512Managed hashstring = new SHA512Managed())
+        byte[] hash;
+        switch (type)
         {
-            byte[] hash = hashstring.ComputeHash(textBytes);
-            StringBuilder builder = new StringBuilder();
-            foreach (byte b in hash)
-            {
-                builder.Append(string.Format(@"{0:x2}", b));
-            }
-            string encodedString = builder.ToString();
-            Log("Encrypted text. SHA-256 Hash: " + encodedString);
-            return encodedString;
+            case HashType.h1:
+                using (var hashstring = new SHA1Managed())
+                {
+                    hash = hashstring.ComputeHash(textBytes);
+                }
+                break;
+            case HashType.h256:
+                using (var hashstring = new SHA256Managed())
+                {
+                    hash = hashstring.ComputeHash(textBytes);
+                }
+                break;
+            case HashType.h512:
+                using (var hashstring = new SHA512Managed())
+                {
+                    hash = hashstring.ComputeHash(textBytes);
+                }
+                break;
+            default:
+                hash = null;
+                break;
         }
+        string encodedString = "";
+        StringBuilder builder = new StringBuilder();
+        foreach (byte b in hash)
+        {
+            builder.Append(string.Format(@"{0:x2}", b));
+        }
+        encodedString = builder.ToString();
+        Log("Encrypted text. SHA-256 Hash: " + encodedString);
+        return encodedString;
     }
 
     /*
