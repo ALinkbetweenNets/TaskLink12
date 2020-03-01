@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -7,7 +6,7 @@ public partial class TLL
 {
     public enum HashType
     {
-        h1,h256,h512
+        h1, h256, h512
     }
 
     /// <summary>
@@ -15,7 +14,7 @@ public partial class TLL
     /// </summary>
     /// <param name="text">text to calculate the Hash of</param>
     /// <returns>Calculated SHA-256 Hash</returns>
-    public static string GetHash(string text,HashType type)
+    public static string GetHash(string text, HashType type)
     {
         byte[] textBytes = Utf8.GetBytes(text);
         byte[] hash;

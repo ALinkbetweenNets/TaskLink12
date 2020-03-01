@@ -35,9 +35,9 @@ public partial class TLL
     public static string Log(Exception ex, string ExceptionSender = "")
     {
         if (ExceptionSender.Length > 0)
-            return Log(ex.StackTrace+ex.Message+"\n" + ExceptionSender);
+            return Log(ex.StackTrace + ex.Message + "\n" + ExceptionSender);
         else
-            return Log(ex.StackTrace+ex.Message);
+            return Log(ex.StackTrace + ex.Message);
     }
 
     public static string LogF(string msg, ref TextBox textBox)

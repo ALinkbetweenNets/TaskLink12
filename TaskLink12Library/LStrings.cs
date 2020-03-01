@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -52,12 +51,12 @@ public partial class TLL
         }
 
 
-        
+
         //Console.WriteLine("Received: " + finishedString);
         //byte[] abc = bytesToConvert;
         //string finishedString = Utf8.GetString(Marshal.Copy(new IntPtr(&abc), bytesToConvert, 0, byteLength), byteLength);
-        
-           
+
+
     }
 
     /// <summary>
@@ -72,6 +71,7 @@ public partial class TLL
         {
             return EncryptString(stringToConvert, SessionPassword, initVector);
 
-        }else return Utf8.GetBytes(stringToConvert);
+        }
+        else return Utf8.GetBytes(stringToConvert);
     }
 }

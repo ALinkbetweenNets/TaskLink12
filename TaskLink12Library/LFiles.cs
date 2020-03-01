@@ -29,7 +29,7 @@ public partial class TLL
                             TLL.LogBox($"Loaded Session Password (Hash: {tll.SessionPassword}) from {path}");
                     }
                 }
-            }            
+            }
         }
         catch (Exception ex)
         {

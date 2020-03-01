@@ -132,7 +132,7 @@ namespace TaskLink12Client
                 "Enter new Session Password", "Session Password");
             if (Input.Length > 0)
             {
-                tll.SessionPassword = TLL.GetHash(Input,TLL.HashType.h512); ;
+                tll.SessionPassword = TLL.GetHash(Input, TLL.HashType.h512); ;
                 Input = string.Empty;
                 TLL.LogBox("Set new Session Password. SHA-512 Hash:\n" +
                         tll.SessionPassword);
@@ -278,13 +278,13 @@ namespace TaskLink12Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("AsyncUsage", "AsyncFixer03:Avoid fire & forget async void methods", Justification = "<Ausstehend>")]
         public async void SilentMode()
         {
-            
-            if (TLC.Silent && tll.SPSet &&tll.IPSet)
+
+            if (TLC.Silent && tll.SPSet && tll.IPSet)
             {
                 notifyIconSilent.Visible = TLC.Silent;
                 LogF("Silent Mode. Hiding Form...");
                 buttonSilent.Text = "Disable Silent Mode";
-                
+
                 Hide();
                 //WindowState = FormWindowState.Minimized;
                 try
@@ -317,7 +317,7 @@ namespace TaskLink12Client
                 {
                     TLL.Log(ex);
                 }
-                
+
             }
         }
 

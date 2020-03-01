@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using System.Text;
-
-public partial class TLL
+﻿public partial class TLL
 {
-    
+
     /// <summary>
     /// Version of the TaskLink Project. Used in Protocol
     /// </summary>

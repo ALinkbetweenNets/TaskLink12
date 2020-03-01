@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TaskLink12Server
+﻿namespace TaskLink12Server
 {
     public partial class TLS
     {

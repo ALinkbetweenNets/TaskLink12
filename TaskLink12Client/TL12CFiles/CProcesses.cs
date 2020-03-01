@@ -72,9 +72,9 @@ namespace TaskLink12Client
             bool success = false;
             if (name.Length > 0)
             {
-                name = name.ToLower().Replace("!","");
+                name = name.ToLower().Replace("!", "");
                 name = name.ToLower().Replace(".exe", "");
-                LogI("Killing Process "+name);
+                LogI("Killing Process " + name);
                 try
                 {
                     foreach (var process in Process.GetProcessesByName(name))

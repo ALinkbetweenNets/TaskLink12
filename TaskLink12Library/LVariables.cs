@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
@@ -78,6 +77,6 @@ public partial class TLL
     /// </summary>
     public List<IPAddress> IpList = new List<IPAddress>();
 
-    
-    
+
+
 }

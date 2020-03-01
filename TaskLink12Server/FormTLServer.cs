@@ -16,7 +16,7 @@ namespace TaskLink12Server
             {
                 try
                 {
-                    return listBoxClientIP.Items.Count > 0 && listBoxClientIP.SelectedItem.ToString().Length > 0 
+                    return listBoxClientIP.Items.Count > 0 && listBoxClientIP.SelectedItem.ToString().Length > 0
                         && TLL.IPFilter(listBoxClientIP.SelectedItem.ToString());
                 }
                 catch { return false; }
@@ -81,7 +81,7 @@ namespace TaskLink12Server
             if (Input.Length > 0)
             {
 
-                string hash = TLL.GetHash(Input,TLL.HashType.h512);
+                string hash = TLL.GetHash(Input, TLL.HashType.h512);
 
                 Input = string.Empty;
 
@@ -267,7 +267,7 @@ namespace TaskLink12Server
                             try
                             {
                                 checkedListBoxProc.Items.Add(s);
-                                if (s.StartsWith("!",StringComparison.Ordinal))
+                                if (s.StartsWith("!", StringComparison.Ordinal))
                                     checkedListBoxProc.SetItemChecked(checkedListBoxProc.Items.IndexOf(s), true);
                             }
                             catch (Exception ex) { TLL.Log(ex); }
@@ -289,7 +289,7 @@ namespace TaskLink12Server
             {
                 if (tll.IPSet && tll.SPSet && listBoxClientIP.SelectedItem.ToString().Length > 0
                     && checkedListBoxProc.SelectedItem.ToString().Length > 0)
-                    if (await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL", 
+                    if (await TLS.ConnectAsync(listBoxClientIP.SelectedItem.ToString(), tll, "KILL",
                         checkedListBoxProc.SelectedItem.ToString()).ConfigureAwait(true) == "S")
                         TLL.LogBox($"Successfully Ended {checkedListBoxProc.SelectedItem.ToString()}");
                     else TLL.LogBox($"Could not end {checkedListBoxProc.SelectedItem.ToString()}");
@@ -305,7 +305,7 @@ namespace TaskLink12Server
         private void button1_Click(object sender, EventArgs e)
         {
             //button1.Text = TLL.Random(20, 40).ToString();
-            
+
             /*
             if (tll.SPSet)
             {
@@ -319,7 +319,7 @@ namespace TaskLink12Server
         {
             buttonEnd.Enabled = checkedListBoxProc.Items.Count > 0
                 && checkedListBoxProc.SelectedItem.ToString().Length > 0;
-                
+
         }
     }
 }

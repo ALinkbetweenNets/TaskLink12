@@ -17,6 +17,6 @@
         /// Thread successfull, execution without error
         /// </summary>
         Success,
-    } 
+    }
 
 }

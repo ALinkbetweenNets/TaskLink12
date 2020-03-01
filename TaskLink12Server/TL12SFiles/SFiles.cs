@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Text;
 
 namespace TaskLink12Server
 {
@@ -15,7 +14,7 @@ namespace TaskLink12Server
         public static IPAddress[] FileClientLoad()
         {
             List<IPAddress> ipList = new List<IPAddress>();
-            foreach(string s in File.ReadAllLines(TLS.PathC))
+            foreach (string s in File.ReadAllLines(TLS.PathC))
             {
                 try
                 {

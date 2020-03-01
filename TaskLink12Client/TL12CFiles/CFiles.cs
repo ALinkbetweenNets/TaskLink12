@@ -53,7 +53,7 @@ namespace TaskLink12Client
                 }
                 TLL.Log("Writing Done");
                 TLL.LogBox($"Saved Silent Mode Setting ({Sil}) to {TLC.PathSilent}");
-                
+
             }
             catch (Exception ex)
             {

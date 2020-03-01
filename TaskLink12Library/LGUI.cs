@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Net;
-using System.Text;
 
 public partial class TLL
 {
@@ -23,7 +21,7 @@ public partial class TLL
         }
         catch (Exception ex)
         {
-            Log(ex,"InputBox");
+            Log(ex, "InputBox");
             return string.Empty;
         }
     }
