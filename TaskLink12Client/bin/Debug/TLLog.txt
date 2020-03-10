@@ -1,0 +1,698 @@
+10.02.20 09:20:01: * Starting... /*
+10.02.20 09:20:01: NotApplicable
+10.02.20 09:20:01: Local IP Addresses:
+10.02.20 09:20:01: 192.168.178.85
+10.02.20 09:20:01: 192.168.178.85
+10.02.20 09:20:01: * IPs on this Computer: /*
+10.02.20 09:20:01: * 192.168.178.85 /*
+10.02.20 09:20:01: * 192.168.178.85 /*
+10.02.20 09:20:01: NotApplicable
+10.02.20 09:20:01: NotApplicable
+10.02.20 09:20:01: * Stopping Receiver /*
+10.02.20 09:20:01: * Receiver Status: Not Running /*
+10.02.20 09:20:01: * Receiver Status: Not Running /*
+10.02.20 09:20:01: * Receiver Status: Not Running /*
+10.02.20 09:20:01: NotApplicable
+10.02.20 09:20:27: NotApplicable
+10.02.20 09:20:30: Input Box: Session Password : Enter new Session Password
+10.02.20 09:20:30: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.02.20 09:20:31: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.02.20 09:20:31: NotApplicable
+10.02.20 09:20:31: NotApplicable
+10.02.20 09:20:32: * Receiver Status: Not Running /*
+10.02.20 09:20:32: * Receiver Status: Running /*
+10.02.20 09:20:32: Starting Receiver
+10.02.20 09:20:32: Starting Receiver
+10.02.20 09:20:33: The server is running at port 2502
+10.02.20 09:20:33: The local End point is  :192.168.178.85:2502
+10.02.20 09:20:33: Waiting for a connection.....
+10.02.20 09:20:33: * Receiver Status: Running /*
+10.02.20 09:21:16: Connection from 192.168.178.93:50573 authenticated
+10.02.20 09:21:16: Received: LINK
+10.02.20 09:21:16: Connection Initiated
+10.02.20 09:21:16: Correct Protocol
+10.02.20 09:21:16: Sent: LINK
+10.02.20 09:21:16: Received: 12.3
+10.02.20 09:21:16: Sent: 12.3
+10.02.20 09:21:16: Received: 27
+10.02.20 09:21:16: Sent: 108
+10.02.20 09:21:16: Encrypted text. SHA-256 Hash: e7156d18cee9f854204f923a8b4364b965a58dfd07d5dbb27d44e4ffffab2bf7b6d90584a3b622c04c6c53f180f8436a15cef82a0a3fc417b13e8503d8397d10
+10.02.20 09:21:17: Received: 16f907b88f95138735b47fa09966aeb2697c50afb499ec5385c883459faa9729394007b9d617ae46e1c9ea0e33074bba3eb3fd07d83edd1cf5e5da99f4c36983
+10.02.20 09:21:17: Received Authentication Token. Checking validity...
+10.02.20 09:21:17: Encrypted text. SHA-256 Hash: 16f907b88f95138735b47fa09966aeb2697c50afb499ec5385c883459faa9729394007b9d617ae46e1c9ea0e33074bba3eb3fd07d83edd1cf5e5da99f4c36983
+10.02.20 09:21:17: Authentication Token Correct
+10.02.20 09:21:17: Encrypted text. SHA-256 Hash: b257379c86101a9744eccfb9a85dc1e8e1c2175d255218f8d67be490fefa8577bc8c917a77a73a1b82ad943c20bfe08d84baceef80ba4c8d97f018dfe547dd2a
+10.02.20 09:21:17: Sent: b257379c86101a9744eccfb9a85dc1e8e1c2175d255218f8d67be490fefa8577bc8c917a77a73a1b82ad943c20bfe08d84baceef80ba4c8d97f018dfe547dd2a
+10.02.20 09:21:17: Received: REQUEST
+10.02.20 09:21:17: Request accepted
+10.02.20 09:21:48: Sent: !AppVShNotify.exe;!atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;browser_broker.exe;Calculator.exe;conhost.exe;ctfmon.exe;dllhost.exe;explorer.exe;FileCoAuth.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SearchUI.exe;SecurityHealthSystray.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;smartscreen.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;VBCSCompiler.exe;WinStore.App.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 09:21:48: Connection closed
+10.02.20 09:21:48: End Reached
+10.02.20 09:21:48: Connection closed
+10.02.20 09:21:48: Starting Receiver
+10.02.20 09:21:48: The server is running at port 2502
+10.02.20 09:21:48: The local End point is  :192.168.178.85:2502
+10.02.20 09:21:48: Waiting for a connection.....
+10.02.20 09:24:35: * Starting... /*
+10.02.20 09:24:35: NotApplicable
+10.02.20 09:24:35: Local IP Addresses:
+10.02.20 09:24:35: 192.168.178.85
+10.02.20 09:24:35: 192.168.178.85
+10.02.20 09:24:35: * IPs on this Computer: /*
+10.02.20 09:24:35: * 192.168.178.85 /*
+10.02.20 09:24:35: * 192.168.178.85 /*
+10.02.20 09:24:35: NotApplicable
+10.02.20 09:24:35: NotApplicable
+10.02.20 09:24:35: * Stopping Receiver /*
+10.02.20 09:24:35: * Receiver Status: Not Running /*
+10.02.20 09:24:35: * Receiver Status: Not Running /*
+10.02.20 09:24:35: * Receiver Status: Not Running /*
+10.02.20 09:24:35: NotApplicable
+10.02.20 09:24:39: Input Box: Session Password : Enter new Session Password
+10.02.20 09:24:39: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.02.20 09:24:39: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.02.20 09:24:39: NotApplicable
+10.02.20 09:24:39: NotApplicable
+10.02.20 09:24:41: NotApplicable
+10.02.20 09:24:43: * Receiver Status: Not Running /*
+10.02.20 09:24:43: * Receiver Status: Running /*
+10.02.20 09:24:43: Starting Receiver
+10.02.20 09:24:43: Starting Receiver
+10.02.20 09:24:43: Connection closed
+10.02.20 15:10:19: * Starting... /*
+10.02.20 15:10:19: NotApplicable
+10.02.20 15:10:19: Local IP Addresses:
+10.02.20 15:10:19: 192.168.178.85
+10.02.20 15:10:19: 192.168.178.85
+10.02.20 15:10:19: * IPs on this Computer: /*
+10.02.20 15:10:19: * 192.168.178.85 /*
+10.02.20 15:10:19: * 192.168.178.85 /*
+10.02.20 15:10:19: NotApplicable
+10.02.20 15:10:19: NotApplicable
+10.02.20 15:10:19: * Stopping Receiver /*
+10.02.20 15:10:19: * Receiver Status: Not Running /*
+10.02.20 15:10:19: * Receiver Status: Not Running /*
+10.02.20 15:10:19: * Receiver Status: Not Running /*
+10.02.20 15:10:19: NotApplicable
+10.02.20 15:10:25: NotApplicable
+10.02.20 15:10:27: Input Box: Session Password : Enter new Session Password
+10.02.20 15:10:27: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.02.20 15:10:28: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.02.20 15:10:28: NotApplicable
+10.02.20 15:10:28: NotApplicable
+10.02.20 15:10:30: * Receiver Status: Not Running /*
+10.02.20 15:10:30: * Receiver Status: Running /*
+10.02.20 15:10:30: Starting Receiver
+10.02.20 15:10:30: Starting Receiver
+10.02.20 15:10:30: The server is running at port 2502
+10.02.20 15:10:30: The local End point is  :192.168.178.85:2502
+10.02.20 15:10:30: Waiting for a connection.....
+10.02.20 15:11:19: Connection from 192.168.178.93:51274 authenticated
+10.02.20 15:11:20: Received: LINK
+10.02.20 15:11:20: Connection Initiated
+10.02.20 15:11:20: Correct Protocol
+10.02.20 15:11:21: Sent: LINK
+10.02.20 15:11:22: Received: 12.3
+10.02.20 15:11:22: Sent: 12.3
+10.02.20 15:11:23: Received: 24
+10.02.20 15:11:23: Sent: 116
+10.02.20 15:11:23: Encrypted text. SHA-256 Hash: f0ab8b7a2ddccb3436da71b3c9cc9724837598791b7341f56c2a25af458e8c11ce37d29c0b58618082925193283ca8bcb80d971f6dc4d82ed11be8a276a8374a
+10.02.20 15:11:24: Received: c7065beffbc33e28fe72fffbe1d130b628467f94821572ab758cb9401b5a5f9c58a30e19a8e45f5d3f0fcb9dbd134c11184d6ac1425c6170dd259a7b962e5ea7
+10.02.20 15:11:24: Received Authentication Token. Checking validity...
+10.02.20 15:11:24: Encrypted text. SHA-256 Hash: c7065beffbc33e28fe72fffbe1d130b628467f94821572ab758cb9401b5a5f9c58a30e19a8e45f5d3f0fcb9dbd134c11184d6ac1425c6170dd259a7b962e5ea7
+10.02.20 15:11:24: Authentication Token Correct
+10.02.20 15:11:24: Encrypted text. SHA-256 Hash: 52c027ecf408da42929c9dbc937a747d3964e242da67d9ab29f6dae533710038e188edacb6b3333401251e3dfad1dedf10e69d710bacfea16a1a381a9ef4ae98
+10.02.20 15:11:24: Sent: 52c027ecf408da42929c9dbc937a747d3964e242da67d9ab29f6dae533710038e188edacb6b3333401251e3dfad1dedf10e69d710bacfea16a1a381a9ef4ae98
+10.02.20 15:11:26: Received: REQUEST
+10.02.20 15:11:26: Request accepted
+10.02.20 15:11:37: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;backgroundTaskHost.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;dumpcap.exe;explorer.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;MSBuild.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;PlacesServer.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchProtocolHost.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.ThreadedWaitDialog.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;smartscreen.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;VBCSCompiler.exe;vsls-agent.exe;WinStore.App.exe;Wireshark.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:11:37: Connection closed
+10.02.20 15:11:37: End Reached
+10.02.20 15:11:37: Connection closed
+10.02.20 15:11:37: Starting Receiver
+10.02.20 15:11:37: The server is running at port 2502
+10.02.20 15:11:37: The local End point is  :192.168.178.85:2502
+10.02.20 15:11:37: Waiting for a connection.....
+10.02.20 15:12:17: Connection from 192.168.178.93:51276 authenticated
+10.02.20 15:12:18: Received: LINK
+10.02.20 15:12:18: Connection Initiated
+10.02.20 15:12:18: Correct Protocol
+10.02.20 15:12:18: Sent: LINK
+10.02.20 15:12:20: Received: 12.3
+10.02.20 15:12:20: Sent: 12.3
+10.02.20 15:12:20: Received: 28
+10.02.20 15:12:20: Sent: 108
+10.02.20 15:12:21: Encrypted text. SHA-256 Hash: 901c5f7eb14f96637ea04a67789025b342baf46bba561c5c63e19f530e34e2e03cc65287672ea25d18a9f47ca1c86359af7fc0633c1628c1d0eb84677a1a0210
+10.02.20 15:12:22: Received: 066fd1a4a138e4b18c031b9a47b1059234a47ddef387ceef873e1a052c12a9b5e96e44e49d12d29ea44484fe06c390fdcd68f9e852169cfa09dd89b2efc1ccc3
+10.02.20 15:12:22: Received Authentication Token. Checking validity...
+10.02.20 15:12:22: Encrypted text. SHA-256 Hash: 066fd1a4a138e4b18c031b9a47b1059234a47ddef387ceef873e1a052c12a9b5e96e44e49d12d29ea44484fe06c390fdcd68f9e852169cfa09dd89b2efc1ccc3
+10.02.20 15:12:22: Authentication Token Correct
+10.02.20 15:12:22: Encrypted text. SHA-256 Hash: 0d5f7f521c46ea7bcefa2ed61125856cbd9edb3a85e511fbaf317f3328bc5d730ab451c69e9f610558966f519a88fc188eaf5925673315d9940428d8f1ada6c6
+10.02.20 15:12:22: Sent: 0d5f7f521c46ea7bcefa2ed61125856cbd9edb3a85e511fbaf317f3328bc5d730ab451c69e9f610558966f519a88fc188eaf5925673315d9940428d8f1ada6c6
+10.02.20 15:12:24: Received: KILL
+10.02.20 15:12:24: Kill Request accepted
+10.02.20 15:12:24: Received: OneDrive.exe
+10.02.20 15:12:24: Sent: F
+10.02.20 15:12:24: Connection closed
+10.02.20 15:12:24: End Reached
+10.02.20 15:12:24: Connection closed
+10.02.20 15:12:24: Starting Receiver
+10.02.20 15:12:24: The server is running at port 2502
+10.02.20 15:12:24: The local End point is  :192.168.178.85:2502
+10.02.20 15:12:24: Waiting for a connection.....
+10.02.20 15:18:54: * Receiver Status: Running /*
+10.02.20 15:18:55: * Receiver Status: Running /*
+10.02.20 15:19:02: * Receiver Status: Running /*
+10.02.20 15:22:29: * Starting... /*
+10.02.20 15:22:29: NotApplicable
+10.02.20 15:22:29: Local IP Addresses:
+10.02.20 15:22:29: 192.168.178.85
+10.02.20 15:22:29: 192.168.178.85
+10.02.20 15:22:29: * IPs on this Computer: /*
+10.02.20 15:22:29: * 192.168.178.85 /*
+10.02.20 15:22:29: * 192.168.178.85 /*
+10.02.20 15:22:29: NotApplicable
+10.02.20 15:22:29: NotApplicable
+10.02.20 15:22:29: * Stopping Receiver /*
+10.02.20 15:22:29: * Receiver Status: Not Running /*
+10.02.20 15:22:29: * Receiver Status: Not Running /*
+10.02.20 15:22:29: * Receiver Status: Not Running /*
+10.02.20 15:22:29: NotApplicable
+10.02.20 15:22:39: * Starting... /*
+10.02.20 15:22:39: NotApplicable
+10.02.20 15:22:39: Local IP Addresses:
+10.02.20 15:22:39: 192.168.178.85
+10.02.20 15:22:39: 192.168.178.85
+10.02.20 15:22:39: * IPs on this Computer: /*
+10.02.20 15:22:39: * 192.168.178.85 /*
+10.02.20 15:22:39: * 192.168.178.85 /*
+10.02.20 15:22:39: NotApplicable
+10.02.20 15:22:39: NotApplicable
+10.02.20 15:22:39: * Stopping Receiver /*
+10.02.20 15:22:39: * Receiver Status: Not Running /*
+10.02.20 15:22:39: * Receiver Status: Not Running /*
+10.02.20 15:22:39: * Receiver Status: Not Running /*
+10.02.20 15:22:39: NotApplicable
+10.02.20 15:23:35: Input Box: Session Password : Enter new Session Password
+10.02.20 15:23:35: Encrypted text. SHA-256 Hash: 4dff4ea340f0a823f15d3f4f01ab62eae0e5da579ccb851f8db9dfe84c58b2b37b89903a740e1ee172da793a6e79d560e5f7f9bd058a12a280433ed6fa46510a
+10.02.20 15:23:36: MsgBox (Set new Session Password. SHA-512 Hash:
+4dff4ea340f0a823f15d3f4f01ab62eae0e5da579ccb851f8db9dfe84c58b2b37b89903a740e1ee172da793a6e79d560e5f7f9bd058a12a280433ed6fa46510a)
+10.02.20 15:23:36: NotApplicable
+10.02.20 15:23:36: NotApplicable
+10.02.20 15:23:37: NotApplicable
+10.02.20 15:23:38: * Receiver Status: Not Running /*
+10.02.20 15:23:38: * Receiver Status: Running /*
+10.02.20 15:23:38: Starting Receiver
+10.02.20 15:23:38: Starting Receiver
+10.02.20 15:23:38: The server is running at port 2502
+10.02.20 15:23:38: The local End point is  :192.168.178.85:2502
+10.02.20 15:23:38: Waiting for a connection.....
+10.02.20 15:23:58: Connection from 192.168.178.93:51312 authenticated
+10.02.20 15:23:59: Received: LINK
+10.02.20 15:23:59: Connection Initiated
+10.02.20 15:23:59: Correct Protocol
+10.02.20 15:23:59: Sent: LINK
+10.02.20 15:24:00: Received: 12.3
+10.02.20 15:24:00: Sent: 12.3
+10.02.20 15:24:01: Received: 11
+10.02.20 15:24:01: Sent: 119
+10.02.20 15:24:01: Encrypted text. SHA-256 Hash: 5cfdd535f9e05fd827eeab1cd6713403dca1a85196a5521eb18e4f154a4b7e2851abbbadf385e9db6d3799e3143368497a94f90f594cdcefb96f1383bc95c57b
+10.02.20 15:24:02: Received: a2dfc8848ccd77adb50d1675b83afa022fa6469dee6e6a676308a0eda6318afe2a08ef1e032715e361ccc3a496abf8050f0fac1defa370068e9a9f9d588af2e1
+10.02.20 15:24:02: Received Authentication Token. Checking validity...
+10.02.20 15:24:02: Encrypted text. SHA-256 Hash: a2dfc8848ccd77adb50d1675b83afa022fa6469dee6e6a676308a0eda6318afe2a08ef1e032715e361ccc3a496abf8050f0fac1defa370068e9a9f9d588af2e1
+10.02.20 15:24:02: Authentication Token Correct
+10.02.20 15:24:02: Encrypted text. SHA-256 Hash: 68bfe7172307378e19541056dd94881e0f34cf517bd27dd8b5ce2ffcdfc75f5171a8ee538a529baff03e8d439c64ccc80a9eedb2a9259526d766c4db79251606
+10.02.20 15:24:02: Sent: 68bfe7172307378e19541056dd94881e0f34cf517bd27dd8b5ce2ffcdfc75f5171a8ee538a529baff03e8d439c64ccc80a9eedb2a9259526d766c4db79251606
+10.02.20 15:24:04: Received: REQUEST
+10.02.20 15:24:04: Request accepted
+10.02.20 15:24:14: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;dumpcap.exe;explorer.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;MSBuild.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.ThreadedWaitDialog.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;VBCSCompiler.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;Wireshark.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:24:14: Connection closed
+10.02.20 15:24:14: End Reached
+10.02.20 15:24:14: Connection closed
+10.02.20 15:24:14: Starting Receiver
+10.02.20 15:24:14: The server is running at port 2502
+10.02.20 15:24:14: The local End point is  :192.168.178.85:2502
+10.02.20 15:24:14: Waiting for a connection.....
+10.02.20 15:24:40: Connection from 192.168.178.93:51313 authenticated
+10.02.20 15:24:41: Received: LINK
+10.02.20 15:24:41: Connection Initiated
+10.02.20 15:24:41: Correct Protocol
+10.02.20 15:24:41: Sent: LINK
+10.02.20 15:24:43: Received: 12.3
+10.02.20 15:24:43: Sent: 12.3
+10.02.20 15:24:43: Received: 27
+10.02.20 15:24:43: Sent: 119
+10.02.20 15:24:43: Encrypted text. SHA-256 Hash: 5cfdd535f9e05fd827eeab1cd6713403dca1a85196a5521eb18e4f154a4b7e2851abbbadf385e9db6d3799e3143368497a94f90f594cdcefb96f1383bc95c57b
+10.02.20 15:24:44: Received: da861dd2447d1ab9d094b7daadedf3dc1f93c471c1bcf5e09ab99a6a2940b2a142c35b1ae282a849a6141475d8a8b6055dab5d8159a95ae2c547023dd801e130
+10.02.20 15:24:44: Received Authentication Token. Checking validity...
+10.02.20 15:24:44: Encrypted text. SHA-256 Hash: da861dd2447d1ab9d094b7daadedf3dc1f93c471c1bcf5e09ab99a6a2940b2a142c35b1ae282a849a6141475d8a8b6055dab5d8159a95ae2c547023dd801e130
+10.02.20 15:24:44: Authentication Token Correct
+10.02.20 15:24:44: Encrypted text. SHA-256 Hash: f4b1a5906ae81a6f1598512cd0246d658c280725dedb80313f3cad427cd5fad0d29028b4a671b463948be151ef6072ac3e0997c48829147f9d55890408a1a275
+10.02.20 15:24:44: Sent: f4b1a5906ae81a6f1598512cd0246d658c280725dedb80313f3cad427cd5fad0d29028b4a671b463948be151ef6072ac3e0997c48829147f9d55890408a1a275
+10.02.20 15:24:46: Received: KILL
+10.02.20 15:24:46: Kill Request accepted
+10.02.20 15:24:46: Received: firefox.exe
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Successfully ended firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Successfully ended firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Successfully ended firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Successfully ended firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Successfully ended firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Could not End Process firefox
+10.02.20 15:24:46: Killing Process firefox
+10.02.20 15:24:46: Could not End Process firefox
+10.02.20 15:24:46: Sent: S
+10.02.20 15:24:46: Connection closed
+10.02.20 15:24:46: End Reached
+10.02.20 15:24:46: Connection closed
+10.02.20 15:24:46: Starting Receiver
+10.02.20 15:24:46: The server is running at port 2502
+10.02.20 15:24:46: The local End point is  :192.168.178.85:2502
+10.02.20 15:24:46: Waiting for a connection.....
+10.02.20 15:30:20: * Starting... /*
+10.02.20 15:30:20: NotApplicable
+10.02.20 15:30:20: Local IP Addresses:
+10.02.20 15:30:20: 192.168.178.85
+10.02.20 15:30:20: 192.168.178.85
+10.02.20 15:30:20: * IPs on this Computer: /*
+10.02.20 15:30:20: * 192.168.178.85 /*
+10.02.20 15:30:20: * 192.168.178.85 /*
+10.02.20 15:30:20: NotApplicable
+10.02.20 15:30:20: NotApplicable
+10.02.20 15:30:20: * Stopping Receiver /*
+10.02.20 15:30:20: * Receiver Status: Not Running /*
+10.02.20 15:30:20: * Receiver Status: Not Running /*
+10.02.20 15:30:20: * Receiver Status: Not Running /*
+10.02.20 15:30:20: NotApplicable
+10.02.20 15:30:41: Input Box: Session Password : Enter new Session Password
+10.02.20 15:30:41: Encrypted text. SHA-256 Hash: 5aadb45520dcd8726b2822a7a78bb53d794f557199d5d4abdedd2c55a4bd6ca73607605c558de3db80c8e86c3196484566163ed1327e82e8b6757d1932113cb8
+10.02.20 15:30:42: MsgBox (Set new Session Password. SHA-512 Hash:
+5aadb45520dcd8726b2822a7a78bb53d794f557199d5d4abdedd2c55a4bd6ca73607605c558de3db80c8e86c3196484566163ed1327e82e8b6757d1932113cb8)
+10.02.20 15:30:42: NotApplicable
+10.02.20 15:30:42: NotApplicable
+10.02.20 15:30:43: NotApplicable
+10.02.20 15:31:01: * Receiver Status: Not Running /*
+10.02.20 15:31:01: * Receiver Status: Running /*
+10.02.20 15:31:01: Starting Receiver
+10.02.20 15:31:01: Starting Receiver
+10.02.20 15:31:01: The server is running at port 2502
+10.02.20 15:31:01: The local End point is  :192.168.178.85:2502
+10.02.20 15:31:01: Waiting for a connection.....
+10.02.20 15:32:37: Connection from 192.168.178.93:51345 authenticated
+10.02.20 15:32:38: Received: LINK
+10.02.20 15:32:38: Connection Initiated
+10.02.20 15:32:38: Correct Protocol
+10.02.20 15:32:38: Sent: LINK
+10.02.20 15:32:39: Received: 12.3
+10.02.20 15:32:39: Sent: 12.3
+10.02.20 15:32:39: Received: 23
+10.02.20 15:32:39: Sent: 108
+10.02.20 15:32:39: Encrypted text. SHA-256 Hash: ff2a8f3872a39aa2b7112f9b68e47011cd3816102eebff7add2e17d4b0479d28e234a5f7de38e3daad1d0e5cf9d6be60cc3127b15053b22fde2683390e8becfe
+10.02.20 15:32:40: Received: a1d9c96a58742ef792eb9be9903f1efdf89529b676bd68caf4184b3453b395ab5f98cb1c22258af2e9f7daa5b160bcd9d3a53d08c1ae2efc8234d4bde19056d8
+10.02.20 15:32:41: Received Authentication Token. Checking validity...
+10.02.20 15:32:41: Encrypted text. SHA-256 Hash: a1d9c96a58742ef792eb9be9903f1efdf89529b676bd68caf4184b3453b395ab5f98cb1c22258af2e9f7daa5b160bcd9d3a53d08c1ae2efc8234d4bde19056d8
+10.02.20 15:32:41: Authentication Token Correct
+10.02.20 15:32:41: Encrypted text. SHA-256 Hash: 6501e7d967df424bd449c70fa60c28c4a19383ac96d170f48bbf1bc5ec442edd75f33b3a8978b3937486854dd48df10fba932d0134fc3c49ffe5f80f1bb18278
+10.02.20 15:32:41: Sent: 6501e7d967df424bd449c70fa60c28c4a19383ac96d170f48bbf1bc5ec442edd75f33b3a8978b3937486854dd48df10fba932d0134fc3c49ffe5f80f1bb18278
+10.02.20 15:32:42: Received: REQUEST
+10.02.20 15:32:42: Request accepted
+10.02.20 15:32:51: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;dumpcap.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;smartscreen.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;Wireshark.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:32:51: Connection closed
+10.02.20 15:32:51: End Reached
+10.02.20 15:32:51: Connection closed
+10.02.20 15:32:51: Starting Receiver
+10.02.20 15:32:51: The server is running at port 2502
+10.02.20 15:32:51: The local End point is  :192.168.178.85:2502
+10.02.20 15:32:51: Waiting for a connection.....
+10.02.20 15:37:04: Connection from 192.168.178.93:51354 authenticated
+10.02.20 15:37:05: Received: LINK
+10.02.20 15:37:05: Connection Initiated
+10.02.20 15:37:05: Correct Protocol
+10.02.20 15:37:05: Sent: LINK
+10.02.20 15:37:06: Received: 12.3
+10.02.20 15:37:06: Sent: 12.3
+10.02.20 15:37:07: Received: 11
+10.02.20 15:37:07: Sent: 107
+10.02.20 15:37:07: Encrypted text. SHA-256 Hash: 1ff5706fd3d2c792b0d8851c66a055817d088ab17146191de9dc4a2b95fd2fbef22d0a9adaa2862c7a46ca5c368bd7d2cc43c0669495ddec7e7a42dc7028d4da
+10.02.20 15:37:08: Received: bd1a86da5667ad69336b14fb63c1b8bf22517568c02f9ca434c26e8e58de16abb77003854b0a53db1f5d8aab27d13ac0d123007e9f6f1442b3b1b1bbfd467906
+10.02.20 15:37:08: Received Authentication Token. Checking validity...
+10.02.20 15:37:08: Encrypted text. SHA-256 Hash: bd1a86da5667ad69336b14fb63c1b8bf22517568c02f9ca434c26e8e58de16abb77003854b0a53db1f5d8aab27d13ac0d123007e9f6f1442b3b1b1bbfd467906
+10.02.20 15:37:08: Authentication Token Correct
+10.02.20 15:37:08: Encrypted text. SHA-256 Hash: 267e9a8b84cc8783b682ce7a96afb5a49bd65253d753cadd746696cbd43282ec6caf6146465aa6d4252f33b2c24f2f15ade824c7698fde17d2708f380d0b28c7
+10.02.20 15:37:08: Sent: 267e9a8b84cc8783b682ce7a96afb5a49bd65253d753cadd746696cbd43282ec6caf6146465aa6d4252f33b2c24f2f15ade824c7698fde17d2708f380d0b28c7
+10.02.20 15:37:10: Received: REQUEST
+10.02.20 15:37:10: Request accepted
+10.02.20 15:37:20: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchIndexer.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;dumpcap.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchProtocolHost.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;Wireshark.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:37:20: Connection closed
+10.02.20 15:37:20: End Reached
+10.02.20 15:37:20: Connection closed
+10.02.20 15:37:20: Starting Receiver
+10.02.20 15:37:20: The server is running at port 2502
+10.02.20 15:37:20: The local End point is  :192.168.178.85:2502
+10.02.20 15:37:20: Waiting for a connection.....
+10.02.20 15:45:05: Connection from 192.168.178.93:51365 authenticated
+10.02.20 15:45:06: Received: LINK
+10.02.20 15:45:06: Connection Initiated
+10.02.20 15:45:06: Correct Protocol
+10.02.20 15:45:06: Sent: LINK
+10.02.20 15:45:07: Received: 12.3
+10.02.20 15:45:07: Sent: 12.3
+10.02.20 15:45:08: Received: 15
+10.02.20 15:45:08: Sent: 103
+10.02.20 15:45:08: Encrypted text. SHA-256 Hash: a50c50a3345cdbccf364b01a6417b43ed32c7a416b577ff64d270a2194ee3a9eda3305230d9b2d8a23d81550c09443a31cd3f52a74e6c79b83bcf11d155e8799
+10.02.20 15:45:09: Received: 11698975e984fd4ae02ba2fa6501bce0f30f0dc505548a44c7529d784353ecaced9fecdb8a12188b8d0c57f3273fa25325ebe4e43759fd00ac4dc251ed621ba0
+10.02.20 15:45:09: Received Authentication Token. Checking validity...
+10.02.20 15:45:09: Encrypted text. SHA-256 Hash: 11698975e984fd4ae02ba2fa6501bce0f30f0dc505548a44c7529d784353ecaced9fecdb8a12188b8d0c57f3273fa25325ebe4e43759fd00ac4dc251ed621ba0
+10.02.20 15:45:09: Authentication Token Correct
+10.02.20 15:45:09: Encrypted text. SHA-256 Hash: 0b04873d3e319c00a9148bd60ba7eea580c29f5e6c54f62559b9fd573b38ebb590a60cbcd515a4617c2d507e88bd48b7da2c3bdb7e27b2c89b71e50b619049cb
+10.02.20 15:45:09: Sent: 0b04873d3e319c00a9148bd60ba7eea580c29f5e6c54f62559b9fd573b38ebb590a60cbcd515a4617c2d507e88bd48b7da2c3bdb7e27b2c89b71e50b619049cb
+10.02.20 15:45:11: Received: KILL
+10.02.20 15:45:11: Kill Request accepted
+10.02.20 15:45:11: Received: Wireshark.exe
+10.02.20 15:45:11: Killing Process wireshark
+10.02.20 15:45:11: Killing Process Wireshark
+10.02.20 15:45:11: Successfully ended Wireshark
+10.02.20 15:45:11: Killing Process Wireshark
+10.02.20 15:45:11: Could not End Process Wireshark
+10.02.20 15:45:11: Sent: S
+10.02.20 15:45:11: Connection closed
+10.02.20 15:45:11: End Reached
+10.02.20 15:45:11: Connection closed
+10.02.20 15:45:11: Starting Receiver
+10.02.20 15:45:11: The server is running at port 2502
+10.02.20 15:45:11: The local End point is  :192.168.178.85:2502
+10.02.20 15:45:11: Waiting for a connection.....
+10.02.20 15:45:17: Connection from 192.168.178.93:51370 authenticated
+10.02.20 15:45:18: Received: LINK
+10.02.20 15:45:18: Connection Initiated
+10.02.20 15:45:18: Correct Protocol
+10.02.20 15:45:18: Sent: LINK
+10.02.20 15:45:19: Received: 12.3
+10.02.20 15:45:19: Sent: 12.3
+10.02.20 15:45:20: Received: 24
+10.02.20 15:45:20: Sent: 110
+10.02.20 15:45:20: Encrypted text. SHA-256 Hash: a50c50a3345cdbccf364b01a6417b43ed32c7a416b577ff64d270a2194ee3a9eda3305230d9b2d8a23d81550c09443a31cd3f52a74e6c79b83bcf11d155e8799
+10.02.20 15:45:21: Received: 141509b13f4360917698e4a7f50b722d4d7d5f087036baa2c5ae205a78ad78f798095ad46bde3ed4e476f237a866812f7e19c45db49157e9401d866a4800c8b6
+10.02.20 15:45:21: Received Authentication Token. Checking validity...
+10.02.20 15:45:21: Encrypted text. SHA-256 Hash: 141509b13f4360917698e4a7f50b722d4d7d5f087036baa2c5ae205a78ad78f798095ad46bde3ed4e476f237a866812f7e19c45db49157e9401d866a4800c8b6
+10.02.20 15:45:21: Authentication Token Correct
+10.02.20 15:45:21: Encrypted text. SHA-256 Hash: 6a7f8b9427614601608067f9c7307f0acfc3598962536682ecfda3439dd0c95e50d973dbecea1143fd93f29c10650fa22f00ca820d3b83ee81d1c8c378399cc7
+10.02.20 15:45:21: Sent: 6a7f8b9427614601608067f9c7307f0acfc3598962536682ecfda3439dd0c95e50d973dbecea1143fd93f29c10650fa22f00ca820d3b83ee81d1c8c378399cc7
+10.02.20 15:45:22: Received: REQUEST
+10.02.20 15:45:22: Request accepted
+10.02.20 15:45:32: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:45:32: Connection closed
+10.02.20 15:45:32: End Reached
+10.02.20 15:45:32: Connection closed
+10.02.20 15:45:32: Starting Receiver
+10.02.20 15:45:32: The server is running at port 2502
+10.02.20 15:45:33: The local End point is  :192.168.178.85:2502
+10.02.20 15:45:33: Waiting for a connection.....
+10.02.20 15:47:43: Connection from 192.168.178.93:51377 authenticated
+10.02.20 15:47:44: Received: LINK
+10.02.20 15:47:44: Connection Initiated
+10.02.20 15:47:44: Correct Protocol
+10.02.20 15:47:44: Sent: LINK
+10.02.20 15:47:45: Received: 12.3
+10.02.20 15:47:45: Sent: 12.3
+10.02.20 15:47:45: Received: 22
+10.02.20 15:47:45: Sent: 102
+10.02.20 15:47:46: Encrypted text. SHA-256 Hash: bd96a8e0cdf6da53e6f8550ca03bf4f9954a8fc80c27a564f79a16bcc2ac53bf8a0ad0f6d2ffe58155371b1767c40f07cded35a71180fda0749ac779e1580410
+10.02.20 15:47:47: Received: 3178b1645e3bf08c8a53f60018fcb572d70e2715045d7411905bace31d159685059438c2f8dca9048fc479a5c35d12b703dd63321aa940b0f6a2138e5a547066
+10.02.20 15:47:47: Received Authentication Token. Checking validity...
+10.02.20 15:47:47: Encrypted text. SHA-256 Hash: 3178b1645e3bf08c8a53f60018fcb572d70e2715045d7411905bace31d159685059438c2f8dca9048fc479a5c35d12b703dd63321aa940b0f6a2138e5a547066
+10.02.20 15:47:47: Authentication Token Correct
+10.02.20 15:47:47: Encrypted text. SHA-256 Hash: 2a04b78841417936cd295439cdf716744bf6e5b4ea109e5567094be46804aefab8dc37798fb95cc9733666b61107fa5959cb4c899239bafb63067da18b1089db
+10.02.20 15:47:47: Sent: 2a04b78841417936cd295439cdf716744bf6e5b4ea109e5567094be46804aefab8dc37798fb95cc9733666b61107fa5959cb4c899239bafb63067da18b1089db
+10.02.20 15:47:48: Received: REQUEST
+10.02.20 15:47:48: Request accepted
+10.02.20 15:47:58: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchProtocolHost.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 15:47:58: Connection closed
+10.02.20 15:47:58: End Reached
+10.02.20 15:47:58: Connection closed
+10.02.20 15:47:58: Starting Receiver
+10.02.20 15:47:58: The server is running at port 2502
+10.02.20 15:47:58: The local End point is  :192.168.178.85:2502
+10.02.20 15:47:58: Waiting for a connection.....
+10.02.20 15:56:33: * Starting... /*
+10.02.20 15:56:33: NotApplicable
+10.02.20 15:56:33: Local IP Addresses:
+10.02.20 15:56:33: 192.168.178.85
+10.02.20 15:56:33: 192.168.178.85
+10.02.20 15:56:33: * IPs on this Computer: /*
+10.02.20 15:56:33: * 192.168.178.85 /*
+10.02.20 15:56:33: * 192.168.178.85 /*
+10.02.20 15:56:33: NotApplicable
+10.02.20 15:56:33: NotApplicable
+10.02.20 15:56:33: * Stopping Receiver /*
+10.02.20 15:56:33: * Receiver Status: Not Running /*
+10.02.20 15:56:33: * Receiver Status: Not Running /*
+10.02.20 15:56:33: * Receiver Status: Not Running /*
+10.02.20 15:56:33: NotApplicable
+10.02.20 15:56:42: NotApplicable
+10.02.20 15:56:46: Input Box: Session Password : Enter new Session Password
+10.02.20 15:56:46: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.02.20 15:56:47: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.02.20 15:56:47: NotApplicable
+10.02.20 15:56:47: NotApplicable
+10.02.20 15:57:53: * Receiver Status: Not Running /*
+10.02.20 15:57:53: * Receiver Status: Running /*
+10.02.20 15:57:53: Starting Receiver
+10.02.20 15:57:53: Starting Receiver
+10.02.20 15:57:53: The server is running at port 2502
+10.02.20 15:57:53: The local End point is  :192.168.178.85:2502
+10.02.20 15:57:53: Waiting for a connection.....
+10.02.20 16:01:57: Connection from 192.168.178.93:51417 authenticated
+10.02.20 16:01:58: Received: LINK
+10.02.20 16:01:58: Connection Initiated
+10.02.20 16:01:58: Correct Protocol
+10.02.20 16:01:58: Sent: LINK
+10.02.20 16:02:00: Received: 12.3
+10.02.20 16:02:00: Sent: 12.3
+10.02.20 16:02:00: Received: 17
+10.02.20 16:02:00: Sent: 107
+10.02.20 16:02:00: Encrypted text. SHA-256 Hash: a03fc2658ff8503400631179f1595d6704f3a09c6a263f4dcedbbcbdee3422c5bc05aeeacb41ce8d112d4e59a6e363e354a69e12b797e1c784094b618012223c
+10.02.20 16:02:01: Received: faf3234a9796f232c9e90eaa81eebe38804e656938cdb477662e03c73ada4685bd4fa25e9f904fdc4c5068a5f4ef7585c787db8ed79e164ede5329e3636d3eff
+10.02.20 16:02:02: Received Authentication Token. Checking validity...
+10.02.20 16:02:02: Encrypted text. SHA-256 Hash: faf3234a9796f232c9e90eaa81eebe38804e656938cdb477662e03c73ada4685bd4fa25e9f904fdc4c5068a5f4ef7585c787db8ed79e164ede5329e3636d3eff
+10.02.20 16:02:02: Authentication Token Correct
+10.02.20 16:02:02: Encrypted text. SHA-256 Hash: e2490153d4a61d9104f97940bf59a4df6287cc8c35aeb2e8abba6d214457961ebcc8dac9dfb8c8ce3dfd43dfb8925227e234c41314ec95807900f5573a0fbb6b
+10.02.20 16:02:02: Sent: e2490153d4a61d9104f97940bf59a4df6287cc8c35aeb2e8abba6d214457961ebcc8dac9dfb8c8ce3dfd43dfb8925227e234c41314ec95807900f5573a0fbb6b
+10.02.20 16:02:03: Received: REQUEST
+10.02.20 16:02:03: Request accepted
+10.02.20 16:02:14: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.ThreadedWaitDialog.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;VBCSCompiler.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;WINWORD.EXE;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 16:02:14: Connection closed
+10.02.20 16:02:14: End Reached
+10.02.20 16:02:14: Connection closed
+10.02.20 16:02:14: Starting Receiver
+10.02.20 16:02:14: The server is running at port 2502
+10.02.20 16:02:14: The local End point is  :192.168.178.85:2502
+10.02.20 16:02:14: Waiting for a connection.....
+10.02.20 16:06:30: Connection from 192.168.178.93:51430 authenticated
+10.02.20 16:06:31: Received: LINK
+10.02.20 16:06:31: Connection Initiated
+10.02.20 16:06:31: Correct Protocol
+10.02.20 16:06:31: Sent: LINK
+10.02.20 16:06:32: Received: 12.3
+10.02.20 16:06:32: Sent: 12.3
+10.02.20 16:06:33: Received: 28
+10.02.20 16:06:33: Sent: 113
+10.02.20 16:06:33: Encrypted text. SHA-256 Hash: a705f09697c114a8536a7198cee5467595b68393aa7f03bef9a8a48f03705d7729014e252bb3e8da5fe633e1cbb422084c968d18e9b59ac0cf7adc15980a17dd
+10.02.20 16:06:34: Received: cee7f0ad87e8ed42b3b86cb7153dbb08a1f3bb4a75a8a655d2027537c69265a498f35f6a0777b9b019ec8d12b4286079baa628f3e0b64695a03c51bae73e5fc4
+10.02.20 16:06:34: Received Authentication Token. Checking validity...
+10.02.20 16:06:34: Encrypted text. SHA-256 Hash: cee7f0ad87e8ed42b3b86cb7153dbb08a1f3bb4a75a8a655d2027537c69265a498f35f6a0777b9b019ec8d12b4286079baa628f3e0b64695a03c51bae73e5fc4
+10.02.20 16:06:34: Authentication Token Correct
+10.02.20 16:06:34: Encrypted text. SHA-256 Hash: 65d53d0430ec1c65eca050d94ddc5ca7cc5fb66c8f3951be9dbf350abda83fa661bb0ed767af221f761aed5a6b3c361b78af1b54b475e357345a3c7b2a607830
+10.02.20 16:06:34: Sent: 65d53d0430ec1c65eca050d94ddc5ca7cc5fb66c8f3951be9dbf350abda83fa661bb0ed767af221f761aed5a6b3c361b78af1b54b475e357345a3c7b2a607830
+10.02.20 16:06:35: Received: KILL
+10.02.20 16:06:35: Kill Request accepted
+10.02.20 16:06:36: Received: !TeamViewer_Service.exe
+10.02.20 16:06:36: Killing Process teamviewer_service
+10.02.20 16:06:36: Killing Process TeamViewer_Service
+10.02.20 16:06:36: Could not End Process TeamViewer_Service
+10.02.20 16:06:36: Killing Process TeamViewer_Service
+10.02.20 16:06:36: Could not End Process TeamViewer_Service
+10.02.20 16:06:36: Sent: F
+10.02.20 16:06:36: Connection closed
+10.02.20 16:06:36: End Reached
+10.02.20 16:06:36: Connection closed
+10.02.20 16:06:36: Starting Receiver
+10.02.20 16:06:36: The server is running at port 2502
+10.02.20 16:06:36: The local End point is  :192.168.178.85:2502
+10.02.20 16:06:36: Waiting for a connection.....
+10.02.20 16:06:50: Connection from 192.168.178.93:51436 authenticated
+10.02.20 16:06:51: Received: LINK
+10.02.20 16:06:51: Connection Initiated
+10.02.20 16:06:51: Correct Protocol
+10.02.20 16:06:51: Sent: LINK
+10.02.20 16:06:52: Received: 12.3
+10.02.20 16:06:52: Sent: 12.3
+10.02.20 16:06:53: Received: 25
+10.02.20 16:06:53: Sent: 117
+10.02.20 16:06:53: Encrypted text. SHA-256 Hash: a705f09697c114a8536a7198cee5467595b68393aa7f03bef9a8a48f03705d7729014e252bb3e8da5fe633e1cbb422084c968d18e9b59ac0cf7adc15980a17dd
+10.02.20 16:06:54: Received: 7d1e9a5cac7ab1636e655f3249466de2d888bfd507065764ce536b634988c4542c5d8b7de592fcbdf74a463e9fefc09e969ef16c20fa0c280cdd42f7a9e74579
+10.02.20 16:06:54: Received Authentication Token. Checking validity...
+10.02.20 16:06:54: Encrypted text. SHA-256 Hash: 2ae7b9f0cad2b7ca09461da3b1b91cb5e2ded3809027fc511f6ec1f5bf526bf039781d847dd9f8dd0b9e0a83e4c2e6edd6ecf7deba5ce831562c577b8b3085fd
+10.02.20 16:06:54: Incorrect Password
+10.02.20 16:06:54: Connection closed
+10.02.20 16:06:54: End Reached
+10.02.20 16:06:54: Connection closed
+10.02.20 16:06:54: Starting Receiver
+10.02.20 16:06:54: The server is running at port 2502
+10.02.20 16:06:54: The local End point is  :192.168.178.85:2502
+10.02.20 16:06:54: Waiting for a connection.....
+10.02.20 16:09:45: * Starting... /*
+10.02.20 16:09:45: NotApplicable
+10.02.20 16:09:45: Local IP Addresses:
+10.02.20 16:09:45: 192.168.178.85
+10.02.20 16:09:45: 192.168.178.85
+10.02.20 16:09:45: * IPs on this Computer: /*
+10.02.20 16:09:45: * 192.168.178.85 /*
+10.02.20 16:09:45: * 192.168.178.85 /*
+10.02.20 16:09:45: NotApplicable
+10.02.20 16:09:45: NotApplicable
+10.02.20 16:09:45: * Stopping Receiver /*
+10.02.20 16:09:45: * Receiver Status: Not Running /*
+10.02.20 16:09:45: * Receiver Status: Not Running /*
+10.02.20 16:09:45: * Receiver Status: Not Running /*
+10.02.20 16:09:45: NotApplicable
+10.02.20 16:09:46: NotApplicable
+10.02.20 16:09:49: Input Box: Session Password : Enter new Session Password
+10.02.20 16:09:49: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.02.20 16:09:49: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.02.20 16:09:49: NotApplicable
+10.02.20 16:09:49: NotApplicable
+10.02.20 16:10:07: * Receiver Status: Not Running /*
+10.02.20 16:10:07: * Receiver Status: Running /*
+10.02.20 16:10:07: Starting Receiver
+10.02.20 16:10:07: Starting Receiver
+10.02.20 16:10:07: The server is running at port 2502
+10.02.20 16:10:07: The local End point is  :192.168.178.85:2502
+10.02.20 16:10:07: Waiting for a connection.....
+10.02.20 16:10:58: Connection from 192.168.178.93:51454 authenticated
+10.02.20 16:10:59: Received: LINK
+10.02.20 16:10:59: Connection Initiated
+10.02.20 16:10:59: Correct Protocol
+10.02.20 16:10:59: Sent: LINK
+10.02.20 16:11:00: Received: 12.3
+10.02.20 16:11:00: Sent: 12.3
+10.02.20 16:11:01: Received: 21
+10.02.20 16:11:01: Sent: 103
+10.02.20 16:11:01: Encrypted text. SHA-256 Hash: e85a30426db91661c214867fc2bebb376363bed8fa638f4b9d8aea2d27b592a68f6e3f7d01c0c92fd209e911c304f5fd14e6a500bdd873a474fdb45b5d08d1dd
+10.02.20 16:11:03: Received: 354eabe7d479a82f52df4cb9ce17ac1797d794c0e43f8c922930d299e70db21eb1e7b6f5629fecc2281764f49ad3513e0c9598cf5f255e0fbc9271bab87490e5
+10.02.20 16:11:03: Received Authentication Token. Checking validity...
+10.02.20 16:11:03: Encrypted text. SHA-256 Hash: 354eabe7d479a82f52df4cb9ce17ac1797d794c0e43f8c922930d299e70db21eb1e7b6f5629fecc2281764f49ad3513e0c9598cf5f255e0fbc9271bab87490e5
+10.02.20 16:11:03: Authentication Token Correct
+10.02.20 16:11:03: Encrypted text. SHA-256 Hash: 1b8cbc341c4de4ecc7e9c8f511b45c75ab1f75153f947d259aeb72fdb2c060d0627c48bb8fb3752570b609c0b5d45ffb0382569cbee4d760172f97f043fac0ba
+10.02.20 16:11:03: Sent: 1b8cbc341c4de4ecc7e9c8f511b45c75ab1f75153f947d259aeb72fdb2c060d0627c48bb8fb3752570b609c0b5d45ffb0382569cbee4d760172f97f043fac0ba
+10.02.20 16:11:04: Received: REQUEST
+10.02.20 16:11:04: Request accepted
+10.02.20 16:11:17: Sent: !atkexComSvc.exe;!audiodg.exe;!csrss.exe;!dasHost.exe;!dllhost.exe;!dwm.exe;!escsvc64.exe;!fontdrvhost.exe;!KMWDSrv.exe;!lsass.exe;!mDNSResponder.exe;!Memory Compression;!MsMpEng.exe;!NisSrv.exe;!nvcontainer.exe;!NVDisplay.Container.exe;!OfficeClickToRun.exe;!pcapsvc.exe;!Registry;!rundll32.exe;!SamsungRapidSvc.exe;!SearchFilterHost.exe;!SearchIndexer.exe;!SearchProtocolHost.exe;!SecurityHealthService.exe;!services.exe;!SgrmBroker.exe;!smss.exe;!SMSvcHost.exe;!snmp.exe;!spoolsv.exe;!sppsvc.exe;!sqlwriter.exe;!ss_conn_service.exe;!ss_conn_service2.exe;!StandardCollector.Service.exe;!svchost.exe;!synergyd.exe;!System Idle Process;!System;!TCPSVCS.EXE;!TeamViewer_Service.exe;!TinyWall.exe;!vmnat.exe;!vmnetdhcp.exe;!vmware-authd.exe;!vmware-usbarbitrator64.exe;!wininit.exe;!winlogon.exe;!WmiPrvSE.exe;!WUDFHost.exe;ApplicationFrameHost.exe;ASUSGPUFanServiceEx.exe;browser_broker.exe;Calculator.exe;CompPkgSrv.exe;conhost.exe;ctfmon.exe;devenv.exe;dllhost.exe;dumpcap.exe;explorer.exe;FileCoAuth.exe;firefox.exe;GPUTweakII.exe;jusched.exe;LockApp.exe;Microsoft.Photos.exe;Microsoft.ServiceHub.Controller.exe;MicrosoftEdge.exe;MicrosoftEdgeCP.exe;MicrosoftEdgeSH.exe;Middle mouse button.exe;Monitor.exe;msvsmon.exe;nvcontainer.exe;NVIDIA Share.exe;NVIDIA Web Helper.exe;nvsphelper64.exe;OneDrive.exe;PerfWatson2.exe;POWERPNT.EXE;RemindersServer.exe;RtkNGUI64.exe;RuntimeBroker.exe;SamsungDeX.exe;ScriptedSandbox64.exe;SearchProtocolHost.exe;SearchUI.exe;SecurityHealthSystray.exe;ServiceHub.DataWarehouseHost.exe;ServiceHub.Host.CLR.x86.exe;ServiceHub.IdentityHost.exe;ServiceHub.RoslynCodeAnalysisService32.exe;ServiceHub.SettingsHost.exe;ServiceHub.ThreadedWaitDialog.exe;ServiceHub.VSDetouredHost.exe;SettingSyncHost.exe;ShellExperienceHost.exe;sihost.exe;smartscreen.exe;StartMenuExperienceHost.exe;svchost.exe;SystemSettings.exe;taskhostw.exe;TaskLink12Client.exe;TiltWheelMouse.exe;Video.UI.exe;vsls-agent.exe;WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe;WinStore.App.exe;WINWORD.EXE;Wireshark.exe;YourPhone.exe;YourPhoneServer.exe;
+10.02.20 16:11:17: Connection closed
+10.02.20 16:11:17: End Reached
+10.02.20 16:11:17: Connection closed
+10.02.20 16:11:17: Starting Receiver
+10.02.20 16:11:17: The server is running at port 2502
+10.02.20 16:11:17: The local End point is  :192.168.178.85:2502
+10.02.20 16:11:17: Waiting for a connection.....
+10.02.20 16:11:33: Connection from 192.168.178.93:51456 authenticated
+10.02.20 16:11:34: Received: LINK
+10.02.20 16:11:34: Connection Initiated
+10.02.20 16:11:34: Correct Protocol
+10.02.20 16:11:34: Sent: LINK
+10.02.20 16:11:36: Received: 12.3
+10.02.20 16:11:36: Sent: 12.3
+10.02.20 16:11:37: Received: 12
+10.02.20 16:11:37: Sent: 105
+10.02.20 16:11:37: Encrypted text. SHA-256 Hash: e85a30426db91661c214867fc2bebb376363bed8fa638f4b9d8aea2d27b592a68f6e3f7d01c0c92fd209e911c304f5fd14e6a500bdd873a474fdb45b5d08d1dd
+10.02.20 16:11:38: Received: 2872da93fc91ea46a433b83f2cfd67362d2eb3d0b27e4ac268c23685ad325d16fb53514401252c3de7db1d60ac81af22157682c4676fac331cdefcba84efca86
+10.02.20 16:11:38: Received Authentication Token. Checking validity...
+10.02.20 16:11:38: Encrypted text. SHA-256 Hash: 2872da93fc91ea46a433b83f2cfd67362d2eb3d0b27e4ac268c23685ad325d16fb53514401252c3de7db1d60ac81af22157682c4676fac331cdefcba84efca86
+10.02.20 16:11:38: Authentication Token Correct
+10.02.20 16:11:38: Encrypted text. SHA-256 Hash: 4c8995fb4e604943fbdc3d03d6c8d26bfe0fd91adeff7a28fa988b482ab81a6e616a8baaf9923232d8dd5bfa69f8a50f544fc1dd1da35509b474e6e963bf5e28
+10.02.20 16:11:38: Sent: 4c8995fb4e604943fbdc3d03d6c8d26bfe0fd91adeff7a28fa988b482ab81a6e616a8baaf9923232d8dd5bfa69f8a50f544fc1dd1da35509b474e6e963bf5e28
+10.02.20 16:11:40: Received: KILL
+10.02.20 16:11:40: Kill Request accepted
+10.02.20 16:11:40: Received: POWERPNT.EXE
+10.02.20 16:11:40: Killing Process powerpnt
+10.02.20 16:11:41: Killing Process POWERPNT
+10.02.20 16:11:41: Successfully ended POWERPNT
+10.02.20 16:11:41: Killing Process POWERPNT
+10.02.20 16:11:41: Could not End Process POWERPNT
+10.02.20 16:11:41: Sent: S
+10.02.20 16:11:41: Connection closed
+10.02.20 16:11:41: End Reached
+10.02.20 16:11:41: Connection closed
+10.02.20 16:11:41: Starting Receiver
+10.02.20 16:11:41: The server is running at port 2502
+10.02.20 16:11:41: The local End point is  :192.168.178.85:2502
+10.02.20 16:11:41: Waiting for a connection.....
+10.02.20 16:11:49: Connection from 192.168.178.93:51457 authenticated
+10.02.20 16:11:50: Received: LINK
+10.02.20 16:11:50: Connection Initiated
+10.02.20 16:11:50: Correct Protocol
+10.02.20 16:11:50: Sent: LINK
+10.02.20 16:11:52: Received: 12.3
+10.02.20 16:11:52: Sent: 12.3
+10.02.20 16:11:53: Received: 13
+10.02.20 16:11:53: Sent: 110
+10.02.20 16:11:53: Encrypted text. SHA-256 Hash: e85a30426db91661c214867fc2bebb376363bed8fa638f4b9d8aea2d27b592a68f6e3f7d01c0c92fd209e911c304f5fd14e6a500bdd873a474fdb45b5d08d1dd
+10.02.20 16:11:55: Received: c8df7316a7c6ee50675ce0cbc4a3a69931de40bed21c0d80de0ac698aefdc7164528bebc8a606378c557bf468c457a400db2485a6602f2bbdbae784b4b1e99b3
+10.02.20 16:11:55: Received Authentication Token. Checking validity...
+10.02.20 16:11:55: Encrypted text. SHA-256 Hash: ab72a0ac9ed85d28a7c14398b6195492201b00355f46b0e212575b4cb1219f8eced5a36431e3a991c509ec9a8f6668c5ac4c11da2495fc38584b115bf24bb87f
+10.02.20 16:11:55: Incorrect Password
+10.02.20 16:11:55: Connection closed
+10.02.20 16:11:55: End Reached
+10.02.20 16:11:55: Connection closed
+10.02.20 16:11:55: Starting Receiver
+10.02.20 16:11:55: The server is running at port 2502
+10.02.20 16:11:55: The local End point is  :192.168.178.85:2502
+10.02.20 16:11:55: Waiting for a connection.....
+10.03.2020 15:10:29: * Starting... /*
+10.03.2020 15:10:29: NotApplicable
+10.03.2020 15:10:29: Local IP Addresses:
+10.03.2020 15:10:29: 192.168.178.93
+10.03.2020 15:10:30: * IPs on this Computer: /*
+10.03.2020 15:10:30: * 192.168.178.93 /*
+10.03.2020 15:10:30: NotApplicable
+10.03.2020 15:10:30: NotApplicable
+10.03.2020 15:10:30: * Stopping Receiver /*
+10.03.2020 15:10:30: * Receiver Status: Not Running /*
+10.03.2020 15:10:30: * Receiver Status: Not Running /*
+10.03.2020 15:10:30: * Receiver Status: Not Running /*
+10.03.2020 15:10:30: NotApplicable
+10.03.2020 15:10:33: Input Box: Session Password : Enter new Session Password
+10.03.2020 15:10:33: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.03.2020 15:10:33: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.03.2020 15:10:33: NotApplicable
+10.03.2020 15:10:33: NotApplicable
+10.03.2020 15:10:35: * Receiver Status: Not Running /*
+10.03.2020 15:10:35: * Receiver Status: Running /*
+10.03.2020 15:10:35: Starting Receiver
+10.03.2020 15:10:36: Starting Receiver
+10.03.2020 15:10:36: Connection closed
+10.03.2020 15:29:03: * Starting... /*
+10.03.2020 15:29:03: NotApplicable
+10.03.2020 15:29:03: Local IP Addresses:
+10.03.2020 15:29:03: 192.168.178.93
+10.03.2020 15:29:03: * IPs on this Computer: /*
+10.03.2020 15:29:03: * 192.168.178.93 /*
+10.03.2020 15:29:03: NotApplicable
+10.03.2020 15:29:03: NotApplicable
+10.03.2020 15:29:03: * Stopping Receiver /*
+10.03.2020 15:29:03: * Receiver Status: Not Running /*
+10.03.2020 15:29:03: * Receiver Status: Not Running /*
+10.03.2020 15:29:03: * Receiver Status: Not Running /*
+10.03.2020 15:29:03: NotApplicable
