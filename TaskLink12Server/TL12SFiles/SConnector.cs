@@ -98,7 +98,7 @@ namespace TaskLink12Server
                                     {
                                         LogI("Converting num");
                                         R2 = Convert.ToInt32(num);
-
+                                        LogI("Num is " + R2.ToString());
                                         if (R2 > TLL.R2Min && R2 < TLL.R2Max)
                                         {
                                             string temp = DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();

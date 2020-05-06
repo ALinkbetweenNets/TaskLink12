@@ -26670,3 +26670,48 @@
 06.05.20 13:35:59: Invalid R2
 06.05.20 13:35:59: Reached End
 06.05.20 13:36:00: Connection Closed
+06.05.20 13:43:45: NotApplicable
+06.05.20 13:43:46: Local IP Addresses:
+06.05.20 13:43:46: 192.168.178.85
+06.05.20 13:43:47: 192.168.178.85
+06.05.20 13:43:47: * IPs on this Computer: /*
+06.05.20 13:43:48: * 192.168.178.85 /*
+06.05.20 13:43:48: * 192.168.178.85 /*
+06.05.20 13:43:49: NotApplicable
+06.05.20 13:43:49: NotApplicable
+06.05.20 13:43:50: NotApplicable
+06.05.20 13:43:50: Local IP Addresses:
+06.05.20 13:43:51: 192.168.178.85
+06.05.20 13:43:51: 192.168.178.85
+06.05.20 13:43:52: * IPs on this Computer: /*
+06.05.20 13:43:52: * 192.168.178.85 /*
+06.05.20 13:43:53: * 192.168.178.85 /*
+06.05.20 13:43:54: NotApplicable
+06.05.20 13:43:54: NotApplicable
+06.05.20 13:43:58: NotApplicable
+06.05.20 13:44:01: Input Box: Session Password : Enter new Session Password
+06.05.20 13:44:02: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:44:04: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:44:05: NotApplicable
+06.05.20 13:44:05: NotApplicable
+06.05.20 13:44:19: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:44:19: NotApplicable
+06.05.20 13:44:23: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:44:23: Connected
+06.05.20 13:44:24: Opened Stream
+06.05.20 13:44:25: Transmitter Ready
+06.05.20 13:44:25: Sent: LINK
+06.05.20 13:44:26: Started Transmission
+06.05.20 13:44:26: Received: LINK
+06.05.20 13:44:27: Connection Initiated
+06.05.20 13:44:27: Correct Protocol
+06.05.20 13:44:28: Sent: 12.3
+06.05.20 13:44:28: Received: 12.3
+06.05.20 13:44:29: Sent: 29
+06.05.20 13:44:29: Received: 117
+06.05.20 13:44:30: Converting num
+06.05.20 13:44:30: Encrypted text. SHA-256 Hash: 2b4499a4b7df1f16ff92b3a99cb86df2b3e37147a2a2af963d1258a3b0de5939
+06.05.20 13:44:31: Invalid R2
+06.05.20 13:44:31: Reached End
+06.05.20 13:44:32: Connection Closed
