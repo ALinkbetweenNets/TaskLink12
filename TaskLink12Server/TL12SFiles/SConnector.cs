@@ -71,7 +71,7 @@ namespace TaskLink12Server
                                     byte[] ByteResponse = new byte[ResponseLength];
                                     length = stream.Read(ByteResponse, 0, ResponseLength);
                                     string ResponseString = TLL.GetString(
-                                        ByteResponse,ResponseLength , tll.SessionPassword,//length
+                                        ByteResponse,length , tll.SessionPassword,//length
                                         tll.initVector, encrypted);
                                     LogI($"Received: {ResponseString}");
                                     return ResponseString;
