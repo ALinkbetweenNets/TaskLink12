@@ -8,3 +8,8 @@ C:\Users\carlb\Downloads\Neuer Ordner (3)\TaskLink12\TaskLink12Library\bin\Debug
 C:\Users\carlb\Downloads\Neuer Ordner (3)\TaskLink12\TaskLink12Library\obj\Debug\TaskLink12Library.csprojAssemblyReference.cache
 C:\Users\carlb\Downloads\Neuer Ordner (3)\TaskLink12\TaskLink12Library\obj\Debug\TaskLink12Library.dll
 C:\Users\carlb\Downloads\Neuer Ordner (3)\TaskLink12\TaskLink12Library\obj\Debug\TaskLink12Library.pdb
+C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\obj\Debug\TaskLink12Library.dll
+C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\bin\Debug\TaskLink12Library.dll
+C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\bin\Debug\TaskLink12Library.pdb
+C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\obj\Debug\TaskLink12Library.pdb
+C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\obj\Debug\TaskLink12Library.csproj.CoreCompileInputs.cache

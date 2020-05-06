@@ -26111,3 +26111,362 @@
    bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Library\LEncryption.cs:Zeile 220.
    bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Library\LStrings.cs:Zeile 49.
    bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:19:48: NotApplicable
+10.03.20 16:19:49: Local IP Addresses:
+10.03.20 16:19:49: 192.168.178.85
+10.03.20 16:19:50: 192.168.178.85
+10.03.20 16:19:51: * IPs on this Computer: /*
+10.03.20 16:19:51: * 192.168.178.85 /*
+10.03.20 16:19:52: * 192.168.178.85 /*
+10.03.20 16:19:52: NotApplicable
+10.03.20 16:19:53: NotApplicable
+10.03.20 16:19:54: NotApplicable
+10.03.20 16:19:54: Local IP Addresses:
+10.03.20 16:19:55: 192.168.178.85
+10.03.20 16:19:55: 192.168.178.85
+10.03.20 16:19:56: * IPs on this Computer: /*
+10.03.20 16:19:56: * 192.168.178.85 /*
+10.03.20 16:19:57: * 192.168.178.85 /*
+10.03.20 16:19:57: NotApplicable
+10.03.20 16:19:58: NotApplicable
+10.03.20 16:20:08: NotApplicable
+10.03.20 16:20:12: Input Box: Session Password : Enter new Session Password
+10.03.20 16:20:13: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.03.20 16:20:16: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.03.20 16:20:17: NotApplicable
+10.03.20 16:20:17: NotApplicable
+10.03.20 16:20:39: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+10.03.20 16:20:40: NotApplicable
+10.03.20 16:21:02: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+10.03.20 16:21:03: Connected
+10.03.20 16:21:04: Opened Stream
+10.03.20 16:21:04: Transmitter Ready
+10.03.20 16:21:05: Sent: LINK
+10.03.20 16:21:05: Started Transmission
+10.03.20 16:21:06: Received: LINK
+10.03.20 16:21:06: Connection Initiated
+10.03.20 16:21:07: Correct Protocol
+10.03.20 16:21:07: Sent: 12.3
+10.03.20 16:21:08: Received: 12.3
+10.03.20 16:21:09: Sent: 15
+10.03.20 16:21:09: Received: 111
+10.03.20 16:21:10: Converting num
+10.03.20 16:21:10: Encrypted text. SHA-256 Hash: f4e610c1f36836d851367459344037f19f51755d4ec5b7e315d83a62ca3863d6
+10.03.20 16:21:11: Encrypted text. SHA-256 Hash: c6ff8cb7bb7d1439bdf03de3288bb2c817aeaacac2b8643ebe96708415e4c11f
+10.03.20 16:21:12: Sent: c6ff8cb7bb7d1439bdf03de3288bb2c817aeaacac2b8643ebe96708415e4c11f
+10.03.20 16:21:12:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:13:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:14:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:14:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:15:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:15:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:16:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:17:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:17:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:18:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:19:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:19:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:20:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:20:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:21:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:22:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:22:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:23:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:24:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:24:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:25:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:26:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:26:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:27:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:28:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:28:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:29:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:30:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:30:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:31:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:32:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:32:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:33:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:34:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:34:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.

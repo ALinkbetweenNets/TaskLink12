@@ -16,6 +16,7 @@ public partial class TLL
     /// <returns>Calculated SHA-256 Hash</returns>
     public static string GetHash(string text, HashType type)
     {
+
         byte[] textBytes = Utf8.GetBytes(text);
         byte[] hash;
         switch (type)
@@ -193,6 +194,7 @@ public partial class TLL
     }*/
     public static byte[] EncryptString(string text, string SessionPassword, string secret)
     {
+        return Utf8.GetBytes(text);
         byte[] iv = Utf8.GetBytes(secret);
         byte[] array;
 
@@ -227,6 +229,7 @@ public partial class TLL
     /// <returns></returns>
     public static string DecryptString(byte[] text, string SessionPassword, string secret)
     {
+        return Utf8.GetString(text);
         byte[] iv = Utf8.GetBytes(secret);
         //byte[] buffer = Convert.FromBase64String(text);
 
