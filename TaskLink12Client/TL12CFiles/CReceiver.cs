@@ -159,13 +159,13 @@ namespace TaskLink12Client
                                                    
                                                     if (testPass == TLL.GetHash(Pass.Substring(
                                                         R1 / 2,
-                                                        (R2 / 2)// - (R1 / 2)
+                                                        (R2 / 2) - (R1 / 2)
                                                         ), TLL.HashType.h512))
                                                     {
                                                         LogI("Authentication Token Correct");
                                                         Write(TLL.GetHash(Pass.Substring(
                                                             R2 / 2 + R1 / 2,
-                                                            R2// - (R2 / 2 + R1 / 2)
+                                                            R2 - (R2 / 2 + R1 / 2)
                                                             ), TLL.HashType.h512));
                                                         string type = Read();
                                                         switch (type)
