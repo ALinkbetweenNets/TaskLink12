@@ -103,7 +103,10 @@ namespace TaskLink12Server
                                         {
                                             string temp = "1";// DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
                                             string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h512);
-
+                                            LogI("sending " + Pass.Substring(
+                                                R1 / 2,
+                                                (R2 / 2) - (R1 / 2)
+                                                ));
                                             Write(TLL.GetHash(Pass.Substring(
                                                 R1 / 2,
                                                 (R2 / 2) - (R1 / 2)

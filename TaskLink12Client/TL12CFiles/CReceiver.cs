@@ -163,6 +163,10 @@ namespace TaskLink12Client
                                                         ), TLL.HashType.h512))
                                                     {
                                                         LogI("Authentication Token Correct");
+                                                        LogI("Sending " + Pass.Substring(
+                                                            R2 / 2 + R1 / 2,
+                                                            R2 - (R2 / 2 + R1 / 2)
+                                                            ));
                                                         Write(TLL.GetHash(Pass.Substring(
                                                             R2 / 2 + R1 / 2,
                                                             R2 - (R2 / 2 + R1 / 2)
