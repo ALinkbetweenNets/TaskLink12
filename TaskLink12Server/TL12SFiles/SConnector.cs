@@ -106,15 +106,15 @@ namespace TaskLink12Server
 
                                             Write(TLL.GetHash(Pass.Substring(
                                                 R1 / 2,
-                                                (R2 / 2) - (R1 / 2)
+                                                (R2 / 2)// - (R1 / 2)
                                                 ), TLL.HashType.h256));
                                             string testPass = Read();
                                             LogI("Received Authentication Token. Checking validity...");
                                             if (testPass == TLL.GetHash(Pass.Substring(
                                                 R2 / 2 + R1 / 2,
-                                                R2 - (R2 / 2 + R1 / 2)
+                                                R2// - (R2 / 2 + R1 / 2)
                                                 ), TLL.HashType.h256))
-                                            {
+                                            {//
                                                 LogI("Authentication Token Correct");
                                                 Write(type);
                                                 if (type == "KILL")
