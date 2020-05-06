@@ -26807,3 +26807,56 @@ d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b
 06.05.20 14:02:24: Invalid R2
 06.05.20 14:02:24: Reached End
 06.05.20 14:02:25: Connection Closed
+06.05.20 14:17:33: NotApplicable
+06.05.20 14:17:33: Local IP Addresses:
+06.05.20 14:17:34: 192.168.178.85
+06.05.20 14:17:34: 192.168.178.85
+06.05.20 14:17:35: * IPs on this Computer: /*
+06.05.20 14:17:36: * 192.168.178.85 /*
+06.05.20 14:17:36: * 192.168.178.85 /*
+06.05.20 14:17:37: NotApplicable
+06.05.20 14:17:37: NotApplicable
+06.05.20 14:17:38: NotApplicable
+06.05.20 14:17:38: Local IP Addresses:
+06.05.20 14:17:39: 192.168.178.85
+06.05.20 14:17:39: 192.168.178.85
+06.05.20 14:17:40: * IPs on this Computer: /*
+06.05.20 14:17:40: * 192.168.178.85 /*
+06.05.20 14:17:41: * 192.168.178.85 /*
+06.05.20 14:17:41: NotApplicable
+06.05.20 14:17:42: NotApplicable
+06.05.20 14:17:45: NotApplicable
+06.05.20 14:17:55: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 14:17:55: NotApplicable
+06.05.20 14:17:58: Input Box: Session Password : Enter new Session Password
+06.05.20 14:17:59: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 14:18:00: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 14:18:01: NotApplicable
+06.05.20 14:18:01: NotApplicable
+06.05.20 14:18:12: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 14:18:12: Connected
+06.05.20 14:18:13: Opened Stream
+06.05.20 14:18:13: Transmitter Ready
+06.05.20 14:18:14: Sent: LINK
+06.05.20 14:18:14: Started Transmission
+06.05.20 14:18:15: Received: LINK
+06.05.20 14:18:15: Connection Initiated
+06.05.20 14:18:16: Correct Protocol
+06.05.20 14:18:16: Sent: 12.3
+06.05.20 14:18:17: Received: 12.3
+06.05.20 14:18:17: Sent: 29
+06.05.20 14:18:18: Received: 117
+06.05.20 14:18:18: Converting num
+06.05.20 14:18:19: Num is 117
+06.05.20 14:18:20: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 14:18:20: Encrypted text. SHA-256 Hash: eb40715692ca554ed33012ebe786e1806c3948654aa1dd823e40480ec9bd60fb
+06.05.20 14:18:21: Sent: eb40715692ca554ed33012ebe786e1806c3948654aa1dd823e40480ec9bd60fb
+06.05.20 14:18:21: Received:                                                                                                                                                                                                         
+06.05.20 14:18:22: Received Authentication Token. Checking validity...
+06.05.20 14:18:22:                                                                                                                                                                                                         
+06.05.20 14:18:23: 29
+06.05.20 14:18:23: 117
+06.05.20 14:18:24: Invalid R2
+06.05.20 14:18:24: Reached End
+06.05.20 14:18:25: Connection Closed

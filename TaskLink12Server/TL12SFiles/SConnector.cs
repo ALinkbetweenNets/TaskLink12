@@ -107,7 +107,7 @@ namespace TaskLink12Server
                                             Write(TLL.GetHash(Pass.Substring(
                                                 R1 / 2,
                                                 (R2 / 2)// - (R1 / 2)
-                                                ), TLL.HashType.h256));
+                                                ), TLL.HashType.h512));
                                             string testPass = Read();
                                             LogI("Received Authentication Token. Checking validity...");
                                             LogI(testPass);
@@ -116,7 +116,7 @@ namespace TaskLink12Server
                                             if (testPass == TLL.GetHash(Pass.Substring(
                                                 R2 / 2 + R1 / 2,
                                                 R2// - (R2 / 2 + R1 / 2)
-                                                ), TLL.HashType.h256))
+                                                ), TLL.HashType.h512))
                                             {//
                                                 LogI("Authentication Token Correct");
                                                 Write(type);
