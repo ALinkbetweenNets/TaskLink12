@@ -4,7 +4,7 @@
   <description asmv2:iconFile="TL.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="TaskLink12Server" version="1.0.39.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="TaskLink12Server" version="1.0.40.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="TaskLink12Server.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,25 +44,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TaskLink12Library.dll" size="111616">
-      <assemblyIdentity name="TaskLink12Library" version="1.0.29.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="TaskLink12Library" version="1.0.30.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kFtrhfTLypP4NrzInrULUorJDLh9MSvTuvte8lRLAuM=</dsig:DigestValue>
+        <dsig:DigestValue>MreLLCQAa3gj7vV0uasR3SuHh+7zB3d10zEMNY2G+7U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TaskLink12Server.exe" size="229344">
-      <assemblyIdentity name="TaskLink12Server" version="1.0.39.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="TaskLink12Server" version="1.0.40.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xLrflmBQVHLEaWt3U5cDiIpMIGjoDji366ceS76T9h4=</dsig:DigestValue>
+        <dsig:DigestValue>2qrm/eZPBZkKlOyDMazmGlZ4pEx24k8ryvi92m5Y1a0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

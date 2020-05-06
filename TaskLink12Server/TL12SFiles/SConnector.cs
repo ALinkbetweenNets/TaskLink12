@@ -102,7 +102,7 @@ namespace TaskLink12Server
                                         if (R2 > TLL.R2Min && R2 < TLL.R2Max)
                                         {
                                             string temp = "1";// DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
-                                            string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h256);
+                                            string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h512);
 
                                             Write(TLL.GetHash(Pass.Substring(
                                                 R1 / 2,

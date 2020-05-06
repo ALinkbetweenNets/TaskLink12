@@ -151,7 +151,7 @@ namespace TaskLink12Client
                                                     Write(R2.ToString());
 
                                                     string temp = "1";// DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
-                                                    string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h256);
+                                                    string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h512);
 
                                                     string testPass = Read();
                                                     LogI("Received Authentication Token. Checking validity...");
