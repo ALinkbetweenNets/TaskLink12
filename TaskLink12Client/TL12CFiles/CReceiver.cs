@@ -147,10 +147,10 @@ namespace TaskLink12Client
                                                 int R1 = Convert.ToInt32(num);
                                                 if (R1 > TLL.R1Min && R1 < TLL.R1Max)
                                                 {
-                                                    int R2 = TLL.Random(TLL.R2Min, TLL.R2Max);
+                                                    int R2 = 29;//TLL.Random(TLL.R2Min, TLL.R2Max);
                                                     Write(R2.ToString());
 
-                                                    string temp = DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
+                                                    string temp = DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
                                                     string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h256);
 
                                                     string testPass = Read();

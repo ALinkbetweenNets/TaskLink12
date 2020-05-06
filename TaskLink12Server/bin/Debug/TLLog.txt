@@ -26470,3 +26470,108 @@
    bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
    bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
    bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+06.05.20 12:45:32: NotApplicable
+06.05.20 12:45:32: Local IP Addresses:
+06.05.20 12:45:33: 192.168.178.85
+06.05.20 12:45:33: 192.168.178.85
+06.05.20 12:45:34: * IPs on this Computer: /*
+06.05.20 12:45:34: * 192.168.178.85 /*
+06.05.20 12:45:35: * 192.168.178.85 /*
+06.05.20 12:48:19: NotApplicable
+06.05.20 12:48:19: Local IP Addresses:
+06.05.20 12:48:20: 192.168.178.85
+06.05.20 12:48:20: 192.168.178.85
+06.05.20 12:48:21: * IPs on this Computer: /*
+06.05.20 12:48:21: * 192.168.178.85 /*
+06.05.20 12:48:22: * 192.168.178.85 /*
+06.05.20 12:48:25: NotApplicable
+06.05.20 12:48:25: NotApplicable
+06.05.20 12:48:26: NotApplicable
+06.05.20 12:48:26: Local IP Addresses:
+06.05.20 12:48:27: 192.168.178.85
+06.05.20 12:48:27: 192.168.178.85
+06.05.20 12:48:28: * IPs on this Computer: /*
+06.05.20 12:48:28: * 192.168.178.85 /*
+06.05.20 12:48:29: * 192.168.178.85 /*
+06.05.20 12:48:44: NotApplicable
+06.05.20 12:48:44: NotApplicable
+06.05.20 12:48:53: NotApplicable
+06.05.20 12:50:47: Input Box: Session Password : Enter new Session Password
+06.05.20 12:50:48: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 12:51:49: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 12:51:50: NotApplicable
+06.05.20 12:51:50: NotApplicable
+06.05.20 12:51:57: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 12:51:57: NotApplicable
+06.05.20 12:52:15: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 12:52:15: Connected
+06.05.20 12:52:16: Opened Stream
+06.05.20 12:52:16: Transmitter Ready
+06.05.20 12:52:17: Sent: LINK
+06.05.20 12:52:17: Started Transmission
+06.05.20 12:52:18: Received: LINK
+06.05.20 12:52:18: Connection Initiated
+06.05.20 12:52:19: Correct Protocol
+06.05.20 12:52:19: Sent: 12.3
+06.05.20 12:52:20: Received: 12.3
+06.05.20 12:52:20: Sent: 15
+06.05.20 12:52:21: Received: 111
+06.05.20 12:52:21: Converting num
+06.05.20 12:52:22: Encrypted text. SHA-256 Hash: a33deab2c94a55287518a949283a338e51b966b7178f06c212ef160a25afc5e9
+06.05.20 12:52:22: Encrypted text. SHA-256 Hash: ca9727ebba838a5c98641c03de2c0e39c4fa671e9e36dba185b7e0c9ef26a98b
+06.05.20 12:52:23: Sent: ca9727ebba838a5c98641c03de2c0e39c4fa671e9e36dba185b7e0c9ef26a98b
+06.05.20 12:52:24: Received:                                                                                                                                                                                                         
+06.05.20 12:52:24: Received Authentication Token. Checking validity...
+06.05.20 12:52:25: Invalid R2
+06.05.20 12:52:25: Reached End
+06.05.20 12:52:26: Connection Closed
+06.05.20 13:16:28: NotApplicable
+06.05.20 13:16:29: Local IP Addresses:
+06.05.20 13:16:30: 192.168.178.85
+06.05.20 13:16:30: 192.168.178.85
+06.05.20 13:16:31: * IPs on this Computer: /*
+06.05.20 13:16:31: * 192.168.178.85 /*
+06.05.20 13:16:32: * 192.168.178.85 /*
+06.05.20 13:16:32: NotApplicable
+06.05.20 13:16:33: NotApplicable
+06.05.20 13:16:33: NotApplicable
+06.05.20 13:16:34: Local IP Addresses:
+06.05.20 13:16:34: 192.168.178.85
+06.05.20 13:16:35: 192.168.178.85
+06.05.20 13:16:35: * IPs on this Computer: /*
+06.05.20 13:16:36: * 192.168.178.85 /*
+06.05.20 13:16:36: * 192.168.178.85 /*
+06.05.20 13:16:37: NotApplicable
+06.05.20 13:16:37: NotApplicable
+06.05.20 13:16:59: Input Box: Session Password : Enter new Session Password
+06.05.20 13:17:00: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:17:01: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:17:02: NotApplicable
+06.05.20 13:17:02: NotApplicable
+06.05.20 13:17:03: NotApplicable
+06.05.20 13:17:13: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:17:14: NotApplicable
+06.05.20 13:17:30: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:17:31: Connected
+06.05.20 13:17:31: Opened Stream
+06.05.20 13:17:32: Transmitter Ready
+06.05.20 13:17:32: Sent: LINK
+06.05.20 13:17:33: Started Transmission
+06.05.20 13:17:33: Received: LINK
+06.05.20 13:17:34: Connection Initiated
+06.05.20 13:17:34: Correct Protocol
+06.05.20 13:17:35: Sent: 12.3
+06.05.20 13:17:35: Received: 12.3
+06.05.20 13:17:36: Sent: 24
+06.05.20 13:17:36: Received: 113
+06.05.20 13:17:37: Converting num
+06.05.20 13:17:37: Encrypted text. SHA-256 Hash: fda4c572fa3490d950881c5a9b55d808a667a4d55eb69b8847aba5450496e826
+06.05.20 13:17:38: Encrypted text. SHA-256 Hash: 254ac48035f303b01de8cb7e6f0bb1c423d47fa2469b5ac9a37a611acbd3cd29
+06.05.20 13:17:38: Sent: 254ac48035f303b01de8cb7e6f0bb1c423d47fa2469b5ac9a37a611acbd3cd29
+06.05.20 13:17:39: Received:                                                                                                                                                                                                         
+06.05.20 13:17:39: Received Authentication Token. Checking validity...
+06.05.20 13:17:40: Invalid R2
+06.05.20 13:17:40: Reached End
+06.05.20 13:17:41: Connection Closed

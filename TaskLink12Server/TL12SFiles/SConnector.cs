@@ -90,7 +90,7 @@ namespace TaskLink12Server
                                 Write(TLL.Version, false);
                                 if (Read(false) == TLL.Version)
                                 {
-                                    int R1 = TLL.Random(TLL.R1Min, TLL.R1Max);
+                                    int R1 = 117;// TLL.Random(TLL.R1Min, TLL.R1Max);
                                     Write(R1.ToString());
                                     int R2 = 2;
                                     string num = Read();
@@ -101,7 +101,7 @@ namespace TaskLink12Server
 
                                         if (R2 > TLL.R2Min && R2 < TLL.R2Max)
                                         {
-                                            string temp = DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
+                                            string temp = DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
                                             string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h256);
 
                                             Write(TLL.GetHash(Pass.Substring(
