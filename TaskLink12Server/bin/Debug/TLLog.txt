@@ -26111,3 +26111,984 @@
    bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Library\LEncryption.cs:Zeile 220.
    bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Library\LStrings.cs:Zeile 49.
    bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\OneDrive\TL\TaskLink12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:19:48: NotApplicable
+10.03.20 16:19:49: Local IP Addresses:
+10.03.20 16:19:49: 192.168.178.85
+10.03.20 16:19:50: 192.168.178.85
+10.03.20 16:19:51: * IPs on this Computer: /*
+10.03.20 16:19:51: * 192.168.178.85 /*
+10.03.20 16:19:52: * 192.168.178.85 /*
+10.03.20 16:19:52: NotApplicable
+10.03.20 16:19:53: NotApplicable
+10.03.20 16:19:54: NotApplicable
+10.03.20 16:19:54: Local IP Addresses:
+10.03.20 16:19:55: 192.168.178.85
+10.03.20 16:19:55: 192.168.178.85
+10.03.20 16:19:56: * IPs on this Computer: /*
+10.03.20 16:19:56: * 192.168.178.85 /*
+10.03.20 16:19:57: * 192.168.178.85 /*
+10.03.20 16:19:57: NotApplicable
+10.03.20 16:19:58: NotApplicable
+10.03.20 16:20:08: NotApplicable
+10.03.20 16:20:12: Input Box: Session Password : Enter new Session Password
+10.03.20 16:20:13: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+10.03.20 16:20:16: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+10.03.20 16:20:17: NotApplicable
+10.03.20 16:20:17: NotApplicable
+10.03.20 16:20:39: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+10.03.20 16:20:40: NotApplicable
+10.03.20 16:21:02: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+10.03.20 16:21:03: Connected
+10.03.20 16:21:04: Opened Stream
+10.03.20 16:21:04: Transmitter Ready
+10.03.20 16:21:05: Sent: LINK
+10.03.20 16:21:05: Started Transmission
+10.03.20 16:21:06: Received: LINK
+10.03.20 16:21:06: Connection Initiated
+10.03.20 16:21:07: Correct Protocol
+10.03.20 16:21:07: Sent: 12.3
+10.03.20 16:21:08: Received: 12.3
+10.03.20 16:21:09: Sent: 15
+10.03.20 16:21:09: Received: 111
+10.03.20 16:21:10: Converting num
+10.03.20 16:21:10: Encrypted text. SHA-256 Hash: f4e610c1f36836d851367459344037f19f51755d4ec5b7e315d83a62ca3863d6
+10.03.20 16:21:11: Encrypted text. SHA-256 Hash: c6ff8cb7bb7d1439bdf03de3288bb2c817aeaacac2b8643ebe96708415e4c11f
+10.03.20 16:21:12: Sent: c6ff8cb7bb7d1439bdf03de3288bb2c817aeaacac2b8643ebe96708415e4c11f
+10.03.20 16:21:12:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:13:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:14:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:14:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:15:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:15:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:16:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:17:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:17:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:18:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:19:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:19:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:20:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:20:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:21:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:22:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:22:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:23:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:24:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:24:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:25:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:26:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:26:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:27:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:28:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:28:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:29:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:30:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:30:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:31:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:32:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:32:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:33:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:34:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+10.03.20 16:21:34:    bei System.Security.Cryptography.CapiSymmetricAlgorithm.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   bei System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   bei System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   bei System.IO.Stream.Close()
+   bei System.IO.StreamReader.Dispose(Boolean disposing)
+   bei System.IO.TextReader.Dispose()
+   bei TLL.DecryptString(Byte[] text, String SessionPassword, String secret) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LEncryption.cs:Zeile 245.
+   bei TLL.GetString(Byte[] bytesToConvert, Int32 byteLength, String SessionPassword, String initVector, Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Library\LStrings.cs:Zeile 48.
+   bei TaskLink12Server.TLS.<>c__DisplayClass0_0.<ConnectAsync>g__Read|1(Boolean encrypted) in C:\Users\carlb\Downloads\git\TL12\TaskLink12Server\TL12SFiles\SConnector.cs:Zeile 72.Die Eingabedaten sind kein vollständiger Block.
+06.05.20 12:45:32: NotApplicable
+06.05.20 12:45:32: Local IP Addresses:
+06.05.20 12:45:33: 192.168.178.85
+06.05.20 12:45:33: 192.168.178.85
+06.05.20 12:45:34: * IPs on this Computer: /*
+06.05.20 12:45:34: * 192.168.178.85 /*
+06.05.20 12:45:35: * 192.168.178.85 /*
+06.05.20 12:48:19: NotApplicable
+06.05.20 12:48:19: Local IP Addresses:
+06.05.20 12:48:20: 192.168.178.85
+06.05.20 12:48:20: 192.168.178.85
+06.05.20 12:48:21: * IPs on this Computer: /*
+06.05.20 12:48:21: * 192.168.178.85 /*
+06.05.20 12:48:22: * 192.168.178.85 /*
+06.05.20 12:48:25: NotApplicable
+06.05.20 12:48:25: NotApplicable
+06.05.20 12:48:26: NotApplicable
+06.05.20 12:48:26: Local IP Addresses:
+06.05.20 12:48:27: 192.168.178.85
+06.05.20 12:48:27: 192.168.178.85
+06.05.20 12:48:28: * IPs on this Computer: /*
+06.05.20 12:48:28: * 192.168.178.85 /*
+06.05.20 12:48:29: * 192.168.178.85 /*
+06.05.20 12:48:44: NotApplicable
+06.05.20 12:48:44: NotApplicable
+06.05.20 12:48:53: NotApplicable
+06.05.20 12:50:47: Input Box: Session Password : Enter new Session Password
+06.05.20 12:50:48: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 12:51:49: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 12:51:50: NotApplicable
+06.05.20 12:51:50: NotApplicable
+06.05.20 12:51:57: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 12:51:57: NotApplicable
+06.05.20 12:52:15: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 12:52:15: Connected
+06.05.20 12:52:16: Opened Stream
+06.05.20 12:52:16: Transmitter Ready
+06.05.20 12:52:17: Sent: LINK
+06.05.20 12:52:17: Started Transmission
+06.05.20 12:52:18: Received: LINK
+06.05.20 12:52:18: Connection Initiated
+06.05.20 12:52:19: Correct Protocol
+06.05.20 12:52:19: Sent: 12.3
+06.05.20 12:52:20: Received: 12.3
+06.05.20 12:52:20: Sent: 15
+06.05.20 12:52:21: Received: 111
+06.05.20 12:52:21: Converting num
+06.05.20 12:52:22: Encrypted text. SHA-256 Hash: a33deab2c94a55287518a949283a338e51b966b7178f06c212ef160a25afc5e9
+06.05.20 12:52:22: Encrypted text. SHA-256 Hash: ca9727ebba838a5c98641c03de2c0e39c4fa671e9e36dba185b7e0c9ef26a98b
+06.05.20 12:52:23: Sent: ca9727ebba838a5c98641c03de2c0e39c4fa671e9e36dba185b7e0c9ef26a98b
+06.05.20 12:52:24: Received:                                                                                                                                                                                                         
+06.05.20 12:52:24: Received Authentication Token. Checking validity...
+06.05.20 12:52:25: Invalid R2
+06.05.20 12:52:25: Reached End
+06.05.20 12:52:26: Connection Closed
+06.05.20 13:16:28: NotApplicable
+06.05.20 13:16:29: Local IP Addresses:
+06.05.20 13:16:30: 192.168.178.85
+06.05.20 13:16:30: 192.168.178.85
+06.05.20 13:16:31: * IPs on this Computer: /*
+06.05.20 13:16:31: * 192.168.178.85 /*
+06.05.20 13:16:32: * 192.168.178.85 /*
+06.05.20 13:16:32: NotApplicable
+06.05.20 13:16:33: NotApplicable
+06.05.20 13:16:33: NotApplicable
+06.05.20 13:16:34: Local IP Addresses:
+06.05.20 13:16:34: 192.168.178.85
+06.05.20 13:16:35: 192.168.178.85
+06.05.20 13:16:35: * IPs on this Computer: /*
+06.05.20 13:16:36: * 192.168.178.85 /*
+06.05.20 13:16:36: * 192.168.178.85 /*
+06.05.20 13:16:37: NotApplicable
+06.05.20 13:16:37: NotApplicable
+06.05.20 13:16:59: Input Box: Session Password : Enter new Session Password
+06.05.20 13:17:00: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:17:01: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:17:02: NotApplicable
+06.05.20 13:17:02: NotApplicable
+06.05.20 13:17:03: NotApplicable
+06.05.20 13:17:13: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:17:14: NotApplicable
+06.05.20 13:17:30: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:17:31: Connected
+06.05.20 13:17:31: Opened Stream
+06.05.20 13:17:32: Transmitter Ready
+06.05.20 13:17:32: Sent: LINK
+06.05.20 13:17:33: Started Transmission
+06.05.20 13:17:33: Received: LINK
+06.05.20 13:17:34: Connection Initiated
+06.05.20 13:17:34: Correct Protocol
+06.05.20 13:17:35: Sent: 12.3
+06.05.20 13:17:35: Received: 12.3
+06.05.20 13:17:36: Sent: 24
+06.05.20 13:17:36: Received: 113
+06.05.20 13:17:37: Converting num
+06.05.20 13:17:37: Encrypted text. SHA-256 Hash: fda4c572fa3490d950881c5a9b55d808a667a4d55eb69b8847aba5450496e826
+06.05.20 13:17:38: Encrypted text. SHA-256 Hash: 254ac48035f303b01de8cb7e6f0bb1c423d47fa2469b5ac9a37a611acbd3cd29
+06.05.20 13:17:38: Sent: 254ac48035f303b01de8cb7e6f0bb1c423d47fa2469b5ac9a37a611acbd3cd29
+06.05.20 13:17:39: Received:                                                                                                                                                                                                         
+06.05.20 13:17:39: Received Authentication Token. Checking validity...
+06.05.20 13:17:40: Invalid R2
+06.05.20 13:17:40: Reached End
+06.05.20 13:17:41: Connection Closed
+06.05.20 13:28:31: NotApplicable
+06.05.20 13:28:32: Local IP Addresses:
+06.05.20 13:28:33: 192.168.178.85
+06.05.20 13:28:33: 192.168.178.85
+06.05.20 13:28:34: * IPs on this Computer: /*
+06.05.20 13:28:34: * 192.168.178.85 /*
+06.05.20 13:28:35: * 192.168.178.85 /*
+06.05.20 13:28:35: NotApplicable
+06.05.20 13:28:36: NotApplicable
+06.05.20 13:28:37: NotApplicable
+06.05.20 13:28:37: Local IP Addresses:
+06.05.20 13:28:38: 192.168.178.85
+06.05.20 13:28:39: 192.168.178.85
+06.05.20 13:28:39: * IPs on this Computer: /*
+06.05.20 13:28:40: * 192.168.178.85 /*
+06.05.20 13:28:41: * 192.168.178.85 /*
+06.05.20 13:28:42: NotApplicable
+06.05.20 13:28:43: NotApplicable
+06.05.20 13:28:53: Input Box: Session Password : Enter new Session Password
+06.05.20 13:28:54: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:28:56: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:28:56: NotApplicable
+06.05.20 13:28:57: NotApplicable
+06.05.20 13:29:06: NotApplicable
+06.05.20 13:29:10: Confirmation Box: Save Session Password - This will save the Session Password so it will be loaded automatically at startup. Do you want to save it?
+06.05.20 13:29:12: Result: No
+06.05.20 13:29:17: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:29:18: NotApplicable
+06.05.20 13:29:43: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:29:43: Connected
+06.05.20 13:29:44: Opened Stream
+06.05.20 13:29:44: Transmitter Ready
+06.05.20 13:29:45: Sent: LINK
+06.05.20 13:29:45: Started Transmission
+06.05.20 13:29:46: Received: LINK
+06.05.20 13:29:46: Connection Initiated
+06.05.20 13:29:47: Correct Protocol
+06.05.20 13:29:47: Sent: 12.3
+06.05.20 13:29:48: Received: 12.3
+06.05.20 13:29:48: Sent: 117
+06.05.20 13:29:49: Received:                                                                                                                                                                                                         
+06.05.20 13:29:49: Converting num
+06.05.20 13:29:50: Invalid R2
+06.05.20 13:29:51: Reached End
+06.05.20 13:29:51: Connection Closed
+06.05.20 13:35:07: NotApplicable
+06.05.20 13:35:08: Local IP Addresses:
+06.05.20 13:35:08: 192.168.178.85
+06.05.20 13:35:09: 192.168.178.85
+06.05.20 13:35:10: * IPs on this Computer: /*
+06.05.20 13:35:10: * 192.168.178.85 /*
+06.05.20 13:35:11: * 192.168.178.85 /*
+06.05.20 13:35:11: NotApplicable
+06.05.20 13:35:12: NotApplicable
+06.05.20 13:35:12: NotApplicable
+06.05.20 13:35:13: Local IP Addresses:
+06.05.20 13:35:13: 192.168.178.85
+06.05.20 13:35:14: 192.168.178.85
+06.05.20 13:35:15: * IPs on this Computer: /*
+06.05.20 13:35:15: * 192.168.178.85 /*
+06.05.20 13:35:16: * 192.168.178.85 /*
+06.05.20 13:35:16: NotApplicable
+06.05.20 13:35:17: NotApplicable
+06.05.20 13:35:20: Input Box: Session Password : Enter new Session Password
+06.05.20 13:35:21: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:35:22: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:35:23: NotApplicable
+06.05.20 13:35:23: NotApplicable
+06.05.20 13:35:24: NotApplicable
+06.05.20 13:35:35: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:35:35: NotApplicable
+06.05.20 13:35:49: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:35:50: Connected
+06.05.20 13:35:50: Opened Stream
+06.05.20 13:35:51: Transmitter Ready
+06.05.20 13:35:51: Sent: LINK
+06.05.20 13:35:52: Started Transmission
+06.05.20 13:35:52: Received: LINK
+06.05.20 13:35:53: Connection Initiated
+06.05.20 13:35:53: Correct Protocol
+06.05.20 13:35:54: Sent: 12.3
+06.05.20 13:35:54: Received: 12.3
+06.05.20 13:35:55: Sent: 29
+06.05.20 13:35:55: Received: 117
+06.05.20 13:35:56: Converting num
+06.05.20 13:35:56: Encrypted text. SHA-256 Hash: 2b4499a4b7df1f16ff92b3a99cb86df2b3e37147a2a2af963d1258a3b0de5939
+06.05.20 13:35:57: Encrypted text. SHA-256 Hash: cad18bc8f48ab099b65b9ba05431c8cf8f518854ae0600e6322af5e164a58de2
+06.05.20 13:35:57: Sent: cad18bc8f48ab099b65b9ba05431c8cf8f518854ae0600e6322af5e164a58de2
+06.05.20 13:35:58: Received:                                                                                                                                                                                                         
+06.05.20 13:35:58: Received Authentication Token. Checking validity...
+06.05.20 13:35:59: Invalid R2
+06.05.20 13:35:59: Reached End
+06.05.20 13:36:00: Connection Closed
+06.05.20 13:43:45: NotApplicable
+06.05.20 13:43:46: Local IP Addresses:
+06.05.20 13:43:46: 192.168.178.85
+06.05.20 13:43:47: 192.168.178.85
+06.05.20 13:43:47: * IPs on this Computer: /*
+06.05.20 13:43:48: * 192.168.178.85 /*
+06.05.20 13:43:48: * 192.168.178.85 /*
+06.05.20 13:43:49: NotApplicable
+06.05.20 13:43:49: NotApplicable
+06.05.20 13:43:50: NotApplicable
+06.05.20 13:43:50: Local IP Addresses:
+06.05.20 13:43:51: 192.168.178.85
+06.05.20 13:43:51: 192.168.178.85
+06.05.20 13:43:52: * IPs on this Computer: /*
+06.05.20 13:43:52: * 192.168.178.85 /*
+06.05.20 13:43:53: * 192.168.178.85 /*
+06.05.20 13:43:54: NotApplicable
+06.05.20 13:43:54: NotApplicable
+06.05.20 13:43:58: NotApplicable
+06.05.20 13:44:01: Input Box: Session Password : Enter new Session Password
+06.05.20 13:44:02: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:44:04: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:44:05: NotApplicable
+06.05.20 13:44:05: NotApplicable
+06.05.20 13:44:19: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:44:19: NotApplicable
+06.05.20 13:44:23: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:44:23: Connected
+06.05.20 13:44:24: Opened Stream
+06.05.20 13:44:25: Transmitter Ready
+06.05.20 13:44:25: Sent: LINK
+06.05.20 13:44:26: Started Transmission
+06.05.20 13:44:26: Received: LINK
+06.05.20 13:44:27: Connection Initiated
+06.05.20 13:44:27: Correct Protocol
+06.05.20 13:44:28: Sent: 12.3
+06.05.20 13:44:28: Received: 12.3
+06.05.20 13:44:29: Sent: 29
+06.05.20 13:44:29: Received: 117
+06.05.20 13:44:30: Converting num
+06.05.20 13:44:30: Encrypted text. SHA-256 Hash: 2b4499a4b7df1f16ff92b3a99cb86df2b3e37147a2a2af963d1258a3b0de5939
+06.05.20 13:44:31: Invalid R2
+06.05.20 13:44:31: Reached End
+06.05.20 13:44:32: Connection Closed
+06.05.20 13:51:05: NotApplicable
+06.05.20 13:51:06: Local IP Addresses:
+06.05.20 13:51:06: 192.168.178.85
+06.05.20 13:51:07: 192.168.178.85
+06.05.20 13:51:08: * IPs on this Computer: /*
+06.05.20 13:51:08: * 192.168.178.85 /*
+06.05.20 13:51:09: * 192.168.178.85 /*
+06.05.20 13:51:09: NotApplicable
+06.05.20 13:51:10: NotApplicable
+06.05.20 13:51:10: NotApplicable
+06.05.20 13:51:11: Local IP Addresses:
+06.05.20 13:51:11: 192.168.178.85
+06.05.20 13:51:12: 192.168.178.85
+06.05.20 13:51:12: * IPs on this Computer: /*
+06.05.20 13:51:13: * 192.168.178.85 /*
+06.05.20 13:51:13: * 192.168.178.85 /*
+06.05.20 13:51:14: NotApplicable
+06.05.20 13:51:14: NotApplicable
+06.05.20 13:51:18: Input Box: Session Password : Enter new Session Password
+06.05.20 13:51:19: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 13:51:20: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 13:51:20: NotApplicable
+06.05.20 13:51:21: NotApplicable
+06.05.20 13:51:22: NotApplicable
+06.05.20 13:51:27: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 13:51:28: NotApplicable
+06.05.20 13:51:45: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 13:51:45: Connected
+06.05.20 13:51:46: Opened Stream
+06.05.20 13:51:46: Transmitter Ready
+06.05.20 13:51:47: Sent: LINK
+06.05.20 13:51:47: Started Transmission
+06.05.20 13:51:48: Received: LINK
+06.05.20 13:51:49: Connection Initiated
+06.05.20 13:51:49: Correct Protocol
+06.05.20 13:51:50: Sent: 12.3
+06.05.20 13:51:50: Received: 12.3
+06.05.20 13:51:51: Sent: 29
+06.05.20 13:51:51: Received: 119
+06.05.20 13:51:59: Converting num
+06.05.20 13:52:00: Num is 119
+06.05.20 13:52:00: Encrypted text. SHA-256 Hash: 2b4499a4b7df1f16ff92b3a99cb86df2b3e37147a2a2af963d1258a3b0de5939
+06.05.20 13:52:01: Invalid R2
+06.05.20 13:52:02: Reached End
+06.05.20 13:52:02: Connection Closed
+06.05.20 14:01:30: NotApplicable
+06.05.20 14:01:31: Local IP Addresses:
+06.05.20 14:01:31: 192.168.178.85
+06.05.20 14:01:32: 192.168.178.85
+06.05.20 14:01:32: * IPs on this Computer: /*
+06.05.20 14:01:33: * 192.168.178.85 /*
+06.05.20 14:01:33: * 192.168.178.85 /*
+06.05.20 14:01:34: NotApplicable
+06.05.20 14:01:34: NotApplicable
+06.05.20 14:01:35: NotApplicable
+06.05.20 14:01:35: Local IP Addresses:
+06.05.20 14:01:36: 192.168.178.85
+06.05.20 14:01:36: 192.168.178.85
+06.05.20 14:01:37: * IPs on this Computer: /*
+06.05.20 14:01:38: * 192.168.178.85 /*
+06.05.20 14:01:38: * 192.168.178.85 /*
+06.05.20 14:01:39: NotApplicable
+06.05.20 14:01:39: NotApplicable
+06.05.20 14:01:50: Input Box: Session Password : Enter new Session Password
+06.05.20 14:01:50: Encrypted text. SHA-256 Hash: d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db
+06.05.20 14:01:52: MsgBox (Set new Session Password. SHA-512 Hash:
+d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db)
+06.05.20 14:01:52: NotApplicable
+06.05.20 14:01:53: NotApplicable
+06.05.20 14:01:53: NotApplicable
+06.05.20 14:02:03: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 14:02:04: NotApplicable
+06.05.20 14:02:15: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 14:02:16: Connected
+06.05.20 14:02:17: Opened Stream
+06.05.20 14:02:17: Transmitter Ready
+06.05.20 14:02:18: Sent: LINK
+06.05.20 14:02:18: Started Transmission
+06.05.20 14:02:19: Received: LINK
+06.05.20 14:02:19: Connection Initiated
+06.05.20 14:02:20: Correct Protocol
+06.05.20 14:02:20: Sent: 12.3
+06.05.20 14:02:21: Received: 12.3
+06.05.20 14:02:21: Sent: 29
+06.05.20 14:02:22: Received: 117
+06.05.20 14:02:22: Converting num
+06.05.20 14:02:23: Num is 117
+06.05.20 14:02:23: Encrypted text. SHA-256 Hash: d13d23df5760390ca0735e124a365bf7d69f3653c1eb7e9a1fe9d433437c7b15
+06.05.20 14:02:24: Invalid R2
+06.05.20 14:02:24: Reached End
+06.05.20 14:02:25: Connection Closed
+06.05.20 14:17:33: NotApplicable
+06.05.20 14:17:33: Local IP Addresses:
+06.05.20 14:17:34: 192.168.178.85
+06.05.20 14:17:34: 192.168.178.85
+06.05.20 14:17:35: * IPs on this Computer: /*
+06.05.20 14:17:36: * 192.168.178.85 /*
+06.05.20 14:17:36: * 192.168.178.85 /*
+06.05.20 14:17:37: NotApplicable
+06.05.20 14:17:37: NotApplicable
+06.05.20 14:17:38: NotApplicable
+06.05.20 14:17:38: Local IP Addresses:
+06.05.20 14:17:39: 192.168.178.85
+06.05.20 14:17:39: 192.168.178.85
+06.05.20 14:17:40: * IPs on this Computer: /*
+06.05.20 14:17:40: * 192.168.178.85 /*
+06.05.20 14:17:41: * 192.168.178.85 /*
+06.05.20 14:17:41: NotApplicable
+06.05.20 14:17:42: NotApplicable
+06.05.20 14:17:45: NotApplicable
+06.05.20 14:17:55: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 14:17:55: NotApplicable
+06.05.20 14:17:58: Input Box: Session Password : Enter new Session Password
+06.05.20 14:17:59: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 14:18:00: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 14:18:01: NotApplicable
+06.05.20 14:18:01: NotApplicable
+06.05.20 14:18:12: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 14:18:12: Connected
+06.05.20 14:18:13: Opened Stream
+06.05.20 14:18:13: Transmitter Ready
+06.05.20 14:18:14: Sent: LINK
+06.05.20 14:18:14: Started Transmission
+06.05.20 14:18:15: Received: LINK
+06.05.20 14:18:15: Connection Initiated
+06.05.20 14:18:16: Correct Protocol
+06.05.20 14:18:16: Sent: 12.3
+06.05.20 14:18:17: Received: 12.3
+06.05.20 14:18:17: Sent: 29
+06.05.20 14:18:18: Received: 117
+06.05.20 14:18:18: Converting num
+06.05.20 14:18:19: Num is 117
+06.05.20 14:18:20: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 14:18:20: Encrypted text. SHA-256 Hash: eb40715692ca554ed33012ebe786e1806c3948654aa1dd823e40480ec9bd60fb
+06.05.20 14:18:21: Sent: eb40715692ca554ed33012ebe786e1806c3948654aa1dd823e40480ec9bd60fb
+06.05.20 14:18:21: Received:                                                                                                                                                                                                         
+06.05.20 14:18:22: Received Authentication Token. Checking validity...
+06.05.20 14:18:22:                                                                                                                                                                                                         
+06.05.20 14:18:23: 29
+06.05.20 14:18:23: 117
+06.05.20 14:18:24: Invalid R2
+06.05.20 14:18:24: Reached End
+06.05.20 14:18:25: Connection Closed
+06.05.20 14:21:20: NotApplicable
+06.05.20 14:21:21: Local IP Addresses:
+06.05.20 14:21:21: 192.168.178.85
+06.05.20 14:21:22: 192.168.178.85
+06.05.20 14:21:22: * IPs on this Computer: /*
+06.05.20 14:21:23: * 192.168.178.85 /*
+06.05.20 14:21:23: * 192.168.178.85 /*
+06.05.20 14:21:24: NotApplicable
+06.05.20 14:21:24: NotApplicable
+06.05.20 14:21:25: NotApplicable
+06.05.20 14:21:25: Local IP Addresses:
+06.05.20 14:21:26: 192.168.178.85
+06.05.20 14:21:26: 192.168.178.85
+06.05.20 14:21:27: * IPs on this Computer: /*
+06.05.20 14:21:27: * 192.168.178.85 /*
+06.05.20 14:21:28: * 192.168.178.85 /*
+06.05.20 14:21:28: NotApplicable
+06.05.20 14:21:29: NotApplicable
+06.05.20 14:21:32: Input Box: Session Password : Enter new Session Password
+06.05.20 14:21:33: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 14:21:34: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 14:21:35: NotApplicable
+06.05.20 14:21:35: NotApplicable
+06.05.20 14:21:36: NotApplicable
+06.05.20 14:21:41: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 14:21:42: NotApplicable
+06.05.20 14:21:45: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 14:21:45: Connected
+06.05.20 14:21:46: Opened Stream
+06.05.20 14:21:46: Transmitter Ready
+06.05.20 14:21:47: Sent: LINK
+06.05.20 14:21:47: Started Transmission
+06.05.20 14:21:48: Received: LINK
+06.05.20 14:21:48: Connection Initiated
+06.05.20 14:21:49: Correct Protocol
+06.05.20 14:21:50: Sent: 12.3
+06.05.20 14:21:50: Received: 12.3
+06.05.20 14:21:51: Sent: 29
+06.05.20 14:21:51: Received: 117
+06.05.20 14:21:52: Converting num
+06.05.20 14:21:52: Num is 117
+06.05.20 14:21:53: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 14:21:53: Encrypted text. SHA-256 Hash: d6abd7a081c81114b026ddddf5864b0b1268c73cd528d9a64fbc9ccd7065fd9d5b55866ce8a71f1cf1735e094ef399afc0faa5d35daea5592cb83038fd326a5d
+06.05.20 14:21:54: Sent: d6abd7a081c81114b026ddddf5864b0b1268c73cd528d9a64fbc9ccd7065fd9d5b55866ce8a71f1cf1735e094ef399afc0faa5d35daea5592cb83038fd326a5d
+06.05.20 14:21:54: Received:                                                                                                                                                                                                         
+06.05.20 14:21:55: Received Authentication Token. Checking validity...
+06.05.20 14:21:55:                                                                                                                                                                                                         
+06.05.20 14:21:56: 29
+06.05.20 14:21:56: 117
+06.05.20 14:21:57: Invalid R2
+06.05.20 14:21:57: Reached End
+06.05.20 14:21:58: Connection Closed
+06.05.20 15:00:02: NotApplicable
+06.05.20 15:00:02: Local IP Addresses:
+06.05.20 15:00:03: 192.168.178.85
+06.05.20 15:00:04: 192.168.178.85
+06.05.20 15:00:04: * IPs on this Computer: /*
+06.05.20 15:00:05: * 192.168.178.85 /*
+06.05.20 15:00:05: * 192.168.178.85 /*
+06.05.20 15:00:06: NotApplicable
+06.05.20 15:00:06: NotApplicable
+06.05.20 15:00:07: NotApplicable
+06.05.20 15:00:07: Local IP Addresses:
+06.05.20 15:00:08: 192.168.178.85
+06.05.20 15:00:08: 192.168.178.85
+06.05.20 15:00:09: * IPs on this Computer: /*
+06.05.20 15:13:05: NotApplicable
+06.05.20 15:13:06: Local IP Addresses:
+06.05.20 15:13:07: 192.168.178.85
+06.05.20 15:13:07: 192.168.178.85
+06.05.20 15:13:08: * IPs on this Computer: /*
+06.05.20 15:13:08: * 192.168.178.85 /*
+06.05.20 15:13:09: * 192.168.178.85 /*
+06.05.20 15:13:10: NotApplicable
+06.05.20 15:13:10: NotApplicable
+06.05.20 15:13:11: NotApplicable
+06.05.20 15:13:11: Local IP Addresses:
+06.05.20 15:13:12: 192.168.178.85
+06.05.20 15:13:12: 192.168.178.85
+06.05.20 15:13:13: * IPs on this Computer: /*
+06.05.20 15:13:13: * 192.168.178.85 /*
+06.05.20 15:13:14: * 192.168.178.85 /*
+06.05.20 15:13:14: NotApplicable
+06.05.20 15:13:15: NotApplicable
+06.05.20 15:13:20: Input Box: Session Password : Enter new Session Password
+06.05.20 15:13:20: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 15:13:22: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 15:13:22: NotApplicable
+06.05.20 15:13:23: NotApplicable
+06.05.20 15:13:29: NotApplicable
+06.05.20 15:13:34: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 15:13:35: NotApplicable
+06.05.20 15:13:52: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 15:13:52: Connected
+06.05.20 15:13:53: Opened Stream
+06.05.20 15:13:53: Transmitter Ready
+06.05.20 15:13:54: Sent: LINK
+06.05.20 15:13:54: Started Transmission
+06.05.20 15:13:55: Received: LINK
+06.05.20 15:13:56: Connection Initiated
+06.05.20 15:13:56: Correct Protocol
+06.05.20 15:13:57: Sent: 12.3
+06.05.20 15:13:57: Received: 12.3
+06.05.20 15:13:58: Sent: 29
+06.05.20 15:13:58: Received: 117
+06.05.20 15:13:59: Converting num
+06.05.20 15:13:59: Num is 117
+06.05.20 15:14:00: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 15:14:00: sending 28c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164
+06.05.20 15:14:01: Encrypted text. SHA-256 Hash: 576173e9adb65c4b75ee48c89f42a6a8649cef3f419971cc13bbe5a3276cda14f03e967884dd7601c5c94163c9eeec93692c1522d69963a574724771067b72d2
+06.05.20 15:14:01: Sent: 576173e9adb65c4b75ee48c89f42a6a8649cef3f419971cc13bbe5a3276cda14f03e967884dd7601c5c94163c9eeec93692c1522d69963a574724771067b72d2
+06.05.20 15:14:02: Received: d4a079c1b53d6db982d7b66c639df4962e10835429e4f6ad746c966f96d9590ea40553283cf005dee9bf46c10752da7d9924726382bc406bf30e30da53c6210f
+06.05.20 15:14:02: Received Authentication Token. Checking validity...
+06.05.20 15:14:03: d4a079c1b53d6db982d7b66c639df4962e10835429e4f6ad746c966f96d9590ea40553283cf005dee9bf46c10752da7d9924726382bc406bf30e30da53c6210f
+06.05.20 15:14:04: 29
+06.05.20 15:14:04: 117
+06.05.20 15:14:05: Encrypted text. SHA-256 Hash: d4a079c1b53d6db982d7b66c639df4962e10835429e4f6ad746c966f96d9590ea40553283cf005dee9bf46c10752da7d9924726382bc406bf30e30da53c6210f
+06.05.20 15:14:05: Authentication Token Correct
+06.05.20 15:14:06: Sent: REQUEST
+06.05.20 15:14:43: Received: !AppHelperCap.exe;!AppVShNotify.exe;!conhost.exe;!csrss.exe;!CxAudioSvc.exe;!CxUtilSvc.exe;!dasHost.exe;!dhcpsrv.exe;!dllhost.exe;!DpCardEngine.exe;!DpHostW.exe;!dwm.exe;!escsvc64.exe;!esif_uf.exe;!EvtEng.exe;!fontdrvhost.exe;!HotKeyServiceUWP.exe;!HP_SureRun.exe;!HPCommRecovery.exe;!hpMAMSrv.exe;!hpqwmiex.exe;!IAStorDataMgrSvc.exe;!ibtsiva.exe;!jhi_service.exe;!LanWlanWwanSwitchingServiceUWP.exe;!LMS.exe;!LogiRegistryService.exe;!LsaIso.exe;!lsass.exe;!Memory Compression;!MsMpEng.exe;!NetworkCap.exe;!NisSrv.exe;!NVDisplay.Contain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+06.05.20 16:20:38: NotApplicable
+06.05.20 16:20:39: Local IP Addresses:
+06.05.20 16:20:40: 192.168.178.85
+06.05.20 16:20:40: 192.168.178.85
+06.05.20 16:20:41: * IPs on this Computer: /*
+06.05.20 16:20:41: * 192.168.178.85 /*
+06.05.20 16:20:42: * 192.168.178.85 /*
+06.05.20 16:20:42: NotApplicable
+06.05.20 16:20:43: NotApplicable
+06.05.20 16:20:43: NotApplicable
+06.05.20 16:20:44: Local IP Addresses:
+06.05.20 16:20:44: 192.168.178.85
+06.05.20 16:20:45: 192.168.178.85
+06.05.20 16:20:46: * IPs on this Computer: /*
+06.05.20 16:20:46: * 192.168.178.85 /*
+06.05.20 16:20:47: * 192.168.178.85 /*
+06.05.20 16:20:47: NotApplicable
+06.05.20 16:20:48: NotApplicable
+06.05.20 16:20:56: Input Box: Session Password : Enter new Session Password
+06.05.20 16:20:57: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 16:20:58: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 16:20:59: NotApplicable
+06.05.20 16:20:59: NotApplicable
+06.05.20 16:21:00: NotApplicable
+06.05.20 16:21:05: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 16:21:06: NotApplicable
+06.05.20 16:21:13: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 16:21:14: Connected
+06.05.20 16:21:14: Opened Stream
+06.05.20 16:21:15: Transmitter Ready
+06.05.20 16:21:15: Sent: LINK
+06.05.20 16:21:16: Started Transmission
+06.05.20 16:21:16: Received: LINK
+06.05.20 16:21:17: Connection Initiated
+06.05.20 16:21:17: Correct Protocol
+06.05.20 16:21:18: Sent: 12.3
+06.05.20 16:21:18: Received: 12.3
+06.05.20 16:21:19: Sent: 29
+06.05.20 16:21:19: Received: 116
+06.05.20 16:21:20: Converting num
+06.05.20 16:21:20: Num is 116
+06.05.20 16:21:21: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 16:21:22: sending 28c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164
+06.05.20 16:21:22: Encrypted text. SHA-256 Hash: 576173e9adb65c4b75ee48c89f42a6a8649cef3f419971cc13bbe5a3276cda14f03e967884dd7601c5c94163c9eeec93692c1522d69963a574724771067b72d2
+06.05.20 16:21:23: Sent: 576173e9adb65c4b75ee48c89f42a6a8649cef3f419971cc13bbe5a3276cda14f03e967884dd7601c5c94163c9eeec93692c1522d69963a574724771067b72d2
+06.05.20 16:21:23: Received:                                                                                                                                                                                                         
+06.05.20 16:21:24: Received Authentication Token. Checking validity...
+06.05.20 16:21:24:                                                                                                                                                                                                         
+06.05.20 16:21:25: 29
+06.05.20 16:21:25: 116
+06.05.20 16:21:26: Encrypted text. SHA-256 Hash: 5a6185ae9398e7ff3afd1be94323384d402cd00e8f292cc90f35766e6ec762884af98a84fe2709a318902e21f1d7b35d7a88b122819d49cd7db33ffaa4f21b34
+06.05.20 16:21:26: INCORRECT PASSWORD
+06.05.20 16:21:27: Reached End
+06.05.20 16:21:27: Connection Closed
+06.05.20 16:22:04: NotApplicable
+06.05.20 16:22:05: Local IP Addresses:
+06.05.20 16:22:06: 192.168.178.85
+06.05.20 16:22:06: 192.168.178.85
+06.05.20 16:22:07: * IPs on this Computer: /*
+06.05.20 16:22:07: * 192.168.178.85 /*
+06.05.20 16:22:08: * 192.168.178.85 /*
+06.05.20 16:22:08: NotApplicable
+06.05.20 16:22:09: NotApplicable
+06.05.20 16:22:09: NotApplicable
+06.05.20 16:22:10: Local IP Addresses:
+06.05.20 16:22:10: 192.168.178.85
+06.05.20 16:22:11: 192.168.178.85
+06.05.20 16:22:11: * IPs on this Computer: /*
+06.05.20 16:22:12: * 192.168.178.85 /*
+06.05.20 16:22:12: * 192.168.178.85 /*
+06.05.20 16:22:13: NotApplicable
+06.05.20 16:22:14: NotApplicable
+06.05.20 16:22:16: NotApplicable
+06.05.20 16:22:18: Input Box: Session Password : Enter new Session Password
+06.05.20 16:22:18: Encrypted text. SHA-256 Hash: 3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2
+06.05.20 16:22:20: MsgBox (Set new Session Password. SHA-512 Hash:
+3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2)
+06.05.20 16:22:20: NotApplicable
+06.05.20 16:22:21: NotApplicable
+06.05.20 16:22:31: Input Box: New Client IP : Enter new IPv4 Address of a Client Computer (eg. 192.168.1.5)
+06.05.20 16:22:32: NotApplicable
+06.05.20 16:22:38: Connecting to 192.168.178.93:2502. Type:REQUEST, Content:...
+06.05.20 16:22:38: Connected
+06.05.20 16:22:39: Opened Stream
+06.05.20 16:22:39: Transmitter Ready
+06.05.20 16:22:40: Sent: LINK
+06.05.20 16:22:40: Started Transmission
+06.05.20 16:22:41: Received: LINK
+06.05.20 16:22:41: Connection Initiated
+06.05.20 16:22:42: Correct Protocol
+06.05.20 16:22:42: Sent: 12.3
+06.05.20 16:22:43: Received: 12.3
+06.05.20 16:22:43: Sent: 29
+06.05.20 16:22:44: Received: 106
+06.05.20 16:22:44: Converting num
+06.05.20 16:22:45: Num is 106
+06.05.20 16:22:46: Encrypted text. SHA-256 Hash: 9bfaf8f9b7901528c6a9b1fc38cc4e0f088db2f775f5d08c0d25606164402a3c358489173269dfe3b880876986742c85afe62243070870f640d15ff59c7092b4
+06.05.20 16:22:46: sending 28c6a9b1fc38cc4e0f088db2f775f5d08c0d256
+06.05.20 16:22:47: Encrypted text. SHA-256 Hash: 62ff6a525d7e21eec2949d03746fc20757e863f847a1c2dde7fc194f4042413e7b13c67bcb369b7c5dfac9f38b321aa3012509ba68f053542872ebdeaed9df1c
+06.05.20 16:22:47: Sent: 62ff6a525d7e21eec2949d03746fc20757e863f847a1c2dde7fc194f4042413e7b13c67bcb369b7c5dfac9f38b321aa3012509ba68f053542872ebdeaed9df1c
+06.05.20 16:22:48: Received:                                                                                                                                                                                                         
+06.05.20 16:22:48: Received Authentication Token. Checking validity...
+06.05.20 16:22:49:                                                                                                                                                                                                         
+06.05.20 16:22:49: 29
+06.05.20 16:22:50: 106
+06.05.20 16:22:50: Encrypted text. SHA-256 Hash: 2b4ffd017c10b45738aa6adaff9daf43184447b3d1ec7faabe90d1ca17ca8f911309ab979dea8f2d000ebd8281d0974b9b1972f78e7b1194222ed86139ad2d7a
+06.05.20 16:22:51: INCORRECT PASSWORD
+06.05.20 16:22:51: Reached End
+06.05.20 16:22:52: Connection Closed

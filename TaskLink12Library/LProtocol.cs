@@ -12,8 +12,8 @@
     /// </summary>
     public static ushort Port = 2502;
 
-    public const ushort R1Min = 10;
-    public const ushort R1Max = 30;
-    public const ushort R2Min = 100;
-    public const ushort R2Max = 120;
+    public const int R1Min = 10;
+    public const int R1Max = 30;
+    public const int R2Min = 100;
+    public const int R2Max = 120;
 }

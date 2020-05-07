@@ -147,24 +147,30 @@ namespace TaskLink12Client
                                                 int R1 = Convert.ToInt32(num);
                                                 if (R1 > TLL.R1Min && R1 < TLL.R1Max)
                                                 {
-                                                    int R2 = TLL.Random(TLL.R2Min, TLL.R2Max);
+                                                    int R2 = 117;//TLL.Random(TLL.R2Min, TLL.R2Max);
                                                     Write(R2.ToString());
 
-                                                    string temp = DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
-                                                    string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h256);
+                                                    string temp = "1";// DateTime.Now.Hour.ToString();// + DateTime.Now.Minute.ToString();
+                                                    string Pass = TLL.GetHash(tll.SessionPassword + temp, TLL.HashType.h512);
 
                                                     string testPass = Read();
                                                     LogI("Received Authentication Token. Checking validity...");
+                                                    LogI(testPass);
+                                                   
                                                     if (testPass == TLL.GetHash(Pass.Substring(
                                                         R1 / 2,
                                                         (R2 / 2) - (R1 / 2)
-                                                        ), TLL.HashType.h256))
+                                                        ), TLL.HashType.h512))
                                                     {
                                                         LogI("Authentication Token Correct");
+                                                        LogI("Sending " + Pass.Substring(
+                                                            R2 / 2 + R1 / 2,
+                                                            R2 - (R2 / 2 + R1 / 2)
+                                                            ));
                                                         Write(TLL.GetHash(Pass.Substring(
                                                             R2 / 2 + R1 / 2,
                                                             R2 - (R2 / 2 + R1 / 2)
-                                                            ), TLL.HashType.h256));
+                                                            ), TLL.HashType.h512));
                                                         string type = Read();
                                                         switch (type)
                                                         {
